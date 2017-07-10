@@ -1,0 +1,93 @@
+.cp-footer__copyright {
+  @media screen and (min-width: 992px) {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
+}
+
+.cp-footer__links {
+  @media screen and (min-width: 992px) {
+    margin: 40px 5%;
+    width: 90%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    margin: 40px 5%;
+    width: 90%;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 40px 5%;
+    width: 90%;
+  }
+}
+
+.cp-footer__links__col {
+  @media screen and (min-width: 992px) {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+  }
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+  }
+}
+
+.cp-footer__links__col__item {
+  @media screen and (min-width: 992px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+
+.cp-footer__links__col__item > h5 {
+  @media screen and (min-width: 992px) {
+    color: #4F739A;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    color: #4F739A;
+  }
+  @media screen and (max-width: 767px) {
+    color: #4F739A;
+  }
+}
+
+.cp-footer__links__col__item > a {
+  @media screen and (min-width: 992px) {
+    color: #4F739A;
+    text-decoration: underline;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    color: #4F739A;
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 767px) {
+    color: #4F739A;
+    text-decoration: underline;
+    line-height: 24px;
+  }
+}
