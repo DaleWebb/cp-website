@@ -43,9 +43,9 @@ export default class Home extends React.Component {
   features() {
     let features = [];
 
-    this.state.features.forEach((feature) => {
+    this.state.features.forEach((feature, i) => {
       features.push(
-        <div className="cp-feature">
+        <div className="cp-feature" key={i}>
           <div className="placeholder placeholder-big"></div>
           <h5>{feature.title}</h5>
           <p>{feature.body}</p>
