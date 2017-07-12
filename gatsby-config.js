@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/cp-website',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
