@@ -57,19 +57,18 @@ export default class Home extends React.Component {
   }
 
   render() {
+
     return (
-      <DefaultLayout>
+      <DefaultLayout id="home-page">
         <div className="cp-section-1">
           <div className="cp-container">
-            <div className="cp-content">
-              <h1 className="cp-section__title--top">Home care software that works</h1>
-              <p className="cp-section__description--top">
-                CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
-              </p>
-              <div>
-                <a className="cp-button cp-button--outline">Watch the video</a>
-                <a className="cp-button cp-button--filled">Book a demo</a>
-              </div>
+            <h1 className="cp-section__title--top">Home care software that works</h1>
+            <p className="cp-section__description--top">
+              CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
+            </p>
+            <div>
+              <a className="cp-button cp-button--outline">Watch the video</a>
+              <a className="cp-button cp-button--filled">Book a demo</a>
             </div>
           </div>
         </div>

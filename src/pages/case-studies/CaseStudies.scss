@@ -1,0 +1,207 @@
+#case-studies {
+  .cp-section-1 {
+    @media screen and (min-width: 992px) {
+      width: 100%;
+      padding: 160px 100px 100px 100px;
+      background: #F4F8FC;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      width: 100%;
+      padding: 160px 100px 100px 100px;
+      background: #F4F8FC;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      padding: 110px 50px 50px 50px;
+      background: #F4F8FC;
+    }
+  }
+
+  .cp-section-2 {
+    @media screen and (min-width: 992px) {
+
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+
+    }
+    @media screen and (max-width: 767px) {
+
+    }
+  }
+
+  .cp-case-study {
+    @media screen and (min-width: 992px) {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 22%;
+      width: 22%;
+      margin: 4% 1.3% 0 1.3%;
+      -moz-transition: opacity .2s;
+      -o-transition: opacity .2s;
+      -webkit-transition: opacity .2s;
+      transition: opacity .2s;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 29%;
+      width: 29%;
+      margin: 4% 1.9% 0 1.9%;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 90%;
+      width: 90%;
+      margin: 5%;
+    }
+  }
+
+  .cp-section-2 .cp-case-study {
+    @media screen and (min-width: 992px) {
+      opacity: 1;
+    }
+  }
+
+  .cp-section-2:hover .cp-case-study {
+    @media screen and (min-width: 992px) {
+      opacity: .5;
+    }
+  }
+
+  .cp-section-2 .cp-case-study:hover,
+  .cp-section-2 .cp-case-study:hover + .cp-case-study {
+    @media screen and (min-width: 992px) {
+      opacity: 1;
+    }
+  }
+
+  .cp-section-2 .cp-case-study:hover + .cp-case-study {
+    @media screen and (min-width: 992px) {
+      opacity: .5;
+    }
+  }
+
+  .cp-case-study__inner {
+    @media screen and (min-width: 992px) {
+      width: calc(100% - 40px);
+      max-height: 324px;
+      height: 324px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 2px solid #DDE5ED;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      width: calc(100% - 40px);
+      max-height: 324px;
+      height: 324px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 2px solid #DDE5ED;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 767px) {
+      width: calc(100% - 40px);
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 2px solid #DDE5ED;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .cp-case-study__inner__img {
+    @media screen and (min-width: 992px) {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  }
+
+  .cp-case-study__inner__description {
+    @media screen and (min-width: 992px) {
+      max-height: 141px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      max-height: 141px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media screen and (max-width: 767px) {
+    }
+  }
+
+  .cp-case-study__stat {
+    @media screen and (min-width: 992px) {
+      width: calc(100% - 40px);
+      height: 108px;
+      max-height: 108px;
+      padding: 20px;
+      background: #F4F8FC;
+      cursor: pointer;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      width: calc(100% - 40px);
+      height: 108px;
+      max-height: 108px;
+      padding: 20px;
+      background: #F4F8FC;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 767px) {
+      width: calc(100% - 40px);
+      padding: 20px;
+      background: #F4F8FC;
+      cursor: pointer;
+    }
+  }
+
+  .cp-case-study__stat__figure {
+    @media screen and (min-width: 992px) {
+      font-size: 36px;
+      color: #4F739A;
+      text-align: center;
+      margin: 10px 0;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      font-size: 36px;
+      color: #4F739A;
+      text-align: center;
+      margin: 10px 0;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 36px;
+      color: #4F739A;
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+
+  .cp-case-study__stat__description {
+    @media screen and (min-width: 992px) {
+      text-align: center;
+      margin: 10px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      text-align: center;
+      margin: 10px;
+    }
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin: 10px;
+    }
+  }
+}

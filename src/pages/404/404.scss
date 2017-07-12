@@ -1,0 +1,19 @@
+#four-oh-four {
+  .cp-section-1 {
+    @media screen and (min-width: 992px) {
+      width: 100%;
+      padding: 160px 100px 100px 100px;
+      background: #F4F8FC;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      width: 100%;
+      padding: 160px 100px 100px 100px;
+      background: #F4F8FC;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      padding: 110px 50px 50px 50px;
+      background: #F4F8FC;
+    }
+  }
+}
