@@ -1,28 +1,40 @@
 {
   "assetsByChunkName": {
     "commons": [
-      "commons-2aa9349e037c2719f275.js",
-      "commons-2aa9349e037c2719f275.js.map"
+      "commons-1d2014835fc5dbcf42d1.js",
+      "commons-1d2014835fc5dbcf42d1.js.map"
     ],
     "page-component---src-pages-index-js": [
-      "page-component---src-pages-index-js-a9bfa182c4d752af0144.js",
-      "page-component---src-pages-index-js-a9bfa182c4d752af0144.js.map"
+      "page-component---src-pages-index-js-5b21c16f9af8855a5733.js",
+      "page-component---src-pages-index-js-5b21c16f9af8855a5733.js.map"
     ],
-    "page-component---src-pages-features-index-js": [
-      "page-component---src-pages-features-index-js-f63c4276418f7c619bb2.js",
-      "page-component---src-pages-features-index-js-f63c4276418f7c619bb2.js.map"
+    "page-component---src-pages-case-studies-index-js": [
+      "page-component---src-pages-case-studies-index-js-fe6965028317c1b4a954.js",
+      "page-component---src-pages-case-studies-index-js-fe6965028317c1b4a954.js.map"
+    ],
+    "page-component---src-pages-404-js": [
+      "page-component---src-pages-404-js-51db6b53d27f6b926713.js",
+      "page-component---src-pages-404-js-51db6b53d27f6b926713.js.map"
     ],
     "path---index": [
       "path---index-586c7e095e534a3909ec.js",
       "path---index-586c7e095e534a3909ec.js.map"
     ],
-    "path---features": [
-      "path---features-586c7e095e534a3909ec.js",
-      "path---features-586c7e095e534a3909ec.js.map"
+    "path---case-studies": [
+      "path---case-studies-586c7e095e534a3909ec.js",
+      "path---case-studies-586c7e095e534a3909ec.js.map"
+    ],
+    "path---404": [
+      "path---404-586c7e095e534a3909ec.js",
+      "path---404-586c7e095e534a3909ec.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-586c7e095e534a3909ec.js",
+      "path---404-html-586c7e095e534a3909ec.js.map"
     ],
     "app": [
-      "app-035472490dac138ce4c2.js",
-      "app-035472490dac138ce4c2.js.map"
+      "app-6b36111db2bf4ab82ec1.js",
+      "app-6b36111db2bf4ab82ec1.js.map"
     ]
   }
 }
