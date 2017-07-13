@@ -52,3 +52,29 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     )
   })
 }
+
+// Add custom url pathname for blog posts.
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators
+
+  if (node.internal.type === `File`) {
+    console.log(createNodeField({ node, name: `slug`, value: `/${node.name}/` }));
+  }// else if (
+  //   node.internal.type === `MarkdownRemark` &&
+  //   typeof node.slug === `undefined`
+  // ) {
+  //   const fileNode = getNode(node.parent)
+  //   createNodeField({
+  //     node,
+  //     name: `slug`,
+  //     value: fileNode.fields.slug,
+  //   })
+
+    // if (node.frontmatter.tags) {
+    //   const tagSlugs = node.frontmatter.tags.map(
+    //     tag => `/tags/${_.kebabCase(tag)}/`
+    //   )
+    //   createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
+    // }
+  // }
+}

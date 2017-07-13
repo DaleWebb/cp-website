@@ -1,30 +1,31 @@
 #home-page  {
 
-  $cpSection1_lg_padding_top: 157px;
-  $cpSection1_lg_padding_left: 70px;
-  $cpSection1_lg_padding_right: 70px;
-  $cpSection1_lg_padding_bottom: 100px;
+  $cpSection1_lg_padding_top_bottom: 100px;
+  $cpSection1_lg_padding_left_right: 100px;
   $cpSection1_tb_padding_top_bottom: 100px;
-  $cpSection1_tb_padding_left_right: 70px;
-  $cpSection1_mb_padding_top_bottom: 100px;
+  $cpSection1_tb_padding_left_right: 100px;
+  $cpSection1_mb_padding_top_bottom: 90px;
   $cpSection1_mb_padding_left_right: 35px;
 
   .cp-section-1 {
     @media screen and (min-width: 992px) {
-      width: calc(100% - (#{$cpSection1_lg_padding_left} + #{$cpSection1_lg_padding_right}));
+      position: relative;
+      width: calc(100% - (#{$cpSection1_lg_padding_left_right} * 2));
       height: 359px;
-      padding: $cpSection1_lg_padding_top $cpSection1_lg_padding_left $cpSection1_lg_padding_bottom $cpSection1_lg_padding_right;
+      padding: calc(#{$cpSection1_lg_padding_top_bottom} + 60px) $cpSection1_lg_padding_left_right $cpSection1_lg_padding_top_bottom $cpSection1_lg_padding_left_right;
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
+      position: relative;
       width: calc(100% - (#{$cpSection1_tb_padding_left_right} * 2));
       height: 359px;
-      padding: $cpSection1_tb_padding_top_bottom $cpSection1_tb_padding_left_right;
+      padding: calc(#{$cpSection1_tb_padding_top_bottom} + 60px) $cpSection1_tb_padding_left_right $cpSection1_tb_padding_top_bottom $cpSection1_tb_padding_left_right;
     }
     @media screen and (max-width: 767px) {
+      position: relative;
       width: calc(100% - (#{$cpSection1_mb_padding_left_right} * 2));
       height: 359px;
       margin-bottom: 60px;
-      padding: $cpSection1_mb_padding_top_bottom $cpSection1_mb_padding_left_right;
+      padding: #{$cpSection1_mb_padding_top_bottom} $cpSection1_mb_padding_left_right $cpSection1_mb_padding_top_bottom $cpSection1_mb_padding_left_right;
     }
   }
 
