@@ -1,28 +1,36 @@
 {
   "assetsByChunkName": {
     "commons": [
-      "commons-1d2014835fc5dbcf42d1.js",
-      "commons-1d2014835fc5dbcf42d1.js.map"
+      "commons-463bf70451454bcf4797.js",
+      "commons-463bf70451454bcf4797.js.map"
     ],
     "page-component---src-pages-index-js": [
-      "page-component---src-pages-index-js-5b21c16f9af8855a5733.js",
-      "page-component---src-pages-index-js-5b21c16f9af8855a5733.js.map"
+      "page-component---src-pages-index-js-4b7df9787a82f5c38031.js",
+      "page-component---src-pages-index-js-4b7df9787a82f5c38031.js.map"
     ],
     "page-component---src-pages-case-studies-index-js": [
-      "page-component---src-pages-case-studies-index-js-fe6965028317c1b4a954.js",
-      "page-component---src-pages-case-studies-index-js-fe6965028317c1b4a954.js.map"
+      "page-component---src-pages-case-studies-index-js-fa2c32180fc322292696.js",
+      "page-component---src-pages-case-studies-index-js-fa2c32180fc322292696.js.map"
+    ],
+    "page-component---src-templates-case-study-index-js": [
+      "page-component---src-templates-case-study-index-js-dd081bf3cf38509278ee.js",
+      "page-component---src-templates-case-study-index-js-dd081bf3cf38509278ee.js.map"
     ],
     "page-component---src-pages-404-js": [
-      "page-component---src-pages-404-js-51db6b53d27f6b926713.js",
-      "page-component---src-pages-404-js-51db6b53d27f6b926713.js.map"
+      "page-component---src-pages-404-js-3957dc9c9fb768651815.js",
+      "page-component---src-pages-404-js-3957dc9c9fb768651815.js.map"
     ],
     "path---index": [
       "path---index-586c7e095e534a3909ec.js",
       "path---index-586c7e095e534a3909ec.js.map"
     ],
     "path---case-studies": [
-      "path---case-studies-586c7e095e534a3909ec.js",
-      "path---case-studies-586c7e095e534a3909ec.js.map"
+      "path---case-studies-e19f1b3c95ca617cbb4a.js",
+      "path---case-studies-e19f1b3c95ca617cbb4a.js.map"
+    ],
+    "path---case-studies-sos-homecare": [
+      "path---case-studies-sos-homecare-40b41956097bf517822b.js",
+      "path---case-studies-sos-homecare-40b41956097bf517822b.js.map"
     ],
     "path---404": [
       "path---404-586c7e095e534a3909ec.js",
@@ -33,8 +41,8 @@
       "path---404-html-586c7e095e534a3909ec.js.map"
     ],
     "app": [
-      "app-6b36111db2bf4ab82ec1.js",
-      "app-6b36111db2bf4ab82ec1.js.map"
+      "app-edea603207b2cc78807c.js",
+      "app-edea603207b2cc78807c.js.map"
     ]
   }
 }

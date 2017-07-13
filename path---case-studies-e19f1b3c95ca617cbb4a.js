@@ -1,0 +1,2 @@
+webpackJsonp([6],{"./node_modules/json-loader/index.js!./.cache/json/case-studies.json":function(e,a){e.exports={data:{allMarkdownRemark:{edges:[{node:{frontmatter:{name:"SOS Homecare",path:"/case-studies/sos-homecare",description:"Read how SOS Homecare saved 11 days a month on finance duties.",stat:"11 days",statDescription:"a month saved on finance duties"}}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---case-studies-e19f1b3c95ca617cbb4a.js.map
