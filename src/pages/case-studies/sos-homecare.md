@@ -5,6 +5,7 @@ draft: false
 description: Read how SOS Homecare saved 11 days a month on finance duties.
 stat: 11 days
 statDescription: a month saved on finance duties
+img: sos-homecare.jpg
 quote:
   text: We’re now becoming a paperless company because we rarely have to print anything out. CarePlanner gets 9/10 from me, and I’m looking forward to future updates and even more functionality.
   name: Chris Atherton
