@@ -9,42 +9,46 @@ export default () => (
       <div className="cp-footer__links">
       <div className="cp-footer__links__col">
         <div className="cp-footer__links__col__item">
-          <h5>Feature Highlights</h5>
+          <h5>
+            <Link to="/features">Feature Highlights</Link>
+          </h5>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Drag and Drop Rostering</a>
+          <Link to="/features#drag-and-drop-rostering">Drag and Drop Rostering</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Infinite Customisation</a>
+          <Link to="/features#infinite-customisation">Infinite Customisation</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Invoicing and Payments</a>
+          <Link to="/features#invoicing-and-payments">Invoicing and Payments</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Call Monitoring</a>
+          <Link to="/features#call-monitoring">Call Monitoring</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Mobile App</a>
+          <Link to="/features#mobile-app">Mobile App</Link>
         </div>
       </div>
       <div className="cp-footer__links__col">
         <div className="cp-footer__links__col__item">
-          <h5>Case Studies</h5>
+          <h5>
+            <Link to="/case-studies">Case Studies</Link>
+          </h5>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>SOS Homecare</a>
+          <Link to="/case-studies/sos-homecare">SOS Homecare</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>County Care</a>
+          <Link to="/case-studies/county-care">County Care</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Proud To Care</a>
+          <Link to="/case-studies/proud-to-care">Proud To Care</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Charlesworth Community Care</a>
+          <Link to="/case-studies/charlesworth-community-care">Charlesworth Community Care</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Woodfield24</a>
+          <Link to="/case-studies/woodfield24">Woodfield24</Link>
         </div>
       </div>
       <div className="cp-footer__links__col">
@@ -52,13 +56,10 @@ export default () => (
           <h5>Company</h5>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Terms</a>
+          <Link to="/terms-and-conditions">Terms and Conditions</Link>
         </div>
         <div className="cp-footer__links__col__item">
-          <a>Privacy Policy</a>
-        </div>
-        <div className="cp-footer__links__col__item">
-          <a>Contact Us</a>
+          <Link to="/contact-us">Contact Us</Link>
         </div>
       </div>
     </div>

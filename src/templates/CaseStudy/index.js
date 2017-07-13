@@ -13,7 +13,7 @@ export default class CaseStudy extends React.Component {
 
     return (
       <DefaultLayout id="case-study">
-        <style dangerouslySetInnerHTML={{ __html: '.cp-section-1::before { background: url(' + require('../../pages/case-studies/' + caseStudy.frontmatter.img) + '); }' }}></style>
+        <style dangerouslySetInnerHTML={{ __html: '.cp-section-1::before { background: url(' + require('../../pages/case-studies/' + caseStudy.frontmatter.img.base) + '); }' }}></style>
         <div className="cp-section-1">
           <h5>Case Study</h5>
           <h1>{caseStudy.frontmatter.name}</h1>
@@ -73,7 +73,9 @@ export const pageQuery = graphql`
       frontmatter {
         name
         path
-        img
+        img {
+          base
+        }
         description
         stat
         statDescription

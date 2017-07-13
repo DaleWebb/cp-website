@@ -29,7 +29,7 @@ export default class CaseStudies extends React.Component {
               <Link to={caseStudy.node.frontmatter.path}>
                 <div className="cp-case-study">
                   <div className="cp-case-study__inner">
-                    <img className="cp-case-study__inner__img" src={require('./' + caseStudy.node.frontmatter.img)}/>
+                    <img className="cp-case-study__inner__img" src={require('./' + caseStudy.node.frontmatter.img.base)}/>
                     <h3>{caseStudy.node.frontmatter.name}</h3>
                     <div className="cp-case-study__inner__description">
                       <p>{caseStudy.node.frontmatter.description}</p>
@@ -60,7 +60,9 @@ export const pageQuery = graphql`
           frontmatter {
             name
             path
-            img
+            img {
+              base
+            }
             description
             stat
             statDescription
