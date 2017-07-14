@@ -8,27 +8,18 @@ import './ContactUs.scss'
 
 export default class ContactUs extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-    };
-  }
-
-  componentWillMount() {
-        const script = document.createElement("script");
-
-        script.src = "https://form.jotformeu.com/jsform/62022480953351";
-        script.async = true;
-
-        document.body.appendChild(script);
-    }
-
   render() {
 
     return (
       <DefaultLayout id="contact-us">
         <Helmet>
           <title>Contact Us | CarePlanner</title>
+          <meta name="description" content="Talk to the team about how CarePlanner can work for you." />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Contact Us | CarePlanner" />
+          <meta property="og:description" content="Talk to the team about how CarePlanner can work for you." />
+          <meta name="twitter:title" content="Contact Us | CarePlanner" />
+          <meta name="twitter:description" content="Talk to the team about how CarePlanner can work for you." />
         </Helmet>
         <div className="cp-section-1">
           <h1>Contact Us</h1>
@@ -36,6 +27,7 @@ export default class ContactUs extends React.Component {
         <div className="cp-section-2">
           <div className="cp-column-1">
             <iframe id="62022480953351" style={{border: 0}}/>
+            <script src="https://form.jotformeu.com/jsform/62022480953351"></script>
           </div>
           <div className="cp-column-2">
             <h2>Offices</h2>
