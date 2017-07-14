@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+ <html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><title>Gatsby.js</title><link rel="preload" href="/cp-website/page-component---src-templates-generic-post-index-js-5ad8bab6b00c4d535931.js" as="script"/><link rel="preload" href="/cp-website/path---terms-and-conditions-b6d72b525a58c41a449a.js" as="script"/><link rel="preload" href="/cp-website/app-68b83e3eff70f8b77d03.js" as="script"/><link rel="preload" href="/cp-website/commons-71cb99ed9c5ad27b9725.js" as="script"/><script id="webpack-manifest">
+            //<![CDATA[
+            window.webpackManifest = {"1":"page-component---src-templates-case-study-index-js-f9f0537a93245666d54d.js","2":"page-component---src-pages-case-studies-index-js-37dea22ecbc02153563e.js","3":"page-component---src-pages-index-js-c8194cd4b8ffd26ca05f.js","4":"page-component---src-templates-generic-post-index-js-5ad8bab6b00c4d535931.js","5":"page-component---src-pages-features-index-js-c120567ca0c5a984a983.js","6":"page-component---src-pages-contact-us-index-js-c4d5e19d70c60f48c895.js","7":"page-component---src-pages-404-js-3957dc9c9fb768651815.js","8":"path---terms-and-conditions-b6d72b525a58c41a449a.js","9":"path---index-586c7e095e534a3909ec.js","10":"path---features-586c7e095e534a3909ec.js","11":"path---contact-us-586c7e095e534a3909ec.js","12":"path---case-studies-8a785cc9688fbc7a0391.js","13":"path---case-studies-woodfield-24-f248929a6add92c49c25.js","14":"path---case-studies-sos-homecare-db797bac04a12b276933.js","15":"path---case-studies-proud-to-care-6e0e7d2f33248a86ad85.js","16":"path---case-studies-county-care-7c6365664f29786dc10b.js","17":"path---case-studies-charlesworth-community-care-09a966d1a1f0a8ec7ade.js","18":"path---404-586c7e095e534a3909ec.js","19":"path---404-html-586c7e095e534a3909ec.js","20":"app-68b83e3eff70f8b77d03.js"}
+            //]]>
+            </script><script>
+  !function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",[
+  "/cp-website/commons-71cb99ed9c5ad27b9725.js","/cp-website/app-68b83e3eff70f8b77d03.js","/cp-website/path---terms-and-conditions-b6d72b525a58c41a449a.js","/cp-website/page-component---src-templates-generic-post-index-js-5ad8bab6b00c4d535931.js"
+])
+  </script><style id="gatsby-inlined-css">@media screen and (min-width:992px){.cp-navbar{position:fixed;top:0;width:100%;height:60px;background-color:#fff;box-shadow:0 2px 4px #dde5ed;z-index:1000}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar{position:fixed;top:0;width:100%;height:60px;background-color:#fff;box-shadow:0 2px 4px #dde5ed;z-index:1000}}@media screen and (max-width:767px){.cp-navbar{position:fixed;top:0;width:100%;height:60px;background-color:#fff;box-shadow:0 2px 4px #dde5ed;z-index:1000}}@media screen and (min-width:992px){.cp-navbar__inner{padding:0 20px}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__inner{padding:0 20px}}@media screen and (max-width:767px){.cp-navbar__inner{padding:0 20px}}@media screen and (min-width:992px){.cp-navbar__hamburger{display:none}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__hamburger{display:inline-block;position:relative;height:30px;width:30px;margin:15px 0}}@media screen and (max-width:767px){.cp-navbar__hamburger{display:inline-block;vertical-align:top;position:relative;height:30px;width:30px;margin:15px 0}}@media screen and (min-width:992px){.cp-navbar__hamburger__icon{display:none}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__hamburger__icon{position:absolute;margin-top:15px;display:inline-block;width:30px;height:2px;border-top:2px solid #4f739a;-webkit-transition:border-color .1s;transition:border-color .1s}}@media screen and (max-width:767px){.cp-navbar__hamburger__icon{position:absolute;margin-top:15px;display:inline-block;width:30px;height:2px;border-top:2px solid #4f739a;-webkit-transition:border-color .1s;transition:border-color .1s}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__hamburger__icon:before{top:-10px}}@media screen and (max-width:767px){.cp-navbar__hamburger__icon:before{top:-10px}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__hamburger__icon:after{bottom:-6px}}@media screen and (max-width:767px){.cp-navbar__hamburger__icon:after{bottom:-6px}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__hamburger__icon:after,.cp-navbar__hamburger__icon:before{content:" ";position:absolute;border-top:2px solid #4f739a;height:0;left:0;right:0;-webkit-transition:-webkit-transform .2s;transition:-webkit-transform .2s;transition:transform .2s;transition:transform .2s,-webkit-transform .2s}}@media screen and (max-width:767px){.cp-navbar__hamburger__icon:after,.cp-navbar__hamburger__icon:before{content:" ";position:absolute;border-top:2px solid #4f739a;height:0;left:0;right:0;-webkit-transition:-webkit-transform .2s;transition:-webkit-transform .2s;transition:transform .2s;transition:transform .2s,-webkit-transform .2s}}@media screen and (min-width:992px){.cp-navbar__actions{float:right}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__actions{margin:-3px -20px 0;overflow-y:hidden;height:0;-webkit-transition:height .2s ease-out;-moz-transition:height .2s ease-out;-ms-transition:height .2s ease-out;-o-transition:height .2s ease-out;transition:height .2s ease-out}.cp-navbar__actions[data-navbar-open=true]{height:180px}}@media screen and (max-width:767px){.cp-navbar__actions{margin-left:-20px;margin-right:-20px;background:hsla(0,0%,100%,.8);box-shadow:0 2px 4px #dde5ed;overflow-y:hidden;height:0;-webkit-transition:height .2s ease-out;-moz-transition:height .2s ease-out;-ms-transition:height .2s ease-out;-o-transition:height .2s ease-out;transition:height .2s ease-out}.cp-navbar__actions[data-navbar-open=true]{height:266px}}@media screen and (min-width:992px){.cp-navbar__links{display:block;float:left;padding:0;height:100%;margin:0}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__links{background:hsla(0,0%,100%,.8);box-shadow:0 2px 4px #dde5ed;margin:0;padding:0}}@media screen and (max-width:767px){.cp-navbar__links{display:block;padding:0;width:100%;margin:0}}@media screen and (min-width:992px){.cp-navbar__buttons{display:block;float:left;padding:0;height:100%;margin:0 0 0 20px}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__buttons{position:absolute;top:-12px;right:0;padding:0}}@media screen and (max-width:767px){.cp-navbar__buttons{display:block;padding:0;height:100%;margin-left:20px}}@media screen and (min-width:992px){.cp-navbar__links li{display:block;float:left}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__links li{display:block}}@media screen and (max-width:767px){.cp-navbar__links li{display:block}}@media screen and (min-width:992px){.cp-navbar__buttons li{display:block;float:left}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__buttons li{display:block;float:left}}@media screen and (max-width:767px){.cp-navbar__buttons li{display:inline-block}}@media screen and (min-width:992px){.cp-navbar__link{display:block;color:#4f739a;padding:22px 0;margin:0 20px;text-decoration:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (min-width:768px) and (max-width:991px){.cp-navbar__link{display:block;color:#4f739a;padding:22px 0;margin:0 20px;text-decoration:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (max-width:767px){.cp-navbar__link{display:block;color:#4f739a;padding:22px 0;margin:0 20px;text-decoration:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (min-width:992px){.cp-logo{position:relative;top:13px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (min-width:768px) and (max-width:991px){.cp-logo{display:inline-block;vertical-align:top;position:relative;top:13px;left:20px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (max-width:767px){.cp-logo{display:inline-block;vertical-align:top;position:relative;top:13px;left:calc(50% - 85px);user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (min-width:992px){.cp-button{display:inline-block;padding:10px 20px;margin:10px 20px 10px 0;text-decoration:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (min-width:768px) and (max-width:991px){.cp-button{display:inline-block;padding:10px 20px;margin:10px 20px 10px 0;text-decoration:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (max-width:767px){.cp-button{display:inline-block;padding:10px 20px;margin:10px 10px 10px 0;text-decoration:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}}@media screen and (min-width:992px){.cp-button--outline{color:#70a4db;border:2px solid #70a4db}}@media screen and (min-width:768px) and (max-width:991px){.cp-button--outline{color:#70a4db;border:2px solid #70a4db}}@media screen and (max-width:767px){.cp-button--outline{color:#70a4db;border:2px solid #70a4db}}@media screen and (min-width:992px){.cp-button--filled{color:#fff;background:#70a4db;border:2px solid #70a4db}}@media screen and (min-width:768px) and (max-width:991px){.cp-button--filled{color:#fff;background:#70a4db;border:2px solid #70a4db}}@media screen and (max-width:767px){.cp-button--filled{color:#fff;background:#70a4db;border:2px solid #70a4db}}@media screen and (min-width:992px){.cp-footer__copyright{width:100%;float:left;text-align:center;margin:40px 0}}@media screen and (min-width:768px) and (max-width:991px){.cp-footer__copyright{width:100%;float:left;text-align:center;margin:40px 0}}@media screen and (max-width:767px){.cp-footer__copyright{width:100%;float:left;text-align:center;margin:40px 0}}@media screen and (min-width:992px){.cp-footer__links{margin:40px 5%;width:90%}}@media screen and (min-width:768px) and (max-width:991px){.cp-footer__links{margin:40px 5%;width:90%}}@media screen and (max-width:767px){.cp-footer__links{margin:40px 5%;width:90%}}@media screen and (min-width:992px){.cp-footer__links__col{display:inline-block;vertical-align:top;width:33%}}@media screen and (min-width:768px) and (max-width:991px){.cp-footer__links__col{display:inline-block;vertical-align:top;width:33%}}@media screen and (max-width:767px){.cp-footer__links__col{display:inline-block;vertical-align:top;width:49%}}@media screen and (min-width:992px){.cp-footer__links__col__item{margin-bottom:20px}}@media screen and (min-width:768px) and (max-width:991px){.cp-footer__links__col__item{margin-bottom:20px}}@media screen and (max-width:767px){.cp-footer__links__col__item{margin-bottom:20px}}@media screen and (min-width:992px){.cp-footer__links__col__item>h5{color:#4f739a}}@media screen and (min-width:768px) and (max-width:991px){.cp-footer__links__col__item>h5{color:#4f739a}}@media screen and (max-width:767px){.cp-footer__links__col__item>h5{color:#4f739a}}@media screen and (min-width:992px){.cp-footer__links__col__item>a{color:#4f739a;text-decoration:underline}}@media screen and (min-width:768px) and (max-width:991px){.cp-footer__links__col__item>a{color:#4f739a;text-decoration:underline}}@media screen and (max-width:767px){.cp-footer__links__col__item>a{color:#4f739a;text-decoration:underline;line-height:24px}}@media screen and (min-width:992px){*{font-family:Circular Std;color:#4a4a4a;font-size:13px}}@media screen and (min-width:768px) and (max-width:991px){*{font-family:Circular Std;color:#4a4a4a;font-size:13px}}@media screen and (max-width:767px){*{font-family:Circular Std;color:#4a4a4a;font-size:13px}}@media screen and (min-width:992px){html{max-width:100%;width:100%;overflow-x:hidden}}@media screen and (min-width:768px) and (max-width:991px){html{max-width:100%;width:100%;overflow-x:hidden}}@media screen and (max-width:767px){html{max-width:100%;width:100%;overflow-x:hidden}}@media screen and (min-width:992px){body{max-width:100%;width:100%;overflow-x:hidden;margin:0}}@media screen and (min-width:768px) and (max-width:991px){body{max-width:100%;width:100%;overflow-x:hidden;margin:0}}@media screen and (max-width:767px){body{max-width:100%;width:100%;overflow-x:hidden;margin:0}}@media screen and (min-width:992px){.cp-section__title--top{color:#70a4db;font-size:36px;font-weight:400;line-height:46px;margin:10px 0 0}}@media screen and (min-width:768px) and (max-width:991px){.cp-section__title--top{color:#70a4db;font-size:36px;font-weight:400;line-height:46px;margin:10px 0 0}}@media screen and (max-width:767px){.cp-section__title--top{color:#70a4db;font-size:24px;font-weight:400;line-height:40px;margin:10px 0 0}}@media screen and (min-width:992px){.cp-section__description--top{color:#9b9b9b;font-size:20px;line-height:35px;font-weight:400;margin:15px 0;width:537px}}@media screen and (min-width:768px) and (max-width:991px){.cp-section__description--top{color:#9b9b9b;font-size:20px;line-height:35px;font-weight:400;margin:15px 0;width:537px}}@media screen and (max-width:767px){.cp-section__description--top{color:#9b9b9b;font-size:16px;line-height:30px;font-weight:400;margin:15px 0}}@media screen and (min-width:992px){.cp-section__title{color:#70a4db;font-size:24px;font-weight:400;line-height:35px;margin:10px 0 0}}@media screen and (min-width:768px) and (max-width:991px){.cp-section__title{color:#70a4db;font-size:24px;font-weight:400;line-height:35px;margin:10px 0 0}}@media screen and (max-width:767px){.cp-section__title{color:#70a4db;font-size:24px;font-weight:400;line-height:35px;margin:10px 0 0}}@media screen and (min-width:992px){.cp-section__description{color:#4f739a;font-size:13px;font-weight:400;line-height:20px;margin:20px 0}}@media screen and (min-width:768px) and (max-width:991px){.cp-section__description{color:#4f739a;font-size:13px;font-weight:400;line-height:20px;margin:20px 0}}@media screen and (max-width:767px){.cp-section__description{color:#4f739a;font-size:13px;font-weight:400;line-height:20px;margin:20px 0}}@media screen and (min-width:992px){.cp-container{margin-left:auto;margin-right:auto;max-width:1404px}}@media screen and (min-width:768px) and (max-width:991px){.cp-container{margin-left:auto;margin-right:auto;max-width:991px}}@media screen and (max-width:767px){.cp-container{margin-left:auto;margin-right:auto;max-width:767px}}@media screen and (min-width:992px){.cp-content{padding:157px 70px 100px}}@media screen and (min-width:768px) and (max-width:991px){.cp-content{padding:100px 35px}}@media screen and (max-width:767px){.cp-content{padding:100px 35px}}@media screen and (min-width:992px){h1{color:#70a4db;font-size:36px;font-weight:400;line-height:46px;margin:10px 0 0}}@media screen and (min-width:768px) and (max-width:991px){h1{color:#70a4db;font-size:36px;font-weight:400;line-height:46px;margin:10px 0 0}}@media screen and (max-width:767px){h1{color:#70a4db;font-size:24px;font-weight:400;line-height:40px;margin:10px 0 0}}@media screen and (min-width:992px){h2{color:#70a4db;font-size:20px;font-weight:400;line-height:46px;margin:10px 0 0}}@media screen and (min-width:768px) and (max-width:991px){h2{color:#70a4db;font-size:20px;font-weight:400;line-height:46px;margin:10px 0 0}}@media screen and (max-width:767px){h2{color:#70a4db;font-size:18px;font-weight:400;line-height:40px;margin:10px 0 0}}@media screen and (min-width:992px){h3{font-size:18px;font-weight:400;color:#70a4db}}@media screen and (min-width:768px) and (max-width:991px){h3{font-size:18px;font-weight:400;margin:10px 0;color:#70a4db}}@media screen and (max-width:767px){h3{font-size:16px;font-weight:400;line-height:30px;margin:5px 0;color:#70a4db}}@media screen and (min-width:992px){h5{font-size:13px;font-weight:700;line-height:25px;color:#4f739a;margin:15px 0 0}}@media screen and (min-width:768px) and (max-width:991px){h5{font-size:13px;font-weight:700;line-height:25px;color:#4f739a;margin:15px 0 0}}@media screen and (max-width:767px){h5{font-size:13px;font-weight:700;line-height:25px;color:#4f739a;margin:15px 0 0}}@media screen and (min-width:992px){p{margin:10px 0;color:#4a4a4a;line-height:25px}}@media screen and (min-width:768px) and (max-width:991px){p{margin:10px 0;color:#4a4a4a;line-height:25px}}@media screen and (max-width:767px){p{margin:10px 0;color:#4a4a4a;line-height:25px}}@media screen and (min-width:992px){b,strong{color:#9b9b9b}}@media screen and (min-width:768px) and (max-width:991px){b,strong{color:#9b9b9b}}@media screen and (max-width:767px){b,strong{color:#9b9b9b}}@media screen and (min-width:992px){a{color:#70a4db;font-size:13px;margin:10px 0;text-decoration:underline}}@media screen and (min-width:768px) and (max-width:991px){a{color:#70a4db;font-size:13px;margin:10px 0;text-decoration:underline}}@media screen and (max-width:767px){a{color:#70a4db;font-size:13px;margin:10px 0;text-decoration:underline}}@media screen and (min-width:992px){hr{margin:40px 0}}@media screen and (min-width:768px) and (max-width:991px){hr{margin:40px 0}}@media screen and (max-width:767px){hr{margin:40px 0}}@media screen and (min-width:992px){blockquote{padding:10px 20px;margin:0 0 20px;font-size:20px;border-left:5px solid #eee;color:#4f739a;line-height:35px}}@media screen and (min-width:768px) and (max-width:991px){blockquote{padding:10px 20px;margin:0 0 20px;font-size:18px;border-left:5px solid #eee;color:#4f739a;line-height:30px}}@media screen and (max-width:767px){blockquote{padding:10px 20px;margin:0 0 20px;font-size:16px;border-left:5px solid #eee;color:#4f739a;line-height:30px}}@media screen and (min-width:992px){.cp-quote__header{margin-bottom:30px}}@media screen and (min-width:768px) and (max-width:991px){.cp-quote__header{margin-bottom:30px}}@media screen and (max-width:767px){.cp-quote__header{margin-bottom:30px}}@media screen and (min-width:992px){.cp-quote__author{display:inline-block;padding-top:12.5px;padding-bottom:12.5px;font-size:16px;color:#4f739a}}@media screen and (min-width:768px) and (max-width:991px){.cp-quote__author{display:inline-block;padding-top:12.5px;padding-bottom:12.5px;font-size:16px;color:#4f739a}}@media screen and (max-width:767px){.cp-quote__author{display:inline-block;padding-top:12.5px;padding-bottom:12.5px;font-size:16px;color:#4f739a}}@media screen and (min-width:992px){.cp-quote__company{display:inline-block;padding-top:12.5px;padding-bottom:12.5px;font-size:16px;color:#4f739a;font-weight:700}}@media screen and (min-width:768px) and (max-width:991px){.cp-quote__company{display:inline-block;padding-top:12.5px;padding-bottom:12.5px;font-size:16px;color:#4f739a;font-weight:700}}@media screen and (max-width:767px){.cp-quote__company{display:inline-block;padding-top:12.5px;padding-bottom:12.5px;font-size:16px;color:#4f739a;font-weight:700}}@media screen and (min-width:992px){.placeholder:before{content:" ";position:absolute;border:2px dashed #dde5ed;height:50px;width:50px;border-radius:100%}}@media screen and (min-width:768px) and (max-width:991px){.placeholder:before{content:" ";position:absolute;border:2px dashed #dde5ed;height:50px;width:50px;border-radius:100%}}@media screen and (max-width:767px){.placeholder:before{content:" ";position:absolute;border:2px dashed #dde5ed;height:50px;width:50px;border-radius:100%}}@media screen and (min-width:992px){.placeholder-big:before{height:75px;width:75px}}@media screen and (min-width:768px) and (max-width:991px){.placeholder-big:before{height:75px;width:75px}}@media screen and (max-width:767px){.placeholder-big:before{height:75px;width:75px}}@media screen and (min-width:992px){.placeholder{height:50px;width:50px;margin-right:65px;margin-bottom:15px}}@media screen and (min-width:768px) and (max-width:991px){.placeholder{height:50px;width:50px;margin-right:65px;margin-bottom:15px}}@media screen and (max-width:767px){.placeholder{height:50px;width:50px;margin-right:65px;margin-bottom:15px}}@media screen and (min-width:992px){.placeholder-big{height:75px;width:75px;margin-right:90px;margin-bottom:15px}}@media screen and (min-width:768px) and (max-width:991px){.placeholder-big{height:75px;width:75px;margin-right:90px;margin-bottom:15px}}@media screen and (max-width:767px){.placeholder-big{height:75px;width:75px;margin-right:90px;margin-bottom:15px}}@font-face{font-family:Circular Std;font-style:normal;font-weight:400;src:url(/cp-website/static/CircularStd-Book.74c9e89b.eot) format("eot"),url(/cp-website/static/CircularStd-Book.3dbc9d5d.ttf) format("ttf"),url(/cp-website/static/CircularStd-Book.2acfd79a.woff) format("woff"),url(/cp-website/static/CircularStd-Book.0b2d771c.svg) format("svg"),url(/cp-website/static/CircularStd-Book.6365c40a.otf) format("otf")}@font-face{font-family:Circular Std;font-weight:700;src:url(/cp-website/static/CircularStd-Bold.bc053eca.eot) format("eot"),url(/cp-website/static/CircularStd-Bold.e9de56ce.ttf) format("ttf"),url(/cp-website/static/CircularStd-Bold.3aa75ec0.woff) format("woff"),url(/cp-website/static/CircularStd-Bold.79a6aa51.svg) format("svg"),url(/cp-website/static/CircularStd-Bold.6baed2bf.otf) format("otf")}@media screen and (min-width:992px){#generic-post .cp-section-1{width:calc(100% - 200px);padding:160px 100px 100px;background:#f4f8fc}}@media screen and (min-width:768px) and (max-width:991px){#generic-post .cp-section-1{width:calc(100% - 200px);padding:160px 100px 100px;background:#f4f8fc}}@media screen and (max-width:767px){#generic-post .cp-section-1{width:calc(100% - 100px);padding:130px 50px 70px;background:#f4f8fc}}@media screen and (min-width:992px){#generic-post .cp-section-2{width:calc(100% - 200px);padding:100px}}@media screen and (min-width:768px) and (max-width:991px){#generic-post .cp-section-2{width:calc(100% - 100px);padding:0 50px}}@media screen and (max-width:767px){#generic-post .cp-section-2{width:calc(100% - 40px);margin-bottom:60px;padding:0 20px}}@media screen and (min-width:992px){#case-study .cp-section-1{position:relative;width:calc(100% - 200px);padding:160px 100px 100px}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-section-1{position:relative;width:calc(100% - 200px);padding:160px 100px 100px}}@media screen and (max-width:767px){#case-study .cp-section-1{position:relative;width:calc(100% - 100px);margin-bottom:60px;padding:130px 50px 70px}}@media screen and (min-width:992px){#case-study .cp-section-1:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;opacity:.4;z-index:-1;background-repeat:no-repeat;background-position:100% 0;background-size:auto 100%}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-section-1:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;opacity:.4;z-index:-1;background-repeat:no-repeat;background-position:100% 0;background-size:auto 100%}}@media screen and (max-width:767px){#case-study .cp-section-1:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;opacity:.4;z-index:-1;background-repeat:no-repeat;background-position:100% 0;background-size:auto 100%}}@media screen and (min-width:992px){#case-study .cp-section-1:after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(right,hsla(0,0%,100%,0),#fff 35%);background-image:-o-linear-gradient(left,hsla(0,0%,100%,0) 0,#fff 35%);background-image:-moz-linear-gradient(left,hsla(0,0%,100%,0) 0,#fff 35%);background-image:linear-gradient(270deg,hsla(0,0%,100%,0) 0,#fff 35%)}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-section-1:after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(right,hsla(0,0%,100%,0),#fff 50%);background-image:-o-linear-gradient(left,hsla(0,0%,100%,0) 0,#fff 50%);background-image:-moz-linear-gradient(left,hsla(0,0%,100%,0) 0,#fff 50%);background-image:linear-gradient(270deg,hsla(0,0%,100%,0) 0,#fff 50%)}}@media screen and (max-width:767px){#case-study .cp-section-1:after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(right,hsla(0,0%,100%,0),#fff 60%);background-image:-o-linear-gradient(left,hsla(0,0%,100%,0) 0,#fff 60%);background-image:-moz-linear-gradient(left,hsla(0,0%,100%,0) 0,#fff 60%);background-image:linear-gradient(270deg,hsla(0,0%,100%,0) 0,#fff 60%)}}@media screen and (min-width:992px){#case-study .cp-section-1 blockquote{margin:20px 0;max-width:60%}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-section-1 blockquote{margin:20px 0}}@media screen and (max-width:767px){#case-study .cp-section-1 blockquote{margin:10px 0}}@media screen and (min-width:992px){#case-study .cp-section-2{width:calc(100% - 200px);padding:0 100px 100px}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-section-2{width:calc(100% - 100px);padding:0 50px}}@media screen and (max-width:767px){#case-study .cp-section-2{width:calc(100% - 40px);margin-bottom:60px;padding:0 20px}}@media screen and (min-width:992px){#case-study .cp-section-2:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);background-image:-o-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:-moz-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:linear-gradient(180deg,hsla(0,0%,100%,0) 0,#fff 75%)}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-section-2:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);background-image:-o-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:-moz-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:linear-gradient(180deg,hsla(0,0%,100%,0) 0,#fff 75%)}}@media screen and (max-width:767px){#case-study .cp-section-2:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);background-image:-o-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:-moz-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:linear-gradient(180deg,hsla(0,0%,100%,0) 0,#fff 75%)}}@media screen and (min-width:992px){#case-study .cp-column-1{display:inline-block;vertical-align:top;max-width:60%;width:60%;margin:0 1%}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-column-1{display:inline-block;vertical-align:top;max-width:60%;width:60%;margin:0 1%}}@media screen and (max-width:767px){#case-study .cp-column-1{max-width:90%;width:90%;margin:5%}}@media screen and (min-width:992px){#case-study .cp-column-2{display:inline-block;vertical-align:top;max-width:28%;width:28%;margin:0 5%}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-column-2{display:inline-block;vertical-align:top;max-width:28%;width:28%;margin:0 5%}}@media screen and (max-width:767px){#case-study .cp-column-2{max-width:90%;width:90%;margin:5%}}@media screen and (min-width:992px){#case-study .cp-case-study__stat{width:calc(100% - 40px);height:108px;max-height:108px;padding:20px;margin:40px 0;background:#f4f8fc}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-case-study__stat{width:calc(100% - 40px);height:108px;max-height:108px;padding:20px;margin:40px 0;background:#f4f8fc}}@media screen and (max-width:767px){#case-study .cp-case-study__stat{width:calc(100% - 40px);padding:20px;margin:40px 0;background:#f4f8fc}}@media screen and (min-width:992px){#case-study .cp-case-study__stat__figure{font-size:36px;color:#4f739a;text-align:center;margin:10px 0}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-case-study__stat__figure{font-size:36px;color:#4f739a;text-align:center;margin:10px 0}}@media screen and (max-width:767px){#case-study .cp-case-study__stat__figure{font-size:36px;color:#4f739a;text-align:center;margin:10px 0}}@media screen and (min-width:992px){#case-study .cp-case-study__stat__description{text-align:center;margin:10px}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-case-study__stat__description{text-align:center;margin:10px}}@media screen and (max-width:767px){#case-study .cp-case-study__stat__description{text-align:center;margin:10px}}@media screen and (min-width:992px){#case-study .cp-section-3{padding:50px 100px;background:#f4f8fc}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-section-3{padding:50px;background:#f4f8fc}}@media screen and (max-width:767px){#case-study .cp-section-3{padding:10px;background:#f4f8fc}}@media screen and (min-width:992px){#case-study .cp-section-3 h2{text-align:center}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-section-3 h2{text-align:center}}@media screen and (max-width:767px){#case-study .cp-section-3 h2{text-align:center}}@media screen and (min-width:992px){#case-study .cp-case-study{display:inline-block;vertical-align:top;max-width:22%;width:22%;margin:4% 1.3% 0;-moz-transition:opacity .2s;-o-transition:opacity .2s;-webkit-transition:opacity .2s;transition:opacity .2s}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-case-study{display:inline-block;vertical-align:top;max-width:29%;width:29%;margin:4% 1.9% 0}}@media screen and (max-width:767px){#case-study .cp-case-study{max-width:90%;width:90%;margin:5%}}@media screen and (min-width:992px){#case-study .cp-section-3 .cp-case-study{opacity:1}}@media screen and (min-width:992px){#case-study .cp-section-3:hover .cp-case-study{opacity:.6}}@media screen and (min-width:992px){#case-study .cp-section-3 .cp-case-study:hover,#case-study .cp-section-3 .cp-case-study:hover+.cp-case-study{opacity:1}}@media screen and (min-width:992px){#case-study .cp-section-3 .cp-case-study:hover+.cp-case-study{opacity:.6}}@media screen and (min-width:992px){#case-study .cp-case-study__inner{width:calc(100% - 40px);max-height:324px;height:324px;padding:20px;margin-bottom:20px;border:2px solid #dde5ed;border-radius:10px;background:#fff;cursor:pointer}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-case-study__inner{width:calc(100% - 40px);max-height:324px;height:324px;padding:20px;margin-bottom:20px;border:2px solid #dde5ed;border-radius:10px;background:#fff;cursor:pointer}}@media screen and (max-width:767px){#case-study .cp-case-study__inner{width:calc(100% - 40px);padding:20px;margin-bottom:20px;border:2px solid #dde5ed;border-radius:10px;background:#fff;cursor:pointer}}@media screen and (min-width:992px){#case-study .cp-case-study__inner__img{width:100%;border-top-left-radius:10px;border-top-right-radius:10px}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-case-study__inner__img{width:100%;border-top-left-radius:10px;border-top-right-radius:10px}}@media screen and (max-width:767px){#case-study .cp-case-study__inner__img{display:none}}@media screen and (min-width:992px){#case-study .cp-case-study__inner__description{max-height:141px;overflow:hidden;text-overflow:ellipsis}}@media screen and (min-width:768px) and (max-width:991px){#case-study .cp-case-study__inner__description{max-height:141px;overflow:hidden;text-overflow:ellipsis}}@media screen and (min-width:992px){#case-studies .cp-section-1{width:calc(100% - 200px);padding:220px 100px 160px;background:#f4f8fc}}@media screen and (min-width:768px) and (max-width:991px){#case-studies .cp-section-1{width:calc(100% - 200px);padding:220px 100px 160px;background:#f4f8fc}}@media screen and (max-width:767px){#case-studies .cp-section-1{width:calc(100% - 100px);padding:170px 50px 110px;background:#f4f8fc}}@media screen and (min-width:992px){#case-studies .cp-section-2{padding:0 100px}}@media screen and (max-width:767px){#case-studies .cp-section-2{padding:0 10px}}@media screen and (min-width:992px){#case-studies .cp-case-study{display:inline-block;vertical-align:top;max-width:22%;width:22%;margin:4% 1.3% 0;-moz-transition:opacity .2s;-o-transition:opacity .2s;-webkit-transition:opacity .2s;transition:opacity .2s}}@media screen and (min-width:768px) and (max-width:991px){#case-studies .cp-case-study{display:inline-block;vertical-align:top;max-width:29%;width:29%;margin:4% 1.9% 0}}@media screen and (max-width:767px){#case-studies .cp-case-study{max-width:90%;width:90%;margin:5%}}@media screen and (min-width:992px){#case-studies .cp-section-2 .cp-case-study{opacity:1}}@media screen and (min-width:992px){#case-studies .cp-section-2:hover .cp-case-study{opacity:.6}}@media screen and (min-width:992px){#case-studies .cp-section-2 .cp-case-study:hover,#case-studies .cp-section-2 .cp-case-study:hover+.cp-case-study{opacity:1}}@media screen and (min-width:992px){#case-studies .cp-section-2 .cp-case-study:hover+.cp-case-study{opacity:.6}}@media screen and (min-width:992px){#case-studies .cp-case-study__inner{width:calc(100% - 40px);max-height:324px;height:324px;padding:20px;margin-bottom:20px;border:2px solid #dde5ed;border-radius:10px;cursor:pointer}}@media screen and (min-width:768px) and (max-width:991px){#case-studies .cp-case-study__inner{width:calc(100% - 40px);max-height:324px;height:324px;padding:20px;margin-bottom:20px;border:2px solid #dde5ed;border-radius:10px;cursor:pointer}}@media screen and (max-width:767px){#case-studies .cp-case-study__inner{width:calc(100% - 40px);padding:20px;margin-bottom:20px;border:2px solid #dde5ed;border-radius:10px;cursor:pointer}}@media screen and (min-width:992px){#case-studies .cp-case-study__inner__img{width:100%;border-top-left-radius:10px;border-top-right-radius:10px}}@media screen and (min-width:768px) and (max-width:991px){#case-studies .cp-case-study__inner__img{width:100%;border-top-left-radius:10px;border-top-right-radius:10px}}@media screen and (max-width:767px){#case-studies .cp-case-study__inner__img{width:100%;border-top-left-radius:10px;border-top-right-radius:10px}}@media screen and (min-width:992px){#case-studies .cp-case-study__inner__description{max-height:141px;overflow:hidden;text-overflow:ellipsis}}@media screen and (min-width:768px) and (max-width:991px){#case-studies .cp-case-study__inner__description{max-height:141px;overflow:hidden;text-overflow:ellipsis}}@media screen and (min-width:992px){#case-studies .cp-case-study__stat{width:calc(100% - 40px);height:108px;max-height:108px;padding:20px;background:#f4f8fc;cursor:pointer}}@media screen and (min-width:768px) and (max-width:991px){#case-studies .cp-case-study__stat{width:calc(100% - 40px);height:108px;max-height:108px;padding:20px;background:#f4f8fc;cursor:pointer}}@media screen and (max-width:767px){#case-studies .cp-case-study__stat{width:calc(100% - 40px);padding:20px;background:#f4f8fc;cursor:pointer}}@media screen and (min-width:992px){#case-studies .cp-case-study__stat__figure{font-size:36px;color:#4f739a;text-align:center;margin:10px 0}}@media screen and (min-width:768px) and (max-width:991px){#case-studies .cp-case-study__stat__figure{font-size:36px;color:#4f739a;text-align:center;margin:10px 0}}@media screen and (max-width:767px){#case-studies .cp-case-study__stat__figure{font-size:36px;color:#4f739a;text-align:center;margin:10px 0}}@media screen and (min-width:992px){#case-studies .cp-case-study__stat__description{text-align:center;margin:10px}}@media screen and (min-width:768px) and (max-width:991px){#case-studies .cp-case-study__stat__description{text-align:center;margin:10px}}@media screen and (max-width:767px){#case-studies .cp-case-study__stat__description{text-align:center;margin:10px}}@media screen and (min-width:992px){#four-oh-four .cp-section-1{width:100%;padding:160px 100px 100px;background:#f4f8fc}}@media screen and (min-width:768px) and (max-width:991px){#four-oh-four .cp-section-1{width:100%;padding:160px 100px 100px;background:#f4f8fc}}@media screen and (max-width:767px){#four-oh-four .cp-section-1{width:100%;padding:110px 50px 50px;background:#f4f8fc}}@media screen and (min-width:992px){#home-page .cp-section-1{position:relative;width:calc(100% - 200px);height:359px;padding:160px 100px 100px}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-section-1{position:relative;width:calc(100% - 200px);height:359px;padding:160px 100px 100px}}@media screen and (max-width:767px){#home-page .cp-section-1{position:relative;width:calc(100% - 70px);height:359px;margin-bottom:60px;padding:90px 35px}}@media screen and (min-width:992px){#home-page .cp-section-1:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background:url(/cp-website/static/section-background.fdcf41b2.png) no-repeat 100% 0}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-section-1:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background:url(/cp-website/static/section-background.fdcf41b2.png) no-repeat 100% 0}}@media screen and (max-width:767px){#home-page .cp-section-1:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1;background:url(/cp-website/static/section-background.fdcf41b2.png) no-repeat 100% 0}}@media screen and (min-width:992px){#home-page .cp-section-2{position:relative;min-height:500px;width:100%;background-color:#f4f8fc}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-section-2{position:relative;min-height:500px;width:100%;background-color:#f4f8fc}}@media screen and (max-width:767px){#home-page .cp-section-2{position:relative;min-height:500px;width:100%;background-color:#f4f8fc}}@media screen and (min-width:992px){#home-page .cp-section-2:before{content:"";position:absolute;top:-129px;left:0;right:0;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTAyNHB4IiBoZWlnaHQ9IjM0NXB4IiB2aWV3Qm94PSIwIDAgMTAyNCAzNDUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ1LjEgKDQzNTA0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJJbml0aWFsLVJlbGVhc2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIb21lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgLTQ1OC4wMDAwMDApIiBmaWxsPSIjRjRGOEZDIj4KICAgICAgICAgICAgPGcgaWQ9IlNlY3Rpb24tMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDQxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0tMy43MzAzNDkzNmUtMTQsMjY0LjA5Mzg0NyBMLTMuNzMwMzQ5MzZlLTE0LDEzNS40NDAzMTkgQzEzNS45NTgyNzEsODEuMDQ3ODAyOSAzMTUuMTQwMDY3LDQ4IDUxMS41LDQ4IEM3MDguMzQxNzMxLDQ4IDg4Ny45MjA5MjQsODEuMjEwMTc3MiAxMDI0LDEzNS44NDEwODUgTDEwMjQsMjY0LjI5NDIyOSBMMTAyNCwzOTIuNzQ3Mzc0IEwtMy43MzAzNDkzNmUtMTQsMzkyLjc0NzM3NCBMLTMuNzMwMzQ5MzZlLTE0LDI2NC4wOTM4NDcgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);background-size:contain;background-repeat:no-repeat;background-position-y:top;z-index:-1}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-section-2:before{content:"";position:absolute;top:-129px;left:0;right:0;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTAyNHB4IiBoZWlnaHQ9IjM0NXB4IiB2aWV3Qm94PSIwIDAgMTAyNCAzNDUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ1LjEgKDQzNTA0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJJbml0aWFsLVJlbGVhc2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIb21lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgLTQ1OC4wMDAwMDApIiBmaWxsPSIjRjRGOEZDIj4KICAgICAgICAgICAgPGcgaWQ9IlNlY3Rpb24tMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDQxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0tMy43MzAzNDkzNmUtMTQsMjY0LjA5Mzg0NyBMLTMuNzMwMzQ5MzZlLTE0LDEzNS40NDAzMTkgQzEzNS45NTgyNzEsODEuMDQ3ODAyOSAzMTUuMTQwMDY3LDQ4IDUxMS41LDQ4IEM3MDguMzQxNzMxLDQ4IDg4Ny45MjA5MjQsODEuMjEwMTc3MiAxMDI0LDEzNS44NDEwODUgTDEwMjQsMjY0LjI5NDIyOSBMMTAyNCwzOTIuNzQ3Mzc0IEwtMy43MzAzNDkzNmUtMTQsMzkyLjc0NzM3NCBMLTMuNzMwMzQ5MzZlLTE0LDI2NC4wOTM4NDcgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);background-size:contain;background-repeat:no-repeat;background-position-y:top;z-index:-1}}@media screen and (max-width:767px){#home-page .cp-section-2:before{content:"";position:absolute;top:-125px;left:0;right:0;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTAyNHB4IiBoZWlnaHQ9IjM0NXB4IiB2aWV3Qm94PSIwIDAgMTAyNCAzNDUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ1LjEgKDQzNTA0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJJbml0aWFsLVJlbGVhc2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIb21lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgLTQ1OC4wMDAwMDApIiBmaWxsPSIjRjRGOEZDIj4KICAgICAgICAgICAgPGcgaWQ9IlNlY3Rpb24tMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDQxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0tMy43MzAzNDkzNmUtMTQsMjY0LjA5Mzg0NyBMLTMuNzMwMzQ5MzZlLTE0LDEzNS40NDAzMTkgQzEzNS45NTgyNzEsODEuMDQ3ODAyOSAzMTUuMTQwMDY3LDQ4IDUxMS41LDQ4IEM3MDguMzQxNzMxLDQ4IDg4Ny45MjA5MjQsODEuMjEwMTc3MiAxMDI0LDEzNS44NDEwODUgTDEwMjQsMjY0LjI5NDIyOSBMMTAyNCwzOTIuNzQ3Mzc0IEwtMy43MzAzNDkzNmUtMTQsMzkyLjc0NzM3NCBMLTMuNzMwMzQ5MzZlLTE0LDI2NC4wOTM4NDcgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);background-size:contain;background-repeat:no-repeat;background-position-y:top;z-index:-1}}@media screen and (min-width:992px){#home-page .cp-section-2:after{content:"";position:absolute;bottom:-129px;left:0;right:0;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTAyNHB4IiBoZWlnaHQ9IjM0NXB4IiB2aWV3Qm94PSIwIDAgMTAyNCAzNDUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ1LjEgKDQzNTA0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJJbml0aWFsLVJlbGVhc2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIb21lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgLTgwNC4wMDAwMDApIiBmaWxsPSIjRjRGOEZDIj4KICAgICAgICAgICAgPGcgaWQ9IlNlY3Rpb24tMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDQxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0tMy43MzAzNDkzNmUtMTQsNTIzLjA0MjY3MSBMLTMuNzMwMzQ5MzZlLTE0LDY1Mi4wODUzNDEgQzEyMi4xMTUyNzksNzAwLjkzOTcyMyAyNzkuMTAwMzE2LDczMi41NzQ2NjMgNDUyLjA4Mjg0OSw3MzguNTEwMjA0IEw1NzAuOTE3MTUxLDczOC41MTAyMDQgQzc0NC4zNzIyMzcsNzMyLjU1ODQ0OCA5MDEuNzQyMzAzLDcwMC43NjY2OTEgMTAyNCw2NTEuNjg0NTc2IEwxMDI0LDUyMi44NDIyODggTDEwMjQsMzk0IEwtMy43MzAzNDkzNmUtMTQsMzk0IEwtMy43MzAzNDkzNmUtMTQsNTIzLjA0MjY3MSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);background-size:contain;background-repeat:no-repeat;background-position-y:bottom;z-index:-1}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-section-2:after{content:"";position:absolute;bottom:-129px;left:0;right:0;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTAyNHB4IiBoZWlnaHQ9IjM0NXB4IiB2aWV3Qm94PSIwIDAgMTAyNCAzNDUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ1LjEgKDQzNTA0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJJbml0aWFsLVJlbGVhc2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIb21lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgLTgwNC4wMDAwMDApIiBmaWxsPSIjRjRGOEZDIj4KICAgICAgICAgICAgPGcgaWQ9IlNlY3Rpb24tMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDQxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0tMy43MzAzNDkzNmUtMTQsNTIzLjA0MjY3MSBMLTMuNzMwMzQ5MzZlLTE0LDY1Mi4wODUzNDEgQzEyMi4xMTUyNzksNzAwLjkzOTcyMyAyNzkuMTAwMzE2LDczMi41NzQ2NjMgNDUyLjA4Mjg0OSw3MzguNTEwMjA0IEw1NzAuOTE3MTUxLDczOC41MTAyMDQgQzc0NC4zNzIyMzcsNzMyLjU1ODQ0OCA5MDEuNzQyMzAzLDcwMC43NjY2OTEgMTAyNCw2NTEuNjg0NTc2IEwxMDI0LDUyMi44NDIyODggTDEwMjQsMzk0IEwtMy43MzAzNDkzNmUtMTQsMzk0IEwtMy43MzAzNDkzNmUtMTQsNTIzLjA0MjY3MSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);background-size:contain;background-repeat:no-repeat;background-position-y:bottom;z-index:-1}}@media screen and (max-width:767px){#home-page .cp-section-2:after{content:"";position:absolute;bottom:-125px;left:0;right:0;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTAyNHB4IiBoZWlnaHQ9IjM0NXB4IiB2aWV3Qm94PSIwIDAgMTAyNCAzNDUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ1LjEgKDQzNTA0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJJbml0aWFsLVJlbGVhc2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIb21lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgLTgwNC4wMDAwMDApIiBmaWxsPSIjRjRGOEZDIj4KICAgICAgICAgICAgPGcgaWQ9IlNlY3Rpb24tMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDQxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0tMy43MzAzNDkzNmUtMTQsNTIzLjA0MjY3MSBMLTMuNzMwMzQ5MzZlLTE0LDY1Mi4wODUzNDEgQzEyMi4xMTUyNzksNzAwLjkzOTcyMyAyNzkuMTAwMzE2LDczMi41NzQ2NjMgNDUyLjA4Mjg0OSw3MzguNTEwMjA0IEw1NzAuOTE3MTUxLDczOC41MTAyMDQgQzc0NC4zNzIyMzcsNzMyLjU1ODQ0OCA5MDEuNzQyMzAzLDcwMC43NjY2OTEgMTAyNCw2NTEuNjg0NTc2IEwxMDI0LDUyMi44NDIyODggTDEwMjQsMzk0IEwtMy43MzAzNDkzNmUtMTQsMzk0IEwtMy43MzAzNDkzNmUtMTQsNTIzLjA0MjY3MSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);background-size:contain;background-repeat:no-repeat;background-position-y:bottom;z-index:-1}}@media screen and (min-width:992px){#home-page .cp-screens{position:absolute;top:-180px;width:100%;text-align:center}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-screens{position:absolute;top:-180px;width:100%;text-align:center}}@media screen and (max-width:767px){#home-page .cp-screens{position:absolute;top:-180px;width:100%;text-align:center}}@media screen and (min-width:992px){#home-page .cp-feature-aside{display:inline-block;vertical-align:top;max-width:14%;width:14%;margin:40px 0 0 5%}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-feature-aside{display:inline-block;vertical-align:top;max-width:14%;width:14%;margin:40px 0 0 5%}}@media screen and (max-width:767px){#home-page .cp-feature-aside{margin:0 35px}}@media screen and (min-width:992px){#home-page .cp-feature-grid{display:inline-block;vertical-align:top;max-width:80%;width:80%}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-feature-grid{display:inline-block;vertical-align:top;max-width:80%;width:80%}}@media screen and (max-width:767px){#home-page .cp-feature-grid{margin:0 35px}}@media screen and (min-width:992px){#home-page .cp-feature{display:inline-block;max-width:25%;width:25%;margin:40px 3.5%;-moz-transition:opacity .2s;-o-transition:opacity .2s;-webkit-transition:opacity .2s;transition:opacity .2s}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-feature{display:inline-block;max-width:25%;width:25%;margin:40px 3.5%}}@media screen and (max-width:767px){#home-page .cp-feature{margin:40px 15px}}@media screen and (min-width:992px){#home-page .cp-feature-grid .cp-feature{opacity:1}}@media screen and (min-width:992px){#home-page .cp-feature-grid:hover .cp-feature{opacity:.6}}@media screen and (min-width:992px){#home-page .cp-feature-grid .cp-feature:hover,#home-page .cp-feature-grid .cp-feature:hover+.cp-feature{opacity:1}}@media screen and (min-width:992px){#home-page .cp-feature-grid .cp-feature:hover+.cp-feature{opacity:.6}}@media screen and (max-width:767px){#home-page .cp-feature .placeholder{float:left;margin-right:25px}}@media screen and (min-width:992px){#home-page .cp-footer__cta{display:inline-block;text-align:center;width:33%;margin-top:40px}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-footer__cta{display:inline-block;text-align:center;width:33%;max-width:33%;margin-top:40px}}@media screen and (max-width:767px){#home-page .cp-footer__cta{text-align:center}}@media screen and (min-width:992px){#home-page .cp-section-3{position:relative;width:100%;height:559px}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-section-3{position:relative;width:100%;height:559px;padding-top:57px}}@media screen and (max-width:767px){#home-page .cp-section-3{position:relative;width:100%;height:559px}}@media screen and (min-width:992px){#home-page .cp-section-3:after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-3;background-repeat:no-repeat;background-size:cover;background-image:url(/cp-website/static/section-3-background.5aa92c3b.png);opacity:.3}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-section-3:after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-3;background-repeat:no-repeat;background-size:cover;background-image:url(/cp-website/static/section-3-background.5aa92c3b.png);opacity:.3}}@media screen and (max-width:767px){#home-page .cp-section-3:after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-3;background-repeat:no-repeat;background-size:cover;background-image:url(/cp-website/static/section-3-background.5aa92c3b.png);opacity:.3}}@media screen and (min-width:992px){#home-page .cp-section-3:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-2;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);background-image:-o-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:-moz-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:linear-gradient(180deg,hsla(0,0%,100%,0),#fff)}}@media screen and (min-width:768px) and (max-width:991px){#home-page .cp-section-3:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-2;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);background-image:-o-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:-moz-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:linear-gradient(180deg,hsla(0,0%,100%,0),#fff)}}@media screen and (max-width:767px){#home-page .cp-section-3:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:-2;background-repeat:no-repeat;background-size:cover;background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);background-image:-o-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:-moz-linear-gradient(bottom,hsla(0,0%,100%,0),#fff);background-image:linear-gradient(180deg,hsla(0,0%,100%,0),#fff)}}@media screen and (min-width:992px){#features .cp-section-1{width:100%;padding:160px 100px 100px;background:#f4f8fc}}@media screen and (min-width:768px) and (max-width:991px){#features .cp-section-1{width:100%;padding:160px 100px 100px;background:#f4f8fc}}@media screen and (max-width:767px){#features .cp-section-1{width:100%;padding:110px 50px 50px;background:#f4f8fc}}@media screen and (min-width:992px){#features .cp-section-2{width:calc(100% - 200px);padding:50px 100px 100px}}@media screen and (min-width:768px) and (max-width:991px){#features .cp-section-2{width:calc(100% - 100px);padding:50px}}@media screen and (max-width:767px){#features .cp-section-2{width:calc(100% - 40px);margin-bottom:60px;padding:0 20px}}@media screen and (min-width:992px){#features .cp-column-1{display:inline-block;vertical-align:top;max-width:40%;width:40%;margin:0 1%;height:694px}}@media screen and (min-width:768px) and (max-width:991px){#features .cp-column-1{display:inline-block;vertical-align:top;max-width:50%;width:50%;margin:0 1%}}@media screen and (max-width:767px){#features .cp-column-1{max-width:90%;width:90%;margin:5%}}@media screen and (min-width:992px){#features .cp-column-2{display:inline-block;vertical-align:top;max-width:48%;width:48%;margin:0 5%}}@media screen and (min-width:768px) and (max-width:991px){#features .cp-column-2{display:inline-block;vertical-align:top;max-width:38%;width:38%;margin:0 5%}}@media screen and (max-width:767px){#features .cp-column-2{max-width:90%;width:90%;margin:5%}}@media screen and (min-width:992px){#features .cp-column-2__column-1,#features .cp-column-2__column-2{display:inline-block;vertical-align:top;max-width:50%;width:50%}}@media screen and (min-width:768px) and (max-width:991px){#features .cp-column-2__column-1,#features .cp-column-2__column-2{display:inline-block;vertical-align:top;max-width:100%;width:100%}}@media screen and (max-width:767px){#features .cp-column-2__column-1,#features .cp-column-2__column-2{max-width:100%;width:100%}}@media screen and (min-width:992px){#contact-us .cp-section-1{width:100%;padding:160px 100px 100px;background:#f4f8fc}}@media screen and (min-width:768px) and (max-width:991px){#contact-us .cp-section-1{width:100%;padding:160px 100px 100px;background:#f4f8fc}}@media screen and (max-width:767px){#contact-us .cp-section-1{width:100%;padding:110px 50px 50px;background:#f4f8fc}}@media screen and (min-width:992px){#contact-us .cp-section-2{width:calc(100% - 200px);padding:50px 100px 100px}}@media screen and (min-width:768px) and (max-width:991px){#contact-us .cp-section-2{width:calc(100% - 100px);padding:50px}}@media screen and (max-width:767px){#contact-us .cp-section-2{width:calc(100% - 40px);margin-bottom:60px;padding:0 20px}}@media screen and (min-width:992px){#contact-us .cp-column-1{display:inline-block;vertical-align:top;max-width:40%;width:40%;margin:0 1%;height:694px}}@media screen and (min-width:768px) and (max-width:991px){#contact-us .cp-column-1{display:inline-block;vertical-align:top;max-width:50%;width:50%;margin:0 1%}}@media screen and (max-width:767px){#contact-us .cp-column-1{max-width:90%;width:90%;margin:5%}}@media screen and (min-width:992px){#contact-us .cp-column-2{display:inline-block;vertical-align:top;max-width:48%;width:48%;margin:0 5%}}@media screen and (min-width:768px) and (max-width:991px){#contact-us .cp-column-2{display:inline-block;vertical-align:top;max-width:38%;width:38%;margin:0 5%}}@media screen and (max-width:767px){#contact-us .cp-column-2{max-width:90%;width:90%;margin:5%}}@media screen and (min-width:992px){#contact-us .cp-column-2__column-1,#contact-us .cp-column-2__column-2{display:inline-block;vertical-align:top;max-width:50%;width:50%}}@media screen and (min-width:768px) and (max-width:991px){#contact-us .cp-column-2__column-1,#contact-us .cp-column-2__column-2{display:inline-block;vertical-align:top;max-width:100%;width:100%}}@media screen and (max-width:767px){#contact-us .cp-column-2__column-1,#contact-us .cp-column-2__column-2{max-width:100%;width:100%}}</style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="-1183058871"><div id="generic-post" data-reactid="2"><nav class="cp-navbar" data-reactid="3"><div class="cp-navbar__inner" data-reactid="4"><div class="cp-container" data-reactid="5"><a class="cp-navbar__hamburger" data-reactid="6"><span class="cp-navbar__hamburger__icon" data-reactid="7"></span></a><a href="/cp-website/" data-reactid="8"><img class="cp-logo" src="data:image/png;base64,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" data-reactid="9"/></a><div class="cp-navbar__actions" data-navbar-open="false" data-reactid="10"><ul class="cp-navbar__links" data-reactid="11"><li data-reactid="12"><a class="cp-navbar__link" href="/cp-website/features" data-reactid="13">Features</a></li><li data-reactid="14"><a class="cp-navbar__link" href="/cp-website/case-studies" data-reactid="15">Case Studies</a></li><li data-reactid="16"><a class="cp-navbar__link" href="/cp-website/contact-us" data-reactid="17">Contact Us</a></li></ul><ul class="cp-navbar__buttons" data-reactid="18"><li data-reactid="19"><a class="cp-button cp-button--outline" href="/cp-websiteundefined" data-reactid="20">Watch the video</a></li><li data-reactid="21"><a class="cp-button cp-button--filled" href="/cp-website/contact-us" data-reactid="22">Book a demo</a></li></ul></div></div></div></nav><div class="cp-section-1" data-reactid="23"><h1 data-reactid="24">Terms and Conditions</h1></div><div class="cp-section-2" data-reactid="25"><style>
+  @media screen and (min-width: 992px) {
+    .cp-section-1 {
+      text-align: center;
+    }
+    #generic-post .cp-section-2 {
+      width: calc(100% - 600px);
+      padding: 100px 300px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .cp-section-1 {
+      text-align: center;
+    }
+    #generic-post .cp-section-2 {
+      width: calc(100% - 300px);
+      padding: 50px 150px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .cp-section-1 {
+      text-align: center;
+    }
+    #generic-post .cp-section-2 {
+      width: calc(100% - 100px);
+      padding: 50px;
+    }
+  }
+</style>
+<h2>Terms and Conditions of Use of <a href="http://www.care-planner.co.uk">http://www.care-planner.co.uk</a> and of sale of Software as a Service (SaaS)</h2>
+<p>These general terms and conditions of use of <a href="http://www.care-planner.co.uk">http://www.care-planner.co.uk</a> and sale of software as a service ( <strong>Terms</strong> ) together with any specific Commercial Terms (as defined below) which
+CarePlanner has emailed to you, set out the terms of CarePlanner’s agreement with you
+( <strong>Agreement</strong> ).</p>
+<p>The Agreement with you explains our responsibilities as your service provider and your
+responsibilities as our Client and the terms of use of the Website (as defined below).</p>
+<p>The Agreement is binding on the Client and the Authorised Users (as defined below) of the
+Service.</p>
+<p>You should print a copy of these Terms or save them to your computer for future reference.</p>
+<p>We may amend these Terms from time to time. Please check the Website from time to time
+to take notice of any changes that may be made, as they are binding on you.</p>
+<p>These Terms are appropriate only for business customers. You confirm that you are, or
+represent a business and that you do not act as a consumer.</p>
+<h2>DEFINITIONS AND INTERPRETATION</h2>
+<p>The clause headings do not affect the interpretation of these Terms. In these Terms the following words and expressions shall have the following meanings:</p>
+<ul>
+<li>
+<p><strong>Agreement</strong> means a Client’s agreement with CarePlanner as set out in these Terms and in any Commercial Terms emailed separately to the Client by CarePlanner.</p>
+</li>
+<li>
+<p><strong>Authorised User</strong> means any person other than the Client who is authorised by the Client in accordance with the Agreement to access and use the Service.</p>
+</li>
+<li>
+<p><strong>CarePlanner</strong> means Care Planner Limited, a company incorporated in England and Wales with Company number 08274960 whose registered office at First Floor, Leadworks, Anchor Road, Bristol BS1 5DB.</p>
+</li>
+<li>
+<p><strong>CarePlanner Website</strong> means <a href="http://www.care-planner.co.uk">http://www.care-planner.co.uk</a> or any other website operated by CarePlanner through which CarePlanner’s products and services are marketed.</p>
+</li>
+<li>
+<p><strong>Client</strong> means the business entity which registers to use the Service.</p>
+</li>
+<li>
+<p><strong>Commercial Terms</strong> means those terms and conditions, emailed separately to the Client by CarePlanner, providing details which include but are not limited to, the Service Fee and the number of Authorised Users associated with the Client’s use of the Service.</p>
+</li>
+<li>
+<p><strong>Confidential Information</strong> means all confidential information (whether oral or written) acquired by a party whether before or after the date of the Agreement and which relates to the affairs or business of the other party or its products, operations or know-how.</p>
+</li>
+<li>
+<p><strong>Data</strong> means the data inputted to the Website or the Software either by the Client or Authorised Users, or CarePlanner on the Client's behalf for the purpose of using the Service or facilitating the Client's use of the Service.</p>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>DPA</strong> means the Data Protection Act 1998.</p>
+</li>
+<li>
+<p><strong>Intellectual Property Rights</strong> are all inventions (whether patentable or not), design rights, databases, database rights, copyright, moral rights, semiconductor topography rights, unregistered trade and service marks, logos, get-up and trade names, all patents, utility models, registered designs registered copy rights, registered trade and service marks, domain names and applications for registration rights relating to know-how, trade secrets and confidential information in any form and any rights or forms of protection of a similar nature anywhere in the world.</p>
+</li>
+<li>
+<p><strong>Service</strong> means any and all CarePlanner services provided to the Client via the Website or via the mobile telephone application or via any other website notified to the Client by CarePlanner from time to time, and the associated support provided by CarePlanner.</p>
+</li>
+<li>
+<p><strong>Service Fee</strong> means all subscription and other types of fees (excluding any taxes and duties) payable by the Client to CarePlanner under the terms of the Agreement.</p>
+</li>
+<li>
+<p><strong>Software</strong> means the online software applications and mobile telephone applications provided by CarePlanner for use by the Client as part of the Service.</p>
+</li>
+<li>
+<p><strong>User Subscriptions</strong> means the user subscriptions purchased by the Client which entitle a given number of Authorised Users to simultaneously access and use the Service in accordance with the Agreement.</p>
+</li>
+<li>
+<p><strong>Virus</strong> is any thing or device (including any software, code, file or programme) which may: prevent, impair or otherwise adversely affect the operation of any computer software, hardware or network, any telecommunications service, equipment or network or any other service or device; prevent, impair or otherwise adversely affect access to or the operation of any programme or data, including the reliability of any programme or data (whether by re-arranging, altering or erasing the programme or data in whole or part or otherwise); or adversely affect the user experience, including worms, trojan horses, viruses and other similar things or devices.</p>
+</li>
+<li>
+<p><strong>Website(s)</strong> means the internet site(s) at the domain <a href="http://www.CLIENTNAME.care-planner.co.uk">http://www.CLIENTNAME.care-planner.co.uk</a> or any other website operated by CarePlanner through which the Service is provided to Clients.</p>
+<ol>
+<li>
+<p>The Client’s access to and use of the Website is subject exclusively to these Terms. The
+Client will not use the Website or the associated mobile application for any purpose
+that is unlawful or that is prohibited by these Terms.</p>
+</li>
+<li>
+<p>By using the Website, the Client agrees to the Terms that relate to Website use. By
+entering into the Agreement the Client agrees to the Terms. If the Client does not
+accept any of the Terms, then they must immediately stop using the Service, the
+Software and the Website.</p>
+</li>
+<li>
+<p>CarePlanner will improve the Service from time to time and changes made may
+necessitate a change to the Agreement. CarePlanner reserves the right to change the
+Agreement at any time, with any new terms taking effect as soon as they are posted on
+the Website. While CarePlanner will take steps to communicate changes via email or
+notification via the Website, it is the Client’s responsibility to read and understand the
+most recent terms as set out on the Website.</p>
+</li>
+<li>
+<p>By registering with the Service, each Client agrees that they have read and understand
+the current Terms. You confirm that you have authority to bind any business on whose
+behalf you order the Service and use the Website.</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2>User Subscriptions</h2>
+<ol start="5">
+<li>CarePlanner grants to the Client a non-exclusive, non-transferable right to permit the number of Authorised Users equal to the number of valid and subsisting User Subscriptions at any given time to use the Service during the Term solely for the Client's internal business operations.</li>
+</ol>
+<h2>Authorised Users</h2>
+<ol start="6">
+<li>There is no maximum number of Authorised Users that the Client may authorise to access and use the Service however the number of Authorised Users accessing the Service at any one time shall not exceed the number of valid and subsisting User Subscriptions the Client has purchased at the relevant time. The Client shall permit CarePlanner on reasonable prior notice to audit the Service.</li>
+</ol>
+<h2>How the Agreement is formed between CarePlanner and the Client</h2>
+<ol start="7">
+<li>
+<p>After the Client places an order, they will receive an e-mail from CarePlanner
+acknowledging receipt of their order and giving payment instructions. This email does
+not mean that the Client’s order has been accepted. CarePlanner’s acceptance of the
+Client’s order will take place as described in clause 8 below.</p>
+</li>
+<li>
+<p>On receipt of a valid Direct Debit mandate CarePlanner will confirm its acceptance by
+sending the Client an e-mail containing the Client’s password(s) to access the Service
+( <strong>Confirmation</strong> ). The Agreement between CarePlanner and the Client will only be
+formed when CarePlanner sends the Client the Confirmation.</p>
+</li>
+</ol>
+<h2>Using the Service</h2>
+<ol start="9">
+<li>The Client shall not access, store, distribute or transmit any Viruses, or any material
+during the course of its use of the Service that:
+a) is unlawful, harmful, threatening, defamatory, obscene, infringing, harassing or
+racially or ethnically offensive;
+b) facilitates illegal activity;
+c) depicts sexually explicit images;
+d) promotes unlawful violence;
+e) is discriminatory based on race, gender, colour, religious belief, sexual
+orientation, disability or
+in a manner that is otherwise illegal or causes damage or injury to any person or
+property;
+and CarePlanner reserves the right, without liability or prejudice to its other rights to the Client,
+to disable the Client's access to any material that breaches the provisions of this clause 9.</li>
+<li>The Client shall use all reasonable endeavours to prevent any unauthorised access to,
+or use of, the Service and, in the event of any such unauthorised access or use,
+promptly notify CarePlanner.</li>
+<li>The rights provided under these Terms are granted to the Client only, and shall not be
+considered granted to any subsidiary or holding company or related party of the Client.</li>
+<li>It is the Client’s sole responsibility to determine that the Service meets their specific
+needs and that the Service provided by CarePlanner is suitable for the purposes for
+which the Client intends to use them.</li>
+</ol>
+<ol start="13">
+<li>CarePlanner grants the Client the right to access and use the Service via the Website for
+the Authorised User(s) set out in the Agreement with the Client. This right is non-
+exclusive, non-transferable, and is limited by and subject to these Terms.</li>
+<li>The Client acknowledges and agrees that:</li>
+</ol>
+<p>a) the Client is responsible for the Authorised Users and any other person or entity
+given permission to access the Service or the Data as a result of the Agreement
+and the Client agrees that CarePlanner is not obliged to provide any person or
+entity with access to any information or Data without the Client’s written
+authorisation and that CarePlanner has the right to refer any requests for
+information which is has received to the Client.
+b) the Client is responsible for deciding who is an Authorised User and what level of
+access to the Service that Authorised User has;
+c) the Client is responsible for their Authorised Users’ use of the Service;
+d) the Client controls their Authorised Users’ level of access to the Service at all
+times and can change or revoke any Authorised User’s access, or change the level
+of access, for any reason and at any time.
+e) If there is any dispute between the Client and an Authorised User in relation to
+access to the Service, the Client shall decide what access to the Service that
+Authorised User shall continue to have.</p>
+<h2>Billing and Costs</h2>
+<ol start="15">
+<li>The Client shall pay the Service Fees to CarePlanner in accordance with these Terms
+and the Commercial Terms.</li>
+<li>The Client shall provide valid, up-to-date and complete contact and billing details.</li>
+<li>The Client authorises CarePlanner to bill the Service Fees by Direct Debit on the date of
+the Agreement and then monthly in advance as specified in the Commercial Terms.</li>
+<li>CarePlanner shall issue invoices to the Client in respect of the Service Fees on the date
+of the Agreement and then monthly in advance as specified in the Commercial Terms.</li>
+<li>The Client shall pay each invoice on the date of the invoice.</li>
+<li>All amounts and fees stated or referred to in the Agreement are exclusive of value
+added tax, which shall be added to CarePlanner's invoice(s) at the appropriate rate.</li>
+<li>If a Client fails to pay when due any amount payable by it under the terms of the
+Agreement with CarePlanner:
+a) CarePlanner may, without liability to the Client, disable the Client's password(s),
+account and access to all or part of the Service and CarePlanner shall be under no
+obligation to provide any or all of the Service while the invoice(s) concerned
+remain unpaid;
+b) If a Client has failed to pay the amount due the Client shall pay interest on the
+overdue amount from the due date until the date of actual payment (after as well
+as before judgment) at the rate of 3 per cent per annum above the base rate
+from time to time of Lloyds Banking Group. Such interest shall accrue on a daily
+basis and be compounded quarterly.</li>
+<li>All expenses incurred by or on behalf of the parties including all fees of agents,
+solicitors, accountants, employed by any of the parties in connection with the
+negotiation or preparation and execution of the Agreement shall be born solely by the
+party which incurred them unless otherwise agreed.</li>
+</ol>
+<ol start="23">
+<li>CarePlanner shall be entitled to increase the Service Fees upon 3 0 days' prior notice to
+the Client and the Commercial Terms shall be deemed to have been amended
+accordingly.</li>
+</ol>
+<h2>Use of and Changes to the Website</h2>
+<ol start="24">
+<li>Please note that any of the content on the CarePlanner Website and the Website(s)
+may be out of date at any given time, and CarePlanner is under no obligation to update
+it.</li>
+<li>CarePlanner does not guarantee that the CarePlanner Website or the Website(s), or
+any content on them, will always be available or be uninterrupted. Access to the
+CarePlanner Website or the Website(s) is permitted on a temporary basis. CarePlanner
+may suspend, withdraw, discontinue or change all or any part of the CarePlanner
+Website and, or the Website(s) without notice. Subject to clauses 58 through 61
+( <strong>Liability</strong> ) CarePlanner will not be liable to the Client if for any reason the CarePlanner
+Website or the Website(s) or any of them are unavailable at any time or for any period.</li>
+<li>The Client is responsible for making all arrangements necessary for it to have access to
+the CarePlanner Website and the Website(s).</li>
+<li>The Client is also responsible for ensuring that all persons who access the CarePlanner
+Website and, or the Website(s) through its internet connection are aware of these
+Terms and that they comply with them.</li>
+<li>The Website is directed to people residing in the United Kingdom. We do not represent
+that content available on or through the CarePlanner Website and, or the Website(s)
+are appropriate or available in other locations. We may limit the availability of the
+CarePlanner Website and, or the Website(s) or any service or product described on the
+CarePlanner Website and, or the Website(s) to any person or geographic area at any
+time. If you choose to access the CarePlanner Website or the Website(s) from outside
+the United Kingdom, you do so at your own risk.</li>
+<li>CarePlanner is the owner or the licensee of all Intellectual Property Rights in the
+CarePlanner Website and the Website(s), and in the material published on them.
+Those works are protected by copyright laws and treaties around the world. All such
+rights are reserved.</li>
+<li>The Client may print off one copy, and may download extracts, of any page(s) from the
+CarePlanner Website for personal use and you may draw the attention of others within
+your organisation to content posted on the CarePlanner Website.</li>
+<li>The Client must not modify the paper or digital copies of any materials it has printed
+off or downloaded in any way from the CarePlanner Website or the Website(s), and
+must not use any illustrations, photographs, video or audio sequences or any graphics
+separately from any accompanying text.</li>
+<li>CarePlanner’s status (and that of any identified contributors) as the authors of content
+on the CarePlanner Website and, or the Website(s) must always be acknowledged.</li>
+<li>CarePlanner reserves the right to:
+a) Change or remove (temporarily or permanently) the CarePlanner Website or any
+part of it, or the Websites or any part of them without notice and the Client confirms
+that subject to clauses 58 through 61 ( <strong>Liability</strong> ) CarePlanner shall not be liable to the
+Client for any such change or removal;
+b) Change any of these Terms that relate to the CarePlanner Website and, or the
+Website(s) at any time, and the Client’s continued use of the CarePlanner Website or
+the relevant Website following any changes shall be deemed to be the Client’s
+acceptance of such change.</li>
+</ol>
+<h2>Links to Third Party Websites</h2>
+<ol start="34">
+<li>The Website, the Service and or the Software may include links to websites that are
+controlled and maintained by others or enable or assist the Client to access other third
+party content or services. Any link to other websites is not an endorsement of such
+websites and Clients acknowledge and agree that CarePlanner is not responsible for
+the content or availability of any such sites.</li>
+<li>The Client acknowledges that the Service may enable or assist it to access the website
+content of, correspond with, and purchase products and services from, third parties via
+third-party websites and that it does so solely at its own risk. CarePlanner makes no
+representation or commitment and shall have no liability or obligation whatsoever in
+relation to the content or use of, or correspondence with, any such third-party
+website, or any transactions completed, and any contract entered into by the Client,
+with any such third party. Any contract entered into and any transaction completed
+via any third-party website is between the Client and the relevant third party, and not
+CarePlanner. CarePlanner recommends that the Client refers to the third party's
+website terms and conditions and privacy policy prior to using the relevant third-party
+website. CarePlanner does not endorse or approve any third-party website nor the
+content of any of the third-party website made available via the Services.</li>
+</ol>
+<h2>Service Security</h2>
+<ol start="36">
+<li>The Client undertakes for itself and in relation to each Authorised User to ensure that
+all usernames and passwords required to access the Service are kept secure and
+confidential. The Client undertakes to immediately notify CarePlanner of any
+unauthorised use of their passwords or any other breach of security. CarePlanner may
+reset the Client’s password provided the Client agrees to take all other actions that
+CarePlanner reasonably deems necessary to maintain or enhance the security of
+CarePlanner’s computing systems and networks and the Client’s access to the Service.</li>
+<li>When accessing and using the Service, the Software and/or the Website, the Client
+agrees:
+a) Not to attempt to undermine the security or integrity of CarePlanner's
+computing systems or networks or, where any of the Service, the Software
+and/or the Website is hosted by a third party, that third party's computing
+systems and networks;
+b) Not to use, or misuse, any of the Service, the Software and/or the Website in
+any way which may impair the functionality of the Service, the Software or the
+Website, or other systems used to deliver the Service, the Software and/or the
+Website or impair the ability of any other user to use the Service, the Software
+and/or the Website;
+c) Not to attempt to gain unauthorised access to any materials other than those to
+which the Client has been given express permission to access or to the computer
+system on which the Service, the Software and/or the Website is hosted;
+d) Not to transmit, or input into the Service, the Software and/or the Website, any:
+files that may damage any other person's computing devices or software,
+content that may be offensive, or material or Data in violation of any law
+(including Data or other material protected by copyright or trade secrets which
+the Client does not have the right to use); and
+e) Not to attempt to modify, copy, adapt, reproduce, disassemble, decompile or
+reverse engineer any computer programs used to deliver the Service, the
+Software and/or the Website or to operate the Service, the Software and/or the</li>
+</ol>
+<p>Website except as is strictly necessary to use either of them for normal
+operation;
+f) Not to access all or any part of the Service, the Software and/or the Website in
+order to build a product or service which competes with the Service;
+g) Not to license, sell, rent, lease, transfer, assign, distribute, display, disclose, or
+otherwise commercially exploit, or otherwise make the Service or the Software
+available to any third party except the Authorised Users;
+h) Not to attempt to obtain, or assist third parties in obtaining, access to the
+Service, other than as provided under these Terms.</p>
+<h2>Data Backups</h2>
+<ol start="38">
+<li>The Client undertakes to keep secure copies of all Data which the Client or their
+Authorised Users have input to the Service. CarePlanner follows best practice policies
+and procedures to prevent data loss, including a daily system data back-up regime, but
+CarePlanner does not guarantee that there will be no loss of Data. Subject to clauses
+59 and 60 CarePlanner expressly excludes liability for any loss of Data regardless of the
+cause.</li>
+<li>The Client shall have sole responsibility for the legality, reliability, integrity, accuracy
+and quality of the Data.</li>
+<li>In the event of any loss or damage to Data, and subject to clauses 59 and 60 the
+Client's sole and exclusive remedy shall be for CarePlanner to use reasonable
+commercial endeavours to restore the lost or damaged Data from the latest back-up of
+such Data maintained by CarePlanner. CarePlanner shall not be responsible for any
+loss, destruction, alteration or disclosure of Data caused by any third party.</li>
+<li>If CarePlanner processes any personal data on the Client's behalf when performing its
+obligations under these Terms, the Client shall be the data controller and CarePlanner
+shall be a data processor and in any such case:
+a) the Client acknowledges and agrees that the personal data may be transferred or
+stored outside the EEA or the country where the Client and the Authorised Users
+are located in order to carry out the Service and CarePlanner's other obligations
+under these Terms;
+b) the Client shall ensure that it is entitled to transfer the relevant personal data to
+CarePlanner so that CarePlanner may lawfully use, process and transfer the
+personal data in accordance with these Terms on the Client's behalf;
+c) the Client shall ensure that the relevant third parties have been informed of, and
+have given their consent to, such use, processing, and transfer as required by all
+applicable data protection legislation.</li>
+</ol>
+<h2>Communications:</h2>
+<ol start="42">
+<li>As a condition of these Terms, the Client agrees only to use any communication tools
+available via the Service, for legitimate and lawful purposes. Clients must not use any of
+the Service’s communication tools for communicating any material unrelated to a
+Client’s use of the Service, including (but not limited to): offers of goods or services for
+sale, unsolicited commercial e-mails; files that could damage another person or entity’s
+computing devices or software; content that may be regarded as offensive to other
+users of the Service; or material which violates English law.</li>
+<li>When the Client communicates via the Service, the Client confirms that they are
+authorised to make that communication. CarePlanner is under no obligation to moderate the Website or to ensure that communications made via the Service are valid or that they relate only to the use of the Service. CarePlanner reserves the right to remove any communication from the Service at its sole discretion and at any time.</li>
+</ol>
+<h2>Confidentiality</h2>
+<ol start="44">
+<li>Each party will treat all Confidential Information as strictly confidential and: (a) will take
+all proper steps to prevent its use or disclosure; (b) will not itself make use of any
+Confidential Information for a purpose other than the performance of its obligations
+under the Agreement; and c) will not disclose Confidential Information to any person
+other than in accordance with Paragraph 45.</li>
+<li>Each party may disclose Confidential Information where such disclosure would
+otherwise be prohibited by this paragraph if and to the extent: (a) required by law; or
+(b) it can be shown by that party (to the other party's reasonable satisfaction) to have
+been known by it before disclosure to it by the other party; or (c) the information was
+or becomes in the public domain (other than by reason of a breach of this paragraph
+by that party).</li>
+</ol>
+<h2>Intellectual Property</h2>
+<ol start="46">
+<li>Intellectual Property Rights in, and title to, the Data which is stored within the Service
+under the terms of the Agreement remains a Client’s property.</li>
+<li>The Client grants CarePlanner a licence to use, copy, transmit, store, and back-up their
+information and Data for the purposes of enabling them to access and use the Service
+and for any other purpose related to provision of the Service under the terms of the
+Agreement.</li>
+<li>None of CarePlanner’s Intellectual Property Rights shall be transferred or affected in
+any way by the Agreement and no party shall acquire any right in relation to
+CarePlanner’s Intellectual Property. Any use of CarePlanner’s branding, logo or get-up
+shall only be permitted with CarePlanner’s prior approval in writing.</li>
+<li>The Client acknowledges and agrees that CarePlanner and/or its licensors own all
+Intellectual Property Rights in the Service, the Software and/or the Website. Except as
+expressly stated in the Agreement, CarePlanner does not grant the Client any rights to,
+or in, patents, copyright, database right, trade secrets, trade names, trade marks
+(whether registered or unregistered), or any other rights or licences in respect of the
+Services, the Software and/or the Website.</li>
+<li>The Client grants an irrevocable and unconditional license to CarePlanner to use the
+name of their business and any associated Logos for no fee for so long as their
+Agreement with CarePlanner remains in force.</li>
+</ol>
+<h2>Data Protection: CarePlanner Limited is accredited ISO27001.</h2>
+<ol start="51">
+<li>CarePlanner and the Client shall satisfy themselves as to the extent of and shall comply
+with their obligations and duties under the Data Protection Act and other applicable
+statutory or European Community provisions and each party shall ensure that it has
+given the relevant registrations and notifications under the Data Protection Act to enable it to comply with the provisions of the Data Protection Act.</li>
+</ol>
+<h2>Legal Compliance</h2>
+<ol start="52">
+<li>Clients are responsible for complying with all relevant tax, accounting, and other laws.
+It is a Client’s responsibility to check that storage of and access to their Data via the
+Service complies with all of the laws which are applicable to the Client (including any
+laws requiring the Client to retain records).</li>
+</ol>
+<h2>Warranties</h2>
+<ol start="53">
+<li>
+<p>The Website is provided on an “as is” and “as available” basis without any
+representation or endorsement made. All warranties, representations or conditions of
+any kind whether express or implied, are to the fullest extent permitted by applicable
+law excluded from the Agreement.</p>
+</li>
+<li>
+<p>CarePlanner makes no warranty that the Service will be either error or defect free, or
+that the Service will be uninterrupted, or that defects will be corrected, or that the
+server which makes the Service available to the Client is free of Viruses or any other
+defect which may be harmful to the Client.</p>
+</li>
+<li>
+<p>The Client warrants and agrees that they will use the Service on behalf of a business
+and that, to the maximum extent permitted by law, any statutory consumer guarantees
+or legislation intended to protect non-business does not apply to the provision of the
+Service by CarePlanner.</p>
+</li>
+<li>
+<p>The Client warrants that where they have registered to use the Service on behalf of
+another person or entity, they have the right to agree to these Terms on behalf of that
+person or entity and the Client agrees that by using the Service the Client binds the
+person or entity on whose behalf the Client is using the Service to fulfil all of the
+obligations which are subject to the Agreement, without limiting the Client’s own
+obligations under the Agreement.</p>
+</li>
+</ol>
+<h2>Liability</h2>
+<ol start="57">
+<li>
+<p>Neither CarePlanner nor the Client shall be deemed in breach of the Agreement or
+otherwise liable to the other parties for any failure or delay in performance by it of
+any of its obligations under the Agreement if and to the extent that the delay or non-
+performance is due to a circumstance beyond the control of that party ("Force
+Majeure"). If a party is prevented or delayed in the performance of any of its
+obligations under the Agreement by Force Majeure that party shall as soon as
+reasonably possible give written notice to the others of the nature and extent of the
+circumstances giving rise to Force Majeure. The operation of the Agreement shall be
+suspended during the period and only during the period in which Force Majeure
+continues and any time periods in the Agreement shall be extended accordingly.</p>
+</li>
+<li>
+<p>This section sets out the entire financial liability of CarePlanner (including any liability
+for the acts or omissions of its employees, agents and sub-contractors) to the Client:
+a) arising under or in connection with the Agreement;
+b) in respect of any use made by the Client of the Service and the Software or any
+part of them; and
+c) in respect of any representation, statement or tortious act or omission (including negligence) arising under or in connection with the Agreement.</p>
+</li>
+<li>
+<p>Except as expressly and specifically provided in the Agreement:
+a) the Client assumes sole responsibility for results obtained from the use of the
+Service and the Software by the Client, and for conclusions drawn from such use.
+CarePlanner shall have no liability for any damage caused by errors or omissions
+in any information, instructions or scripts provided to CarePlanner by the Client
+in connection with the Service, or any actions taken by CarePlanner at the
+Client's direction;
+b) all warranties, representations, conditions and all other terms of any kind
+whatsoever implied by statute or common law are, to the fullest extent
+permitted by applicable law, excluded from this agreement; and
+c) the Service and the Software are provided to the Client on an "as is" basis.</p>
+</li>
+<li>
+<p>Nothing in this agreement excludes the liability of CarePlanner:
+a) for death or personal injury caused by CarePlanner's negligence; or
+b) for fraud or fraudulent misrepresentation.</p>
+</li>
+<li>
+<p>Subject to clause 59 and clause 60 :
+a) CarePlanner shall not be liable under the Agreement whether in tort (including
+for negligence or breach of statutory duty), contract, misrepresentation or
+otherwise for (i) loss of profits; or (ii) loss of business; or (iii) depletion of
+goodwill; or (iv) loss of anticipated savings; or (v) loss of contracts; or (vi) loss of
+or corruption to data or information; or (vii) any special, indirect, consequential
+or pure economic loss, costs, damages, charges or expenses.
+b) CarePlanner’s total liability in contract, tort (including negligence or breach of
+statutory duty), misrepresentation, restitution or otherwise arising in connection
+with the performance or contemplated performance of the Agreement shall
+during any contract year be limited to the amount of any income received by
+CarePlanner under the Agreement during the previous 12 months.</p>
+</li>
+</ol>
+<h2>Indemnities</h2>
+<ol start="62">
+<li>The Client agrees to indemnify and hold harmless CarePlanner against any claims,
+actions, proceedings, losses damages, expenses and costs (including without limitation
+court costs and reasonable legal fees) caused to CarePlanner arising out of or in
+connection with the Client's use of the Service or the Software and any loss or damage
+including reasonable legal costs arising from any defamatory material supplied by the
+Client or any material supplied by the Client which otherwise breaches the rights of any
+third party, or by a breach of the Client’s obligations under the Agreement and
+suffered by CarePlanner arising from any material which is not CarePlanner’s content
+save to the extent that such loss arises as a result of the negligence of CarePlanner.</li>
+<li>The Client agrees to indemnify CarePlanner and to keep CarePlanner fully and
+effectively indemnified against any claims or loss relating to:
+a) CarePlanner's refusal to provide any persons or entity with access to their Data
+or information under these Terms.
+b) CarePlanner’s making available information or Data to any person or entity with
+a Client’s authorisation.</li>
+<li>In no event shall CarePlanner, its employees, agents and sub-contractors be liable to
+the Client to the extent that the alleged infringement is based on:
+a) a modification of the Service or the Software by anyone other than CarePlanner;
+or
+b) the Client's use of the Services or the Software in a manner contrary to the
+instructions given to the Client by CarePlanner; or
+c) the Client's use of the Services or the Software after notice of the alleged or
+actual infringement from CarePlanner or any appropriate authority.</li>
+</ol>
+<h2>Termination</h2>
+<ol start="65">
+<li>The Agreement shall commence on the date CarePlanner issues a Confirmation and
+shall continue until terminated in accordance with clause 66.</li>
+<li>Except as set out in the Commercial Terms, CarePlanner or the Client may terminate
+the Agreement by giving the other not less than 30 days prior written notice at any
+time after 90 days from the date CarePlanner issues the Confirmation. CarePlanner
+may or the Client may terminate the Agreement with immediate effect at any time by
+giving written notice to the other party if the other party:
+a) is in material breach of an obligation under the Agreement, which breach, if
+capable of remedy, has not been remedied within 30 days after such party has
+served written notice on the other party specifying the breach and the steps
+required to remedy it;
+b) fails to pay an amount when due;
+c) becomes insolvent, or goes into liquidation or has a receiver or manager
+appointed of any of its assets, or makes any arrangement with its creditors, or
+becomes subject to any similar insolvency event in any jurisdiction.</li>
+<li>Any termination of the Agreement (however caused) shall not affect any rights or
+liabilities of either party which have accrued prior to the date of termination nor shall it
+affect the coming into force or the continuation in force of any provision of the
+Agreement expressed to survive such termination.</li>
+<li>On termination of the Agreement for any reason:
+a) all licences granted under the Agreement shall immediately terminate;
+b) each party shall return and make no further use of any equipment, property,
+documentation and other items (and all copies of them) belonging to the other
+party;
+c) CarePlanner may destroy or otherwise dispose of any of the Data in its
+possession unless CarePlanner receives, no later than ten days after the effective
+date of the termination of the Agreement, a written request for the delivery to
+the Client of the then most recent back-up of the Data. CarePlanner shall use
+reasonable commercial endeavours to deliver the back-up to the Client within 30
+days of its receipt of such a written request, provided that the Client has, at that
+time, paid all fees and charges outstanding at and resulting from termination
+(whether or not due at the date of termination). The Client shall pay all
+reasonable expenses incurred by CarePlanner in returning or disposing of Data;
+and
+d) any rights, remedies, obligations or liabilities of the parties that have accrued up
+to the date of termination, including the right to claim damages in respect of any
+breach of the Agreement which existed at or before the date of termination shall
+not be affected or prejudiced.</li>
+</ol>
+<h2>Refunds</h2>
+<ol start="69">
+<li>Refunds will not be provided by CarePlanner for any part of any remaining prepaid period in relation to Service Fees paid to CarePlanner by a Client in advance.</li>
+</ol>
+<h2>OTHER GENERAL TERMS</h2>
+<h2>Entire Agreement</h2>
+<ol start="70">
+<li>The Agreement with CarePlanner supersedes any previous agreements between the
+parties in relation to the matters dealt with in the Agreement and represents the
+entire understanding between the parties in relation to the subject matter they cover
+and each of the parties acknowledges and agrees that it has not entered into the
+Agreement in reliance upon any representation, warranty, undertaking, agreement,
+or statement (whether oral or written) made or alleged to have been made by any
+other party (whether or not negligently made) on or prior to the date of the
+Agreement except as expressly set out in the Agreement (provided that nothing
+contained in the Agreement shall operate to exclude any liability for fraudulent
+misrepresentation).</li>
+<li>These Terms are subject to any express provision of the Commercial Terms or the
+Agreement. In the event of a conflict between these Terms and the Commercial
+Terms and any other express provision of the Agreement, the Commercial Terms shall
+prevail.</li>
+</ol>
+<p><strong>Rights, Remedies and Powers</strong></p>
+<ol start="72">
+<li>A failure to exercise or delay in exercising any right, remedy or power provided under
+the Agreement or by law does not constitute a waiver of the right, remedy or power or
+a waiver of any other right, remedy or power. No single or partial exercise of any right,
+remedy or power prevents any further exercise of it or the exercise of any other right,
+remedy or power.</li>
+<li>The rights, remedies and powers provided by the Agreement are cumulative and not
+exclusive of any rights, remedies or powers provided by law. Any waiver of a breach of
+any of the terms of the Agreement or of any default under the Agreement shall not be
+deemed a waiver of any other breach or default and shall not affect the other
+Agreement terms.</li>
+</ol>
+<p><strong>Severance</strong></p>
+<ol start="74">
+<li>If any term or provision in the Agreement shall in whole or in part be held to any
+extent to be illegal or unenforceable under any enactment or rule of law that term or
+provision or part shall to that extent be deemed not to form part of the Agreement
+and the enforceability of the remainder of the Agreement shall not be affected.</li>
+</ol>
+<p><strong>Assignment</strong></p>
+<ol start="75">
+<li>The Client may not assign or transfer any rights or liabilities under the Agreement to
+any other person without CarePlanner's prior written consent.</li>
+<li>The Agreement shall be binding and shall endure for the benefit of the successors in
+title of each party.</li>
+</ol>
+<p><strong>Notices</strong></p>
+<ol start="77">
+<li>Any notice given under the terms of the Agreement by either party to the other must
+be in writing by email and will be deemed to have been given on transmission. Notices
+to CarePlanner must be sent to enquires@care-planner.co.uk or to any other email
+address notified by email to Clients by CarePlanner. Notices to Clients will be sent to
+the email address which Clients provide when setting up their access to the Service</li>
+</ol>
+<p><strong>Advice</strong></p>
+<ol start="78">
+<li>The contents of the CarePlanner Website do not constitute advice and should not be
+relied upon in making, or refraining from making, any decision. Although CarePlanner
+makes reasonable efforts to update the information on the Website, CarePlanner
+makes no representations, warranties or guarantees, whether express or implied, that
+the content on the Website is accurate, complete or up-to-date.</li>
+</ol>
+<p><strong>Jurisdiction</strong></p>
+<ol start="79">
+<li>The Agreement shall be governed by and construed in accordance with the law of
+England and Wales and the parties shall be subject to the exclusive jurisdiction of the
+English Courts.</li>
+</ol></div><div class="cp-footer" data-reactid="26"><div class="cp-container" data-reactid="27"><div class="cp-footer__links" data-reactid="28"><div class="cp-footer__links__col" data-reactid="29"><div class="cp-footer__links__col__item" data-reactid="30"><h5 data-reactid="31"><a href="/cp-website/features" data-reactid="32">Feature Highlights</a></h5></div><div class="cp-footer__links__col__item" data-reactid="33"><a href="/cp-website/features#drag-and-drop-rostering" data-reactid="34">Drag and Drop Rostering</a></div><div class="cp-footer__links__col__item" data-reactid="35"><a href="/cp-website/features#infinite-customisation" data-reactid="36">Infinite Customisation</a></div><div class="cp-footer__links__col__item" data-reactid="37"><a href="/cp-website/features#invoicing-and-payments" data-reactid="38">Invoicing and Payments</a></div><div class="cp-footer__links__col__item" data-reactid="39"><a href="/cp-website/features#call-monitoring" data-reactid="40">Call Monitoring</a></div><div class="cp-footer__links__col__item" data-reactid="41"><a href="/cp-website/features#mobile-app" data-reactid="42">Mobile App</a></div></div><div class="cp-footer__links__col" data-reactid="43"><div class="cp-footer__links__col__item" data-reactid="44"><h5 data-reactid="45"><a href="/cp-website/case-studies" data-reactid="46">Case Studies</a></h5></div><div class="cp-footer__links__col__item" data-reactid="47"><a href="/cp-website/case-studies/sos-homecare" data-reactid="48">SOS Homecare</a></div><div class="cp-footer__links__col__item" data-reactid="49"><a href="/cp-website/case-studies/county-care" data-reactid="50">County Care</a></div><div class="cp-footer__links__col__item" data-reactid="51"><a href="/cp-website/case-studies/proud-to-care" data-reactid="52">Proud To Care</a></div><div class="cp-footer__links__col__item" data-reactid="53"><a href="/cp-website/case-studies/charlesworth-community-care" data-reactid="54">Charlesworth Community Care</a></div><div class="cp-footer__links__col__item" data-reactid="55"><a href="/cp-website/case-studies/woodfield24" data-reactid="56">Woodfield24</a></div></div><div class="cp-footer__links__col" data-reactid="57"><div class="cp-footer__links__col__item" data-reactid="58"><h5 data-reactid="59">Company</h5></div><div class="cp-footer__links__col__item" data-reactid="60"><a href="/cp-website/terms-and-conditions" data-reactid="61">Terms and Conditions</a></div><div class="cp-footer__links__col__item" data-reactid="62"><a href="/cp-website/contact-us" data-reactid="63">Contact Us</a></div></div></div></div><div class="cp-footer__copyright" data-reactid="64">© 2017 CarePlanner, All Rights Reserved</div></div></div></div></div></body></html>

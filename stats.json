@@ -1,52 +1,76 @@
 {
   "assetsByChunkName": {
     "commons": [
-      "commons-2c9dec5358bbca101d65.js",
-      "commons-2c9dec5358bbca101d65.js.map"
+      "commons-71cb99ed9c5ad27b9725.js",
+      "commons-71cb99ed9c5ad27b9725.js.map"
     ],
     "page-component---src-templates-case-study-index-js": [
-      "page-component---src-templates-case-study-index-js-78e69e366d45d3805cbf.js",
-      "page-component---src-templates-case-study-index-js-78e69e366d45d3805cbf.js.map"
+      "page-component---src-templates-case-study-index-js-f9f0537a93245666d54d.js",
+      "page-component---src-templates-case-study-index-js-f9f0537a93245666d54d.js.map"
     ],
     "page-component---src-pages-case-studies-index-js": [
       "page-component---src-pages-case-studies-index-js-37dea22ecbc02153563e.js",
       "page-component---src-pages-case-studies-index-js-37dea22ecbc02153563e.js.map"
     ],
     "page-component---src-pages-index-js": [
-      "page-component---src-pages-index-js-4b7df9787a82f5c38031.js",
-      "page-component---src-pages-index-js-4b7df9787a82f5c38031.js.map"
+      "page-component---src-pages-index-js-c8194cd4b8ffd26ca05f.js",
+      "page-component---src-pages-index-js-c8194cd4b8ffd26ca05f.js.map"
+    ],
+    "page-component---src-templates-generic-post-index-js": [
+      "page-component---src-templates-generic-post-index-js-5ad8bab6b00c4d535931.js",
+      "page-component---src-templates-generic-post-index-js-5ad8bab6b00c4d535931.js.map"
+    ],
+    "page-component---src-pages-features-index-js": [
+      "page-component---src-pages-features-index-js-c120567ca0c5a984a983.js",
+      "page-component---src-pages-features-index-js-c120567ca0c5a984a983.js.map"
+    ],
+    "page-component---src-pages-contact-us-index-js": [
+      "page-component---src-pages-contact-us-index-js-c4d5e19d70c60f48c895.js",
+      "page-component---src-pages-contact-us-index-js-c4d5e19d70c60f48c895.js.map"
     ],
     "page-component---src-pages-404-js": [
       "page-component---src-pages-404-js-3957dc9c9fb768651815.js",
       "page-component---src-pages-404-js-3957dc9c9fb768651815.js.map"
     ],
+    "path---terms-and-conditions": [
+      "path---terms-and-conditions-b6d72b525a58c41a449a.js",
+      "path---terms-and-conditions-b6d72b525a58c41a449a.js.map"
+    ],
     "path---index": [
       "path---index-586c7e095e534a3909ec.js",
       "path---index-586c7e095e534a3909ec.js.map"
     ],
+    "path---features": [
+      "path---features-586c7e095e534a3909ec.js",
+      "path---features-586c7e095e534a3909ec.js.map"
+    ],
+    "path---contact-us": [
+      "path---contact-us-586c7e095e534a3909ec.js",
+      "path---contact-us-586c7e095e534a3909ec.js.map"
+    ],
     "path---case-studies": [
-      "path---case-studies-926e296acd10aa9821a7.js",
-      "path---case-studies-926e296acd10aa9821a7.js.map"
+      "path---case-studies-8a785cc9688fbc7a0391.js",
+      "path---case-studies-8a785cc9688fbc7a0391.js.map"
     ],
     "path---case-studies-woodfield-24": [
-      "path---case-studies-woodfield-24-391d37d79ae818e28e3c.js",
-      "path---case-studies-woodfield-24-391d37d79ae818e28e3c.js.map"
+      "path---case-studies-woodfield-24-f248929a6add92c49c25.js",
+      "path---case-studies-woodfield-24-f248929a6add92c49c25.js.map"
     ],
     "path---case-studies-sos-homecare": [
-      "path---case-studies-sos-homecare-1b82e55c9b9112dc2d83.js",
-      "path---case-studies-sos-homecare-1b82e55c9b9112dc2d83.js.map"
+      "path---case-studies-sos-homecare-db797bac04a12b276933.js",
+      "path---case-studies-sos-homecare-db797bac04a12b276933.js.map"
     ],
     "path---case-studies-proud-to-care": [
-      "path---case-studies-proud-to-care-66399160deb4f5cefc94.js",
-      "path---case-studies-proud-to-care-66399160deb4f5cefc94.js.map"
+      "path---case-studies-proud-to-care-6e0e7d2f33248a86ad85.js",
+      "path---case-studies-proud-to-care-6e0e7d2f33248a86ad85.js.map"
     ],
     "path---case-studies-county-care": [
-      "path---case-studies-county-care-32e2261770d2fbb71837.js",
-      "path---case-studies-county-care-32e2261770d2fbb71837.js.map"
+      "path---case-studies-county-care-7c6365664f29786dc10b.js",
+      "path---case-studies-county-care-7c6365664f29786dc10b.js.map"
     ],
     "path---case-studies-charlesworth-community-care": [
-      "path---case-studies-charlesworth-community-care-cf5470ab55abf0630820.js",
-      "path---case-studies-charlesworth-community-care-cf5470ab55abf0630820.js.map"
+      "path---case-studies-charlesworth-community-care-09a966d1a1f0a8ec7ade.js",
+      "path---case-studies-charlesworth-community-care-09a966d1a1f0a8ec7ade.js.map"
     ],
     "path---404": [
       "path---404-586c7e095e534a3909ec.js",
@@ -57,8 +81,8 @@
       "path---404-html-586c7e095e534a3909ec.js.map"
     ],
     "app": [
-      "app-1c5447ba43a39cc2ddd9.js",
-      "app-1c5447ba43a39cc2ddd9.js.map"
+      "app-68b83e3eff70f8b77d03.js",
+      "app-68b83e3eff70f8b77d03.js.map"
     ]
   }
 }
