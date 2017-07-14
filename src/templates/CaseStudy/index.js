@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Link from 'gatsby-link';
 import { navigateTo } from 'gatsby-link';
 
 import DefaultLayout from '../DefaultLayout/';
@@ -10,6 +12,7 @@ export default class CaseStudy extends React.Component {
   render() {
 
     const caseStudy = this.props.data.markdownRemark;
+    const caseStudies = this.props.data.allMarkdownRemark.edges;
 
     return (
       <DefaultLayout id="case-study">
@@ -23,8 +26,6 @@ export default class CaseStudy extends React.Component {
             <span className="cp-quote__author">{caseStudy.frontmatter.quote.name} - </span>
             <span className="cp-quote__company"> {caseStudy.frontmatter.name}</span>
           </div>
-          <p>
-          </p>
         </div>
         <div className="cp-section-2">
           <div className="cp-column-1">
@@ -61,6 +62,27 @@ export default class CaseStudy extends React.Component {
             <blockquote>"{caseStudy.frontmatter.quote.text}"</blockquote>
           </div>
         </div>
+        <div className="cp-section-3">
+          <div className="cp-container">
+            <h2 onClick={() => navigateTo('/case-studies')}>More Case Studies</h2>
+            {caseStudies.map(caseStudy =>
+              <div className="cp-case-study" onClick={() => navigateTo(caseStudy.node.frontmatter.path)}>
+                <div className="cp-case-study__inner">
+                  <img className="cp-case-study__inner__img" src={require('../../pages/case-studies/' + caseStudy.node.frontmatter.img.base)}/>
+                  <h3>{caseStudy.node.frontmatter.name}</h3>
+                  <div className="cp-case-study__inner__description">
+                    <p>{caseStudy.node.frontmatter.description}</p>
+                  </div>
+                  <Link to={caseStudy.node.frontmatter.path}>Read Case Study...</Link>
+                </div>
+                <div className="cp-case-study__stat">
+                  <div className="cp-case-study__stat__figure">{caseStudy.node.frontmatter.stat}</div>
+                  <div className="cp-case-study__stat__description">{caseStudy.node.frontmatter.statDescription}</div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </DefaultLayout>
     );
   }
@@ -88,6 +110,25 @@ export const pageQuery = graphql`
           problem
           solution
           results
+        }
+      }
+    }
+    allMarkdownRemark(
+      limit: 4,
+      filter: { frontmatter: { path: { regex: "/case-studies/", ne: $path }, draft: {eq: false} } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            path
+            img {
+              base
+            }
+            description
+            stat
+            statDescription
+          }
         }
       }
     }
