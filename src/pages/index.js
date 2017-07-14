@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Link from 'gatsby-link';
+import { navigateTo } from 'gatsby-link';
+
 import DefaultLayout from '../templates/DefaultLayout/';
 
 import './home/index.scss'
@@ -14,14 +17,17 @@ export default class Home extends React.Component {
       features: [
         {
           title: 'Drag and drop rostering',
+          link: 'drag-and-drop-rostering',
           body: 'Organise your carers faster than before with our powerful visual rostering.'
         },
         {
           title: 'Call Monitoring',
+          link: 'call-monitoring',
           body: 'Know for certain that a carer has attended an appointment, and receive a warning if they haven\'t.'
         },
         {
           title: 'SMS, Emails and Mobile',
+          link: 'sms-emails-and-mobile',
           body: 'Keep your carers in the loop with instant updates and notifications sent to their phones and inbox.'
         },
         {
@@ -30,30 +36,16 @@ export default class Home extends React.Component {
         },
         {
           title: 'Invoicing and Payments',
+          link: 'invoicing-and-payments',
           body: 'Produce beautiful invoices that reflect the image of your company.'
         },
         {
           title: 'Infinite customisation',
+          link: 'infinite-customisation',
           body: 'You can manipulate CarePlanner to fit into your workflow and processes.'
         }
       ]
     };
-  }
-
-  features() {
-    let features = [];
-
-    this.state.features.forEach((feature, i) => {
-      features.push(
-        <div className="cp-feature" key={i}>
-          <div className="placeholder placeholder-big"></div>
-          <h5>{feature.title}</h5>
-          <p>{feature.body}</p>
-        </div>
-      );
-    });
-
-    return features;
   }
 
   render() {
@@ -68,7 +60,7 @@ export default class Home extends React.Component {
             </p>
             <div>
               <a className="cp-button cp-button--outline">Watch the video</a>
-              <a className="cp-button cp-button--filled">Book a demo</a>
+              <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
             </div>
           </div>
         </div>
@@ -82,12 +74,23 @@ export default class Home extends React.Component {
               <div>
                 <h2 className="cp-section__title">Feature Highlights</h2>
                 <p className="cp-section__description">All the tools you need to help you focus on what you do best.</p>
-                <a>Read More...</a>
+                <Link to="/features">Read More...</Link>
                 <hr />
               </div>
             </div>
             <div className="cp-feature-grid">
-              {this.features()}
+              {this.state.features.map(feature =>
+                  <div className="cp-feature"
+                    onClick={() => {
+                      if(feature.link) {
+                        navigateTo('/features#' + feature.link);
+                      }
+                    }}>
+                    <div className="placeholder placeholder-big"></div>
+                    <h5>{feature.title}</h5>
+                    <p>{feature.body}</p>
+                  </div>
+              )}
             </div>
           </div>
         </div>
@@ -106,10 +109,10 @@ export default class Home extends React.Component {
                 <a className="cp-button cp-button--big cp-button--filled cp-button--light">Watch the video</a>
               </div>
               <div className="cp-footer__cta">
-                <a className="cp-button cp-button--big cp-button--filled">Book a demo</a>
+                <Link className="cp-button cp-button--big cp-button--filled" to="/contact-us">Book a demo</Link>
               </div>
               <div className="cp-footer__cta">
-                <a className="cp-button cp-button--big cp-button--filled cp-button--light">Request a ringback</a>
+                <Link className="cp-button cp-button--big cp-button--filled cp-button--light" to="/contact-us">Request a ringback</Link>
               </div>
             </div>
           </div>

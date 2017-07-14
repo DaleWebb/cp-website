@@ -40,7 +40,7 @@ export default class ContactUs extends React.Component {
             <div className="cp-column-2__column-2">
               <p>Leadworks First Floor<br />Anchor Square<br />Harbourside<br />Bristol<br />BS1 5DB</p>
             </div>
-            <h2>Sales Enquires</h2>
+            <h2>Sales Enquiries</h2>
               <p>
                 <b>Email: </b>
                 <a href="mailto:enquiries@care-planner.co.uk">enquiries@care-planner.co.uk</a>

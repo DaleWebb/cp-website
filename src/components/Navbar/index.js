@@ -45,7 +45,7 @@ export default class Navbar extends React.Component {
                   <Link className="cp-button cp-button--outline">Watch the video</Link>
                 </li>
                 <li>
-                  <Link className="cp-button cp-button--filled">Book a demo</Link>
+                  <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
                 </li>
               </ul>
             </div>
