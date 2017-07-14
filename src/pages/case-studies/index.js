@@ -51,7 +51,7 @@ export default class CaseStudies extends React.Component {
 export const pageQuery = graphql`
   query caseStudies {
     allMarkdownRemark(
-      filter: { frontmatter: { draft: { ne: true } } }
+      filter: { frontmatter: { path: { regex: "/case-studies/" }, draft: {eq: false} } }
     ) {
       edges {
         node {
