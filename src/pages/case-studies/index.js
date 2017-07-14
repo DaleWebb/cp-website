@@ -2,6 +2,7 @@ import React from 'react';
 
 import { navigateTo } from 'gatsby-link';
 import Link from 'gatsby-link';
+import { Helmet } from 'react-helmet';
 
 import DefaultLayout from '../../templates/DefaultLayout/';
 
@@ -17,19 +18,22 @@ export default class CaseStudies extends React.Component {
 
     return (
       <DefaultLayout id="case-studies">
+        <Helmet>
+          <title>Case Studies | CarePlanner</title>
+        </Helmet>
         <div className="cp-section-1">
           <h1>Case Studies</h1>
           <p className="cp-section__description--top">
             Read why more companies are switching to CarePlanner.
           </p>
         </div>
-        <div className="cp-section-2">
+        <div className="cp-section-2" itemscope itemtype="http://schema.org/ItemList">
           <div className="cp-container">
             {caseStudies.map(caseStudy =>
-              <div className="cp-case-study" onClick={() => navigateTo(caseStudy.node.frontmatter.path)}>
+              <div className="cp-case-study" onClick={() => navigateTo(caseStudy.node.frontmatter.path)} itemprop="itemListElement">
                 <div className="cp-case-study__inner">
-                  <img className="cp-case-study__inner__img" src={require('./' + caseStudy.node.frontmatter.img.base)}/>
-                  <h3>{caseStudy.node.frontmatter.name}</h3>
+                  <img className="cp-case-study__inner__img" src={require('./' + caseStudy.node.frontmatter.img.base)} alt="Quote from {caseStudy.frontmatter.body.company}" />
+                  <h3 itemprop="name">{caseStudy.node.frontmatter.name}</h3>
                   <div className="cp-case-study__inner__description">
                     <p>{caseStudy.node.frontmatter.description}</p>
                   </div>

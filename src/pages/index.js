@@ -2,6 +2,7 @@ import React from 'react';
 
 import Link from 'gatsby-link';
 import { navigateTo } from 'gatsby-link';
+import { Helmet } from 'react-helmet';
 
 import DefaultLayout from '../templates/DefaultLayout/';
 
@@ -52,6 +53,9 @@ export default class Home extends React.Component {
 
     return (
       <DefaultLayout id="home-page">
+        <Helmet>
+          <title>Home | CarePlanner</title>
+        </Helmet>
         <div className="cp-section-1">
           <div className="cp-container">
             <h1 className="cp-section__title--top">Home care software that works</h1>

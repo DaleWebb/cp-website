@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Helmet } from 'react-helmet';
+
 import DefaultLayout from '../../templates/DefaultLayout/';
 
 import './ContactUs.scss'
@@ -25,6 +27,9 @@ export default class ContactUs extends React.Component {
 
     return (
       <DefaultLayout id="contact-us">
+        <Helmet>
+          <title>Contact Us | CarePlanner</title>
+        </Helmet>
         <div className="cp-section-1">
           <h1>Contact Us</h1>
         </div>
