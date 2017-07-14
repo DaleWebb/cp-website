@@ -33,13 +33,13 @@ export default class CaseStudies extends React.Component {
             Read why more companies are switching to CarePlanner.
           </p>
         </div>
-        <div className="cp-section-2" itemscope itemtype="http://schema.org/ItemList">
+        <div className="cp-section-2" itemScope itemType="http://schema.org/ItemList">
           <div className="cp-container">
             {caseStudies.map(caseStudy =>
-              <div className="cp-case-study" onClick={() => navigateTo(caseStudy.node.frontmatter.path)} itemprop="itemListElement">
+              <div className="cp-case-study" onClick={() => navigateTo(caseStudy.node.frontmatter.path)} itemProp="itemListElement">
                 <div className="cp-case-study__inner">
                   <img className="cp-case-study__inner__img" src={require('./' + caseStudy.node.frontmatter.img.base)} alt="Quote from {caseStudy.frontmatter.body.company}" />
-                  <h3 itemprop="name">{caseStudy.node.frontmatter.name}</h3>
+                  <h3 itemProp="name">{caseStudy.node.frontmatter.name}</h3>
                   <div className="cp-case-study__inner__description">
                     <p>{caseStudy.node.frontmatter.description}</p>
                   </div>

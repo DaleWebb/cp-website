@@ -12,7 +12,7 @@ export default class DefaultLayout extends React.Component {
 
   render() {
     return (
-      <div id={this.props.id}>
+      <div {...this.props}>
         <Helmet>
           <link rel="icon" href={require('./favicon.ico')} type="image/x-icon"/>
           <title>CarePlanner</title>
