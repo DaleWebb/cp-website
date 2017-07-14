@@ -26,22 +26,20 @@ export default class CaseStudies extends React.Component {
         <div className="cp-section-2">
           <div className="cp-container">
             {caseStudies.map(caseStudy =>
-              <Link to={caseStudy.node.frontmatter.path}>
-                <div className="cp-case-study">
-                  <div className="cp-case-study__inner">
-                    <img className="cp-case-study__inner__img" src={require('./' + caseStudy.node.frontmatter.img.base)}/>
-                    <h3>{caseStudy.node.frontmatter.name}</h3>
-                    <div className="cp-case-study__inner__description">
-                      <p>{caseStudy.node.frontmatter.description}</p>
-                    </div>
-                    <Link to={caseStudy.node.frontmatter.path}>Read Case Study...</Link>
+              <div className="cp-case-study" onClick={() => navigateTo(caseStudy.node.frontmatter.path)}>
+                <div className="cp-case-study__inner">
+                  <img className="cp-case-study__inner__img" src={require('./' + caseStudy.node.frontmatter.img.base)}/>
+                  <h3>{caseStudy.node.frontmatter.name}</h3>
+                  <div className="cp-case-study__inner__description">
+                    <p>{caseStudy.node.frontmatter.description}</p>
                   </div>
-                  <div className="cp-case-study__stat">
-                    <div className="cp-case-study__stat__figure">{caseStudy.node.frontmatter.stat}</div>
-                    <div className="cp-case-study__stat__description">{caseStudy.node.frontmatter.statDescription}</div>
-                  </div>
+                  <Link to={caseStudy.node.frontmatter.path}>Read Case Study...</Link>
                 </div>
-              </Link>
+                <div className="cp-case-study__stat">
+                  <div className="cp-case-study__stat__figure">{caseStudy.node.frontmatter.stat}</div>
+                  <div className="cp-case-study__stat__description">{caseStudy.node.frontmatter.statDescription}</div>
+                </div>
+              </div>
             )}
           </div>
         </div>

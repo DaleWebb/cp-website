@@ -6,7 +6,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    const caseStudyTemplate = path.resolve(`src/templates/CaseStudy/index.js`)
     // Query for markdown nodes to use in creating pages.
     resolve(
       graphql(
@@ -28,6 +27,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           reject(result.errors)
         }
 
+        const caseStudyTemplate = path.resolve(`src/templates/CaseStudy/index.js`)
+        const genericPostTemplate = path.resolve(`src/templates/GenericPost/index.js`)
+
         // Create pages for each markdown file.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           const path = node.frontmatter.path;
@@ -36,6 +38,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
           if(_.includes(path, `/case-studies/`)) {
             template = slash(caseStudyTemplate);
+          } else {
+            template = slash(genericPostTemplate);
           }
 
           createPage({
