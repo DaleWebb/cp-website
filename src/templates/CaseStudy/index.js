@@ -17,13 +17,12 @@ export default class CaseStudy extends React.Component {
 
     return (
       <DefaultLayout id="case-study" itemScope itemType="http://schema.org/Article">
-        <Helmet>
-          <title>{caseStudy.frontmatter.name} | CarePlanner</title>
+        <Helmet title={caseStudy.frontmatter.name}>
           <meta name="description" content={caseStudy.frontmatter.description} />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="{caseStudy.frontmatter.name} | CarePlanner" />
+          <meta property="og:title" content={caseStudy.frontmatter.name + " | CarePlanner"} />
           <meta property="og:description" content={caseStudy.frontmatter.description} />
-          <meta name="twitter:title" content="{caseStudy.frontmatter.name} | CarePlanner" />
+          <meta name="twitter:title" content={caseStudy.frontmatter.name + " | CarePlanner"} />
           <meta name="twitter:description" content={caseStudy.frontmatter.description} />
         </Helmet>
         <style dangerouslySetInnerHTML={{ __html: '.cp-section-1::before { background: url(' + require('../../pages/case-studies/' + caseStudy.frontmatter.img.base) + '); }' }}></style>

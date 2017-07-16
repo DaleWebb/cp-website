@@ -18,9 +18,7 @@ export default class FourOhFour extends React.Component {
 
     return (
       <DefaultLayout id="four-oh-four">
-        <Helmet>
-          <title>Missing Page | CarePlanner</title>
-        </Helmet>
+        <Helmet title="Missing Page"></Helmet>
         <div className="cp-section-1">
           <h1>We cannot find that page...</h1>
           <p className="cp-section__description--top">

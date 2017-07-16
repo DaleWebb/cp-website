@@ -15,9 +15,7 @@ export default class GenericPost extends React.Component {
 
     return (
       <DefaultLayout id="generic-post">
-        <Helmet>
-          <title>{post.frontmatter.title} | CarePlanner</title>
-        </Helmet>
+        <Helmet title={post.frontmatter.title}></Helmet>
         <div className="cp-section-1">
           <h1>{post.frontmatter.title}</h1>
         </div>

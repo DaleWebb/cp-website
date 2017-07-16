@@ -13,9 +13,8 @@ export default class DefaultLayout extends React.Component {
   render() {
     return (
       <div {...this.props}>
-        <Helmet>
+        <Helmet defaultTitle="Home care software that works" titleTemplate="%s | CarePlanner">
           <link rel="icon" href={require('./favicon.ico')} type="image/x-icon"/>
-          <title>CarePlanner</title>
           <meta name="description" content="CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets." />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="CarePlanner" />

@@ -18,13 +18,12 @@ export default class CaseStudies extends React.Component {
 
     return (
       <DefaultLayout id="case-studies">
-        <Helmet>
-          <title>Case Studies | CarePlanner</title>
+        <Helmet title="Case Studies">
           <meta name="description" content="Read why more companies are switching to CarePlanner." />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Case Studies | CarePlanner" />
+          <meta property="og:title" content="Case Studies on CarePlanner" />
           <meta property="og:description" content="Read why more companies are switching to CarePlanner." />
-          <meta name="twitter:title" content="Case Studies | CarePlanner" />
+          <meta name="twitter:title" content="Case Studies on CarePlanner" />
           <meta name="twitter:description" content="Read why more companies are switching to CarePlanner." />
         </Helmet>
         <div className="cp-section-1">

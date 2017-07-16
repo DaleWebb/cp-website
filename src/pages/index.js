@@ -53,9 +53,7 @@ export default class Home extends React.Component {
 
     return (
       <DefaultLayout id="home-page">
-        <Helmet>
-          <title>Home | CarePlanner</title>
-        </Helmet>
+        <Helmet title="Home"></Helmet>
         <div className="cp-section-1">
           <div className="cp-container">
             <h1 className="cp-section__title--top">Home care software that works</h1>

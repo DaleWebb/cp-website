@@ -12,13 +12,12 @@ export default class ContactUs extends React.Component {
 
     return (
       <DefaultLayout id="contact-us">
-        <Helmet>
-          <title>Contact Us | CarePlanner</title>
+        <Helmet title="Contact Us">
           <meta name="description" content="Talk to the team about how CarePlanner can work for you." />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Contact Us | CarePlanner" />
+          <meta property="og:title" content="Contact CarePlanner" />
           <meta property="og:description" content="Talk to the team about how CarePlanner can work for you." />
-          <meta name="twitter:title" content="Contact Us | CarePlanner" />
+          <meta name="twitter:title" content="Contact CarePlanner" />
           <meta name="twitter:description" content="Talk to the team about how CarePlanner can work for you." />
         </Helmet>
         <div className="cp-section-1">

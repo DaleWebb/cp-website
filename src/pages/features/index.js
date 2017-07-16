@@ -12,9 +12,7 @@ export default class Features extends React.Component {
 
     return (
       <DefaultLayout id="features">
-        <Helmet>
-          <title>Features | CarePlanner</title>
-        </Helmet>
+        <Helmet title="Features"></Helmet>
       </DefaultLayout>
     );
   }
