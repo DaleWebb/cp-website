@@ -1,5 +1,8 @@
 module.exports = {
   pathPrefix: '/cp-website',
+  siteMetadata: {
+    siteUrl: `https://dalewebb.github.io/cp-website`
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -10,6 +13,31 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+            {
+              site {
+                siteMetadata {
+                  siteUrl
+                }
+              }
+
+              allSitePage(
+                filter: {
+                  path: {regex: "/^((?!404).)*$/"}
+                }
+              ) {
+                edges {
+                  node {
+                    path
+                  }
+                }
+              }
+          }`
+      }
+    },
     `gatsby-plugin-sass`
   ]
 };
