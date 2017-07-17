@@ -1,18 +1,25 @@
 #contact-us {
+  $cpSection1_lg_padding_top_bottom: 100px;
+  $cpSection1_lg_padding_left_right: 100px;
+  $cpSection1_tb_padding_top_bottom: 100px;
+  $cpSection1_tb_padding_left_right: 100px;
+  $cpSection1_mb_padding_top_bottom: 70px;
+  $cpSection1_mb_padding_left_right: 50px;
+
   .cp-section-1 {
     @media screen and (min-width: 992px) {
-      width: 100%;
-      padding: 160px 100px 100px 100px;
+      width: calc(100% - (#{$cpSection1_lg_padding_left_right} * 2));
+      padding: calc(#{$cpSection1_lg_padding_top_bottom} + 60px) $cpSection1_lg_padding_left_right $cpSection1_lg_padding_top_bottom $cpSection1_lg_padding_left_right;
       background: #F4F8FC;
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
-      width: 100%;
-      padding: 160px 100px 100px 100px;
+      width: calc(100% - (#{$cpSection1_tb_padding_left_right} * 2));
+      padding: calc(#{$cpSection1_tb_padding_top_bottom} + 60px) $cpSection1_tb_padding_left_right $cpSection1_tb_padding_top_bottom $cpSection1_tb_padding_left_right;
       background: #F4F8FC;
     }
     @media screen and (max-width: 767px) {
-      width: 100%;
-      padding: 110px 50px 50px 50px;
+      width: calc(100% - (#{$cpSection1_mb_padding_left_right} * 2));
+      padding: calc(#{$cpSection1_mb_padding_top_bottom} + 60px) $cpSection1_mb_padding_left_right $cpSection1_mb_padding_top_bottom $cpSection1_mb_padding_left_right;
       background: #F4F8FC;
     }
   }

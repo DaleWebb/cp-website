@@ -27,48 +27,52 @@ export default class CaseStudy extends React.Component {
         </Helmet>
         <style dangerouslySetInnerHTML={{ __html: '.cp-section-1::before { background: url(' + require('../../pages/case-studies/' + caseStudy.frontmatter.img.base) + '); }' }}></style>
         <div className="cp-section-1">
-          <h5>Case Study</h5>
-          <h1 itemProp="name">{caseStudy.frontmatter.name}</h1>
-          <blockquote>"{caseStudy.frontmatter.quote.text}"</blockquote>
-          <div className="cp-quote__header">
-            <span className="placeholder"></span>
-            <span className="cp-quote__author">{caseStudy.frontmatter.quote.name} - </span>
-            <span className="cp-quote__company" itemProp="about"> {caseStudy.frontmatter.name}</span>
+          <div className="cp-container">
+            <h5>Case Study</h5>
+            <h1 itemProp="name">{caseStudy.frontmatter.name}</h1>
+            <blockquote>"{caseStudy.frontmatter.quote.text}"</blockquote>
+            <div className="cp-quote__header">
+              <span className="placeholder"></span>
+              <span className="cp-quote__author">{caseStudy.frontmatter.quote.name} - </span>
+              <span className="cp-quote__company" itemProp="about"> {caseStudy.frontmatter.name}</span>
+            </div>
           </div>
         </div>
         <div className="cp-section-2">
-          <div className="cp-column-1" itemProp="articleBody">
-            <div className="cp-column-1__section-1" itemProp="articleSection">
-              <h5>The Company</h5>
-              <p>
-                {caseStudy.frontmatter.body.company}
-              </p>
+          <div className="cp-container">
+            <div className="cp-column-1" itemProp="articleBody">
+              <div className="cp-column-1__section-1" itemProp="articleSection">
+                <h5>The Company</h5>
+                <p>
+                  {caseStudy.frontmatter.body.company}
+                </p>
+              </div>
+              <div className="cp-column-1__section-2" itemProp="articleSection">
+                <h5>The Problem</h5>
+                <p>
+                  {caseStudy.frontmatter.body.problem}
+                </p>
+              </div>
+              <div className="cp-column-1__section-3" itemProp="articleSection">
+                <h5>The Solution</h5>
+                <p>
+                  {caseStudy.frontmatter.body.solution}
+                </p>
+              </div>
+              <div className="cp-column-1__section-3" itemProp="articleSection">
+                <h5>The Results</h5>
+                <p>
+                  {caseStudy.frontmatter.body.results}
+                </p>
+              </div>
             </div>
-            <div className="cp-column-1__section-2" itemProp="articleSection">
-              <h5>The Problem</h5>
-              <p>
-                {caseStudy.frontmatter.body.problem}
-              </p>
+            <div className="cp-column-2">
+              <div className="cp-case-study__stat">
+                <div className="cp-case-study__stat__figure">{caseStudy.frontmatter.stat}</div>
+                <div className="cp-case-study__stat__description">{caseStudy.frontmatter.statDescription}</div>
+              </div>
+              <blockquote>"{caseStudy.frontmatter.quote.text}"</blockquote>
             </div>
-            <div className="cp-column-1__section-3" itemProp="articleSection">
-              <h5>The Solution</h5>
-              <p>
-                {caseStudy.frontmatter.body.solution}
-              </p>
-            </div>
-            <div className="cp-column-1__section-3" itemProp="articleSection">
-              <h5>The Results</h5>
-              <p>
-                {caseStudy.frontmatter.body.results}
-              </p>
-            </div>
-          </div>
-          <div className="cp-column-2">
-            <div className="cp-case-study__stat">
-              <div className="cp-case-study__stat__figure">{caseStudy.frontmatter.stat}</div>
-              <div className="cp-case-study__stat__description">{caseStudy.frontmatter.statDescription}</div>
-            </div>
-            <blockquote>"{caseStudy.frontmatter.quote.text}"</blockquote>
           </div>
         </div>
         <div className="cp-section-3" itemScope itemType="http://schema.org/ItemList">

@@ -27,10 +27,12 @@ export default class CaseStudies extends React.Component {
           <meta name="twitter:description" content="Read why more companies are switching to CarePlanner." />
         </Helmet>
         <div className="cp-section-1">
-          <h1>Case Studies</h1>
-          <p className="cp-section__description--top">
-            Read why more companies are switching to CarePlanner.
-          </p>
+          <div className="cp-container">
+            <h1>Case Studies</h1>
+            <p className="cp-section__description--top">
+              Read why more companies are switching to CarePlanner.
+            </p>
+          </div>
         </div>
         <div className="cp-section-2" itemScope itemType="http://schema.org/ItemList">
           <div className="cp-container">
