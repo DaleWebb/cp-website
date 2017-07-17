@@ -314,19 +314,16 @@
       position: relative;
       padding-top: 100px;
       width: 100%;
-      height: 559px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 991px) {
       position: relative;
       width: 100%;
-      height: 559px;
       padding-top: 57px;
     }
     @media screen and (max-width: 767px) {
       position: relative;
       width: 100%;
-      height: 559px;
     }
   }
 
@@ -419,6 +416,37 @@
       background-image: -o-linear-gradient(bottom,rgba(255,255,255,0),rgba(255,255,255,1)); /*Opera 11.1-12*/
       background-image: -moz-linear-gradient(bottom,rgba(255,255,255,0),rgba(255,255,255,1)); /*Fx 3.6-15*/
       background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /*Standard*/
+    }
+  }
+
+  .cp-services-grid {
+    @media screen and (min-width: 992px) {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+    @media screen and (max-width: 767px) {
+    }
+  }
+
+  .cp-services-grid__service {
+    @media screen and (min-width: 992px) {
+      display: inline-block;
+      vertical-align: top;
+      width: 29%;
+      margin: 0 1.5%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      display: inline-block;
+      vertical-align: top;
+      width: 29%;
+      margin: 0 1.5%;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
     }
   }
 }

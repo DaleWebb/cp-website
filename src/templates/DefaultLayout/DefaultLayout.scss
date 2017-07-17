@@ -86,7 +86,7 @@ body {
     line-height: 35px;
     font-weight: normal;
     margin: 15px 0;
-    width: 537px;
+    max-width: 537px;
   }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     color: #9b9b9b;
@@ -94,7 +94,7 @@ body {
     line-height: 35px;
     font-weight: normal;
     margin: 15px 0;
-    width: 537px;
+    max-width: 537px;
   }
   @media screen and (max-width: 767px) {
     color: #9b9b9b;
@@ -155,16 +155,19 @@ body {
 
 .cp-container {
   @media screen and (min-width: 992px) {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     max-width: 1404px;
   }
   @media screen and (min-width: 768px) and (max-width: 991px) {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     max-width: 991px;
   }
   @media screen and (max-width: 767px) {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     max-width: 767px;
@@ -210,21 +213,21 @@ h1 {
 h2 {
   @media screen and (min-width: 992px) {
     color: #70A4DB;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: normal;
     line-height: 46px;
     margin: 10px 0 0 0;
   }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     color: #70A4DB;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: normal;
     line-height: 46px;
     margin: 10px 0 0 0;
   }
   @media screen and (max-width: 767px) {
     color: #70A4DB;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: normal;
     line-height: 40px;
     margin: 10px 0 0 0;
@@ -510,5 +513,74 @@ blockquote {
     width: 75px;
     margin-right: 90px;
     margin-bottom: 15px;
+  }
+}
+
+.cp-button {
+  @media screen and (min-width: 992px) {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 20px 10px 0;
+    text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 20px 10px 0;
+    text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 10px 10px 0;
+    text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+}
+
+.cp-button--outline {
+  @media screen and (min-width: 992px) {
+    color: #70A4DB;
+    background: #FFFFFF;
+    border: 2px solid #70A4DB;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    color: #70A4DB;
+    background: #FFFFFF;
+    border: 2px solid #70A4DB;
+  }
+  @media screen and (max-width: 767px) {
+    color: #70A4DB;
+    background: #FFFFFF;
+    border: 2px solid #70A4DB;
+  }
+}
+
+.cp-button--filled {
+  @media screen and (min-width: 992px) {
+    color: #ffffff;
+    background: #70a4db;
+    border: 2px solid #70A4DB;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    color: #ffffff;
+    background: #70a4db;
+    border: 2px solid #70A4DB;
+  }
+  @media screen and (max-width: 767px) {
+    color: #ffffff;
+    background: #70a4db;
+    border: 2px solid #70A4DB;
   }
 }

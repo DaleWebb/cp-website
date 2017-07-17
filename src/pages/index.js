@@ -99,6 +99,26 @@ export default class Home extends React.Component {
         <div className="cp-section-3">
           <div className="cp-container">
             <div className="cp-content">
+              <div className="cp-services-grid">
+                <div className="cp-services-grid__service">
+                  <h2>Top Notch Support</h2>
+                  <p className="cp-section__description--top">
+                    {`You can call us as much as you like and you will get straight through to someone who can help.`}
+                  </p>
+                </div>
+                <div className="cp-services-grid__service">
+                  <h2>Unbeatable Value</h2>
+                  <p className="cp-section__description--top">
+                    {`Pay as you go with no long term contracts, no 'upgrade' fees and no additional charge for core features.`}
+                  </p>
+                </div>
+                <div className="cp-services-grid__service">
+                  <h2>Easy to use</h2>
+                  <p className="cp-section__description--top">
+                    {`CarePlanner is very user friendly, and you don't need to be trained to use it.`}
+                  </p>
+                </div>
+              </div>
               <blockquote>
                 "I've now got more time to support staff, be face-to-face with clients and their families, and offer a truly personal service."
               </blockquote>
