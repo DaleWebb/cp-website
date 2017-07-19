@@ -57,7 +57,9 @@ export default class Features extends React.Component {
             `Tweak appointment times and make carer changes with just a few clicks`,
             `Easy schedule creation for appointments on an on-going basis`,
             `Intuitive 'timeline' interface gives you a clear overview of your daily roster`
-          ]
+          ],
+          graphicClass: `circle`,
+          img: `drag-and-drop-rostering.gif`
         },
         {
           title: 'Infinite customisation',
@@ -68,7 +70,9 @@ export default class Features extends React.Component {
             `You can filter all the information by region, branch or geographical area.`,
             `Permissions can be set to control what users can access.`,
             `Franchises can be built around one system that grows with your business.`
-          ]
+          ],
+          graphicClass: `circle`,
+          img: `drag-and-drop-rostering.gif`
         },
         {
           title: 'Invoicing and Payments',
@@ -79,7 +83,9 @@ export default class Features extends React.Component {
             `Easy integration with Sage, Sage Payroll or IRIS.`,
             `Customise how your invoice is presented, and what information is shown to your customers.`,
             `Keep track of unpaid and overdue invoices.`
-          ]
+          ],
+          graphicClass: `frame`,
+          img: `invoicing-and-payments.png`
         },
         {
           title: 'Call Monitoring',
@@ -90,17 +96,21 @@ export default class Features extends React.Component {
             `No need for a smartphone`,
             `Works even with no mobile reception`,
             `Can be used completely securely just with handwritten timesheets`
-          ]
+          ],
+          graphicClass: `normal`,
+          img: `call-monitoring.jpg`
         },
         {
           title: 'Mobile App',
-          link: 'sms-emails-and-mobile',
+          link: 'mobile-app',
           headline: `Keep Carers Connected On The Go`,
           info: [
             `GPS navigation to a carer’s next appointment.`,
             `Carers know exactly where they need to be - and when.`,
             `Rota changes updated for carers in real-time.`
-          ]
+          ],
+          graphicClass: `normal`,
+          img: `mobile-app.gif`
         }
       ]
     };
@@ -119,7 +129,7 @@ export default class Features extends React.Component {
                 {`Learn about the crucial parts of CarePlanner that will help boost your growth.`}
               </p>
               <div className="cp-column-1__cta">
-              <a className="cp-button cp-button--outline">Watch the video</a>
+              <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
               <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
               </div>
             </div>
@@ -150,16 +160,16 @@ export default class Features extends React.Component {
                       <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
                     </div>
                   </div>
-                  <div className="cp-section-2__feature-graphic">
-
+                  <div className={"cp-section-2__feature-graphic cp-section-2__feature-graphic--" + feature.graphicClass}>
+                    <img src={require(`./` + feature.img)}/>
                   </div>
                 </div>
               );
             } else {
               return (
                 <div className="cp-section-2__feature--right" id={feature.link}>
-                  <div className="cp-section-2__feature-graphic">
-
+                  <div className={"cp-section-2__feature-graphic cp-section-2__feature-graphic--" + feature.graphicClass}>
+                    <img src={require(`./` + feature.img)}/>
                   </div>
                   <div className="cp-section-2__feature-info-grid">
                     <h5>{feature.title}</h5>

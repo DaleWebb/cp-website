@@ -42,7 +42,7 @@ export default class Navbar extends React.Component {
               </ul>
               <ul className="cp-navbar__buttons">
                 <li>
-                  <Link className="cp-button cp-button--outline">Watch the video</Link>
+                  <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
                 </li>
                 <li>
                   <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>

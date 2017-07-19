@@ -65,7 +65,7 @@ export default () => (
     </div>
     </div>
     <div className="cp-footer__copyright">
-      © 2017 CarePlanner, All Rights Reserved
+      © {new Date().getYear()} CarePlanner, All Rights Reserved
     </div>
   </div>
 );

@@ -28,7 +28,7 @@ export default class Home extends React.Component {
         },
         {
           title: 'SMS, Emails and Mobile',
-          link: 'sms-emails-and-mobile',
+          link: 'mobile-app',
           body: 'Keep your carers in the loop with instant updates and notifications sent to their phones and inbox.'
         },
         {
@@ -61,7 +61,7 @@ export default class Home extends React.Component {
               CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
             </p>
             <div>
-              <a className="cp-button cp-button--outline">Watch the video</a>
+              <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
               <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default class Home extends React.Component {
                 <span className="cp-quote__company">Proud To Care</span>
               </div>
               <div className="cp-footer__cta">
-                <a className="cp-button cp-button--big cp-button--filled cp-button--light">Watch the video</a>
+                <a className="cp-button cp-button--big cp-button--filled cp-button--light" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
               </div>
               <div className="cp-footer__cta">
                 <Link className="cp-button cp-button--big cp-button--filled" to="/contact-us">Book a demo</Link>
