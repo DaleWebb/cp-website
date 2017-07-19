@@ -87,7 +87,8 @@ export default class Home extends React.Component {
                       if(feature.link) {
                         navigateTo('/features#' + feature.link);
                       }
-                    }}>
+                    }}
+                    style={(feature.link !== undefined) ? {cursor: 'pointer'} : {}}>
                     <div className="placeholder placeholder-big"></div>
                     <h5>{feature.title}</h5>
                     <p>{feature.body}</p>

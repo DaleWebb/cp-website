@@ -237,6 +237,7 @@
   .cp-feature {
     @media screen and (min-width: 992px) {
       display: inline-block;
+      vertical-align: top;
       max-width: 25%;
       width: 25%;
       margin: 40px 3.5%;
@@ -248,6 +249,7 @@
 
     @media screen and (min-width: 768px) and (max-width: 991px) {
       display: inline-block;
+      vertical-align: top;
       max-width: 25%;
       width: 25%;
       margin: 40px 3.5%;
