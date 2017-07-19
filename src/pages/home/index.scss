@@ -24,6 +24,7 @@
       position: relative;
       width: calc(100% - (#{$cpSection1_mb_padding_left_right} * 2));
       height: 359px;
+      margin-bottom: 60px;
       padding: #{$cpSection1_mb_padding_top_bottom} $cpSection1_mb_padding_left_right $cpSection1_mb_padding_top_bottom $cpSection1_mb_padding_left_right;
     }
   }
