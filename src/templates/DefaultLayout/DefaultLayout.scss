@@ -14,6 +14,11 @@
     color: #4A4A4A;
     font-size: 13px;
   }
+  @media print {
+    font-family: 'Circular Std';
+    color: #4A4A4A;
+    font-size: 13px;
+  }
 }
 
 html {
@@ -77,6 +82,13 @@ body {
     line-height: 40px;
     margin: 10px 0 0 0;
   }
+  @media print {
+    color: #70A4DB;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 40px;
+    margin: 10px 0 0 0;
+  }
 }
 
 .cp-section__description--top {
@@ -97,6 +109,13 @@ body {
     max-width: 537px;
   }
   @media screen and (max-width: 767px) {
+    color: #9b9b9b;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: normal;
+    margin: 15px 0;
+  }
+  @media print {
     color: #9b9b9b;
     font-size: 16px;
     line-height: 30px;
@@ -127,6 +146,13 @@ body {
     line-height: 35px;
     margin: 10px 0 0 0;
   }
+  @media print {
+    color: #70A4DB;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 35px;
+    margin: 10px 0 0 0;
+  }
 }
 
 .cp-section__description {
@@ -145,6 +171,13 @@ body {
     margin: 20px 0;
   }
   @media screen and (max-width: 767px) {
+    color: #4F739A;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 20px 0;
+  }
+  @media print {
     color: #4F739A;
     font-size: 13px;
     font-weight: normal;
@@ -208,6 +241,13 @@ h1 {
     line-height: 40px;
     margin: 10px 0 0 0;
   }
+  @media print {
+    color: #70A4DB;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 40px;
+    margin: 10px 0 0 0;
+  }
 }
 
 h2 {
@@ -232,6 +272,13 @@ h2 {
     line-height: 40px;
     margin: 10px 0 0 0;
   }
+  @media print {
+    color: #70A4DB;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 40px;
+    margin: 10px 0 0 0;
+  }
 }
 
 h3 {
@@ -247,6 +294,13 @@ h3 {
     color: #70A4DB;
   }
   @media screen and (max-width: 767px) {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 5px 0;
+    color: #70A4DB;
+  }
+  @media print {
     font-size: 16px;
     font-weight: normal;
     line-height: 30px;
@@ -277,6 +331,13 @@ h5 {
     color: #4F739A;
     margin: 15px 0 0 0;
   }
+  @media print {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #4F739A;
+    margin: 15px 0 0 0;
+  }
 }
 
 p {
@@ -291,6 +352,11 @@ p {
     line-height: 25px;
   }
   @media screen and (max-width: 767px) {
+    margin: 10px 0;
+    color: #4A4A4A;
+    line-height: 25px;
+  }
+  @media print {
     margin: 10px 0;
     color: #4A4A4A;
     line-height: 25px;
@@ -344,6 +410,9 @@ hr {
   @media screen and (max-width: 767px) {
     margin: 40px 0;
   }
+  @media print {
+    display: none;
+  }
 }
 
 blockquote {
@@ -370,6 +439,14 @@ blockquote {
     border-left: 5px solid #eee;
     color: #4F739A;
     line-height: 30px;
+  }
+  @media print {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 20px;
+    border-left: 5px solid #eee;
+    color: #4F739A;
+    line-height: 35px;
   }
 }
 
@@ -526,9 +603,23 @@ blockquote {
   -webkit-user-select: none;
   -ms-user-select: none;
 
-  .cp-button {
-    display: block;
-    margin: 0 0 15px 0;
+  @media screen and (min-width: 992px) {
+    .cp-button {
+      display: block;
+      margin: 0 0 15px 0;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .cp-button {
+      display: block;
+      margin: 0 0 15px 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .cp-button {
+      display: block;
+      margin: 0 0 15px 0;
+    }
   }
 }
 
@@ -538,13 +629,35 @@ blockquote {
   -webkit-user-select: none;
   -ms-user-select: none;
 
-  .cp-button {
-    display: inline-block;
-    margin: 10px 15px 10px 0;
-  }
+  @media screen and (min-width: 992px) {
+    .cp-button {
+      display: inline-block;
+      margin: 10px 15px 10px 0;
+    }
 
-  .cp-button:last-child {
-    margin: 0;
+    .cp-button:last-child {
+      margin: 0;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .cp-button {
+      display: inline-block;
+      margin: 10px 15px 10px 0;
+    }
+
+    .cp-button:last-child {
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .cp-button {
+      display: inline-block;
+      margin: 10px 15px 10px 0;
+    }
+
+    .cp-button:last-child {
+      margin: 0;
+    }
   }
 }
 
@@ -588,6 +701,11 @@ blockquote {
     -webkit-user-select: none;
     -ms-user-select: none;
   }
+
+  @media print {
+    display: none;
+  }
+
   &:hover, &:focus, &:active {
     font-weight: normal;
   }

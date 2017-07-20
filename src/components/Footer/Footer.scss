@@ -17,6 +17,9 @@
     background: #F4F8FC;
     text-align: center;
   }
+  @media print {
+    display: none;
+  }
 }
 
 .cp-footer__cta__button {
@@ -50,6 +53,12 @@
     text-align: center;
     margin: 40px 0 40px 0;
   }
+  @media print {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
 }
 
 .cp-footer__links {
@@ -64,6 +73,9 @@
   @media screen and (max-width: 767px) {
     margin: 40px 5%;
     width: 90%;
+  }
+  @media print {
+    display: none;
   }
 }
 

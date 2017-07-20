@@ -160,6 +160,9 @@
       width: 90%;
       margin: 5%;
     }
+    @media print {
+      display: none;
+    }
   }
 
   .cp-column-2__column-1, .cp-column-2__column-2 {
