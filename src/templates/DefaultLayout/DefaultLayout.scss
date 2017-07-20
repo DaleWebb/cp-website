@@ -328,6 +328,10 @@ a {
     margin: 10px 0;
     text-decoration: underline;
   }
+
+  &:hover {
+    font-weight: bold;
+  }
 }
 
 hr {
@@ -516,11 +520,46 @@ blockquote {
   }
 }
 
+.cp-button-group--vertical {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  .cp-button {
+    display: block;
+    margin: 0 0 15px 0;
+  }
+}
+
+.cp-button-group--horizontal {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  .cp-button {
+    display: inline-block;
+    margin: 10px 15px 10px 0;
+  }
+
+  .cp-button:last-child {
+    margin: 0;
+  }
+}
+
 .cp-button {
+  cursor: pointer;
+  -moz-transition: background .2s, color .2s, border-color .2s;
+  -o-transition: background .2s, color .2s, border-color .2s;
+  -webkit-transition: background .2s, color .2s, border-color .2s;
+  transition: background .2s, color .2s, border-color .2s;
+
   @media screen and (min-width: 992px) {
     display: inline-block;
     padding: 10px 20px 10px 20px;
     margin: 10px 20px 10px 0;
+    font-weight: normal;
     text-decoration: none;
     user-select: none;
     -moz-user-select: none;
@@ -531,6 +570,7 @@ blockquote {
     display: inline-block;
     padding: 10px 20px 10px 20px;
     margin: 10px 20px 10px 0;
+    font-weight: normal;
     text-decoration: none;
     user-select: none;
     -moz-user-select: none;
@@ -541,29 +581,47 @@ blockquote {
     display: inline-block;
     padding: 10px 20px 10px 20px;
     margin: 10px 10px 10px 0;
+    font-weight: normal;
     text-decoration: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
   }
+  &:hover, &:focus, &:active {
+    font-weight: normal;
+  }
 }
 
 .cp-button--outline {
+
   @media screen and (min-width: 992px) {
     color: #70A4DB;
     background: #FFFFFF;
-    border: 2px solid #70A4DB;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #70A4DB;
   }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     color: #70A4DB;
     background: #FFFFFF;
     border: 2px solid #70A4DB;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #70A4DB;
   }
   @media screen and (max-width: 767px) {
     color: #70A4DB;
     background: #FFFFFF;
     border: 2px solid #70A4DB;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #70A4DB;
+  }
+
+  &:hover, &:focus, &:active {
+    color: #4F739A;
+    border-color: #4F739A;
   }
 }
 
@@ -571,16 +629,27 @@ blockquote {
   @media screen and (min-width: 992px) {
     color: #ffffff;
     background: #70a4db;
-    border: 2px solid #70A4DB;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #70A4DB;
   }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     color: #ffffff;
     background: #70a4db;
-    border: 2px solid #70A4DB;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #70A4DB;
   }
   @media screen and (max-width: 767px) {
     color: #ffffff;
     background: #70a4db;
-    border: 2px solid #70A4DB;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #70A4DB;
+  }
+
+  &:hover, &:focus, &:active {
+    background: #4F739A;
+    border-color: #4F739A;
   }
 }

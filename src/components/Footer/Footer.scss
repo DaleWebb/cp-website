@@ -1,3 +1,36 @@
+.cp-footer__cta {
+  @media screen and (min-width: 992px) {
+    width: calc(100% - 200px);
+    padding: 100px;
+    background: #F4F8FC;
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: calc(100% - 200px);
+    padding: 100px;
+    background: #F4F8FC;
+    text-align: center;
+  }
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 200px);
+    padding: 100px;
+    background: #F4F8FC;
+    text-align: center;
+  }
+}
+
+.cp-footer__cta__button {
+  @media screen and (min-width: 992px) {
+    margin: 25px 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    margin: 25px 0;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 25px 0;
+  }
+}
+
 .cp-footer__copyright {
   @media screen and (min-width: 992px) {
     width: 100%;

@@ -60,7 +60,7 @@ export default class Home extends React.Component {
             <p className="cp-section__description--top">
               CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
             </p>
-            <div>
+            <div className="cp-button-group--horizontal">
               <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
               <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
             </div>
@@ -127,15 +127,6 @@ export default class Home extends React.Component {
                 <span className="placeholder"></span>
                 <span className="cp-quote__author">Gary Hardman - </span>
                 <span className="cp-quote__company">Proud To Care</span>
-              </div>
-              <div className="cp-footer__cta">
-                <a className="cp-button cp-button--big cp-button--filled cp-button--light" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-              </div>
-              <div className="cp-footer__cta">
-                <Link className="cp-button cp-button--big cp-button--filled" to="/contact-us">Book a demo</Link>
-              </div>
-              <div className="cp-footer__cta">
-                <Link className="cp-button cp-button--big cp-button--filled cp-button--light" to="/contact-us">Request a ringback</Link>
               </div>
             </div>
           </div>

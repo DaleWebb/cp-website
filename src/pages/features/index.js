@@ -156,7 +156,8 @@ export default class Features extends React.Component {
                     {feature.info.map(info =>
                       <p className="cp-section-2__feature-info">{info}</p>
                     )}
-                    <div>
+                    <div className="cp-button-group--horizontal">
+                      <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
                       <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
                     </div>
                   </div>
@@ -177,7 +178,8 @@ export default class Features extends React.Component {
                     {feature.info.map(info =>
                       <p className="cp-section-2__feature-info">{info}</p>
                     )}
-                    <div>
+                    <div className="cp-button-group--horizontal">
+                      <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
                       <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
                     </div>
                   </div>

@@ -31,23 +31,19 @@ export default class Navbar extends React.Component {
             <div className="cp-navbar__actions" {...{'data-navbar-open': !this.state.collapsed}}>
               <ul className="cp-navbar__links">
                 <li>
-                  <Link className="cp-navbar__link" to="/features">Features</Link>
+                  <Link className="cp-navbar__link" activeClassName="active" to="/features">Features</Link>
                 </li>
                 <li>
-                  <Link className="cp-navbar__link" to="/case-studies">Case Studies</Link>
+                  <Link className="cp-navbar__link" activeClassName="active" to="/case-studies">Case Studies</Link>
                 </li>
                 <li>
-                  <Link className="cp-navbar__link" to="/contact-us">Contact Us</Link>
+                  <Link className="cp-navbar__link" activeClassName="active" to="/contact-us">Contact Us</Link>
                 </li>
               </ul>
-              <ul className="cp-navbar__buttons">
-                <li>
-                  <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-                </li>
-                <li>
-                  <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
-                </li>
-              </ul>
+              <div className="cp-navbar__buttons cp-button-group--horizontal">
+                <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+                <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+              </div>
             </div>
           </div>
         </div>

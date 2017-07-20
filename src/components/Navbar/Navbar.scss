@@ -241,11 +241,18 @@
 }
 
 .cp-navbar__link {
+  -moz-transition: background .2s;
+  -o-transition: background .2s;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+
   @media screen and (min-width: 992px) {
     display: block;
     color: #4F739A;
-    padding: 22px 0 22px 0;
-    margin: 0 20px 0 20px;
+    padding: 22px 20px 22px 20px;
+    margin: 0;
+    min-width: 80px;
+    text-align: center;
     text-decoration: none;
     user-select: none;
     -moz-user-select: none;
@@ -255,8 +262,10 @@
   @media screen and (min-width: 768px) and (max-width: 991px) {
     display: block;
     color: #4F739A;
-    padding: 22px 0 22px 0;
-    margin: 0 20px 0 20px;
+    padding: 22px 20px 22px 20px;
+    margin: 0;
+    min-width: 80px;
+    text-align: center;
     text-decoration: none;
     user-select: none;
     -moz-user-select: none;
@@ -266,13 +275,26 @@
   @media screen and (max-width: 767px) {
     display: block;
     color: #4F739A;
-    padding: 22px 0 22px 0;
-    margin: 0 20px 0 20px;
+    padding: 22px 20px 22px 20px;
+    margin: 0;
+    min-width: 80px;
+    font-weight: normal;
+    text-align: center;
     text-decoration: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+  }
+
+  &:hover, &:focus, &:active {
+    font-weight: normal;
+    background: #F4F8FC;
+  }
+
+  &.active {
+    font-weight: bold;
+    background: #F4F8FC;
   }
 }
 

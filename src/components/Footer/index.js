@@ -5,6 +5,14 @@ import './footer.scss';
 
 export default () => (
   <div className="cp-footer">
+    <div className="cp-footer__cta">
+      <div className="cp-container">
+        <h1>Discover more about CarePlanner</h1>
+        <div className="cp-footer__cta__button">
+          <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+        </div>
+      </div>
+    </div>
     <div className="cp-container">
       <div className="cp-footer__links">
       <div className="cp-footer__links__col">
@@ -65,7 +73,7 @@ export default () => (
     </div>
     </div>
     <div className="cp-footer__copyright">
-      © {new Date().getYear()} CarePlanner, All Rights Reserved
+      © {new Date().getFullYear()} CarePlanner, All Rights Reserved
     </div>
   </div>
 );

@@ -292,26 +292,6 @@
     }
   }
 
-  .cp-footer__cta {
-    @media screen and (min-width: 992px) {
-      display: inline-block;
-      text-align: center;
-      width: 33%;
-      margin-top: 40px;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-      display: inline-block;
-      text-align: center;
-      width: 33%;
-      max-width: 33%;
-      margin-top: 40px;
-    }
-    @media screen and (max-width: 767px) {
-      text-align: center;
-    }
-  }
-
   .cp-section-3 {
     @media screen and (min-width: 992px) {
       position: relative;
