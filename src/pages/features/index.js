@@ -41,10 +41,6 @@ export default class Features extends React.Component {
         {
           title: `Daily and Weekly Roster`,
           body: `Get a visual overview of how your clients and carers are scheduled over a day or week.`
-        },
-        {
-          title: `Monthly Live-in`,
-          body: ``
         }
       ],
       features: [
@@ -211,7 +207,7 @@ export default class Features extends React.Component {
               )}
             </div>
             <div style={{textAlign: 'center'}}>
-              <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+              <a className="cp-button cp-button--outline cp-button--large" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
             </div>
           </div>
         </div>

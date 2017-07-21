@@ -9,7 +9,7 @@ export default () => (
       <div className="cp-container">
         <h1>Discover more about CarePlanner</h1>
         <div className="cp-footer__cta__button">
-          <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+          <Link className="cp-button cp-button--filled cp-button--large" to="/contact-us">Book a demo</Link>
         </div>
       </div>
     </div>

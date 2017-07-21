@@ -4,27 +4,18 @@
     padding: 100px;
     text-align: center;
     background: #F4F8FC;
-    background-image: -webkit-radial-gradient(circle,#F4F8FC, #e1f0ff);
-    background-image: -moz-radial-gradient(circle,#F4F8FC, #e1f0ff);
-    background-image: -o-radial-gradient(circle,#F4F8FC, #e1f0ff);
   }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     width: calc(100% - 200px);
     padding: 100px;
     text-align: center;
     background: #F4F8FC;
-    background-image: -webkit-radial-gradient(circle,#F4F8FC, #e1f0ff);
-    background-image: -moz-radial-gradient(circle,#F4F8FC, #e1f0ff);
-    background-image: -o-radial-gradient(circle,#F4F8FC, #e1f0ff);
   }
   @media screen and (max-width: 767px) {
     width: calc(100% - 50px);
     padding: 25px;
     text-align: center;
     background: #F4F8FC;
-    background-image: -webkit-radial-gradient(circle,#F4F8FC, #e1f0ff);
-    background-image: -moz-radial-gradient(circle,#F4F8FC, #e1f0ff);
-    background-image: -o-radial-gradient(circle,#F4F8FC, #e1f0ff);
   }
   @media print {
     display: none;

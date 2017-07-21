@@ -555,6 +555,8 @@ blockquote {
 }
 
 .cp-button-group--horizontal {
+
+  text-align: center;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -601,7 +603,8 @@ blockquote {
 
   @media screen and (min-width: 992px) {
     display: inline-block;
-    padding: 10px 20px 10px 20px;
+    text-align: center;
+    padding: 10px 20px;
     margin: 10px 20px 10px 0;
     font-weight: normal;
     text-decoration: none;
@@ -612,7 +615,8 @@ blockquote {
   }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     display: inline-block;
-    padding: 10px 20px 10px 20px;
+    text-align: center;
+    padding: 10px 20px;
     margin: 10px 20px 10px 0;
     font-weight: normal;
     text-decoration: none;
@@ -623,7 +627,8 @@ blockquote {
   }
   @media screen and (max-width: 767px) {
     display: inline-block;
-    padding: 10px 20px 10px 20px;
+    text-align: center;
+    padding: 10px 20px;
     margin: 10px 10px 10px 0;
     font-weight: normal;
     text-decoration: none;
@@ -639,6 +644,19 @@ blockquote {
 
   &:hover, &:focus, &:active {
     font-weight: normal;
+  }
+}
+
+.cp-button--large {
+  @media screen and (min-width: 992px) {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    padding: 20px 35px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 767px) {
   }
 }
 

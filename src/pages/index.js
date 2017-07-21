@@ -66,7 +66,7 @@ export default class Home extends React.Component {
             <p className="cp-section__description--top">
               CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
             </p>
-            <div className="cp-button-group--horizontal">
+            <div className="cp-button-group--horizontal" style={{textAlign: 'left'}}>
               <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
               <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
             </div>
@@ -84,6 +84,10 @@ export default class Home extends React.Component {
                 <p className="cp-section__description">All the tools you need to help you focus on what you do best.</p>
                 <Link to="/features">Read More...</Link>
                 <hr />
+                <div className="cp-button-group--vertical">
+                  <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+                  <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+                </div>
               </div>
             </div>
             <div className="cp-feature-grid">
@@ -131,13 +135,9 @@ export default class Home extends React.Component {
                   </p>
                 </div>
               </div>
-              <blockquote>
-                "I've now got more time to support staff, be face-to-face with clients and their families, and offer a truly personal service."
-              </blockquote>
-              <div className="cp-quote__header">
-                <span className="placeholder"></span>
-                <span className="cp-quote__author">Gary Hardman - </span>
-                <span className="cp-quote__company">Proud To Care</span>
+              <div className="cp-button-group--horizontal">
+                <a className="cp-button cp-button--outline cp-button--large" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+                <Link className="cp-button cp-button--filled cp-button--large" to="/contact-us">Book a demo</Link>
               </div>
             </div>
           </div>

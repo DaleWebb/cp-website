@@ -225,29 +225,42 @@
     }
     @media screen and (max-width: 767px) {
       width: calc(100% - (#{$cpSection2_mb_padding_left_right} * 2));
-      margin-bottom: 60px;
+      margin-bottom: 120px;
       padding: $cpSection2_mb_padding_top_bottom $cpSection2_mb_padding_left_right;
+    }
+  }
+
+  .cp-section-2__feature--left, .cp-section-2__feature--right {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: 992px) {
+      flex-flow: row;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      flex-flow: row;
+    }
+    @media screen and (max-width: 767px) {
+      flex-flow: column;
     }
   }
 
   .cp-section-2__feature-graphic {
     @media screen and (min-width: 992px) {
-      display: inline-block;
       position: relative;
-      width: 60%;
-      max-width: 60%;
-      vertical-align: middle;
+      min-width: 60%;
       text-align: center;
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
-      display: inline-block;
       position: relative;
-      width: 60%;
-      max-width: 60%;
-      vertical-align: middle;
+      min-width: 60%;
       text-align: center;
     }
     @media screen and (max-width: 767px) {
+      order: 0;
       width: 100%;
       max-width: 100%;
       text-align: center;
@@ -317,9 +330,11 @@
   .cp-section-2__feature--right .cp-section-2__feature-graphic--circle {
     @media screen and (min-width: 992px) {
       right: 200px;
+      margin-right: -100px;
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
-      right: 25px;
+      right: 200px;
+      margin-right: -100px;
     }
     @media screen and (max-width: 767px) {
     }
@@ -328,9 +343,11 @@
   .cp-section-2__feature--left .cp-section-2__feature-graphic--circle {
     @media screen and (min-width: 992px) {
       left: 200px;
+      margin-left: -100px;
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
-      left: 25px;
+      left: 200px;
+      margin-left: -100px;
     }
     @media screen and (max-width: 767px) {
     }
@@ -403,45 +420,35 @@
 
   .cp-section-2__feature-info-grid {
     @media screen and (min-width: 992px) {
-      position: relative;
-      display: inline-block;
       max-width: 40%;
       padding: 100px 0;
-      vertical-align: middle;
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
-      position: relative;
-      display: inline-block;
       max-width: 40%;
       padding: 25px 0;
-      vertical-align: middle;
-
     }
     @media screen and (max-width: 767px) {
       padding: 50px 20px;
+      order: 1;
     }
   }
 
   .cp-section-2__feature--left .cp-section-2__feature-info-grid {
     @media screen and (min-width: 992px) {
-      left: 100px;
       text-align: right;
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
-      left: 100px;
       text-align: right;
     }
     @media screen and (max-width: 767px) {
-
+      text-align: left;
     }
   }
 
   .cp-section-2__feature--right .cp-section-2__feature-info-grid {
     @media screen and (min-width: 992px) {
-      right: 100px;
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
-      right: 100px;
     }
     @media screen and (max-width: 767px) {
 
@@ -475,6 +482,30 @@
       margin: 20px 0 20px 10%;
     }
     @media screen and (max-width: 767px) {
+    }
+  }
+
+  .cp-section-2__feature--left .cp-button-group--horizontal {
+    @media screen and (min-width: 992px) {
+      text-align: right;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      text-align: right;
+    }
+    @media screen and (max-width: 767px) {
+      text-align: left;
+    }
+  }
+
+  .cp-section-2__feature--right .cp-button-group--horizontal {
+    @media screen and (min-width: 992px) {
+      text-align: left;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      text-align: left;
+    }
+    @media screen and (max-width: 767px) {
+      text-align: left;
     }
   }
 

@@ -72,6 +72,9 @@ export default class CaseStudy extends React.Component {
                 <div className="cp-case-study__stat__description">{caseStudy.frontmatter.statDescription}</div>
               </div>
               <blockquote>"{caseStudy.frontmatter.quote.text}"</blockquote>
+              <div className="cp-button-group--vertical">
+                <Link className="cp-button cp-button--filled cp-button--large" to="/contact-us">Book a demo</Link>
+              </div>
             </div>
           </div>
         </div>
