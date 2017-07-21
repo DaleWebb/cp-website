@@ -87,7 +87,8 @@ export default class Home extends React.Component {
               </div>
             </div>
             <div className="cp-feature-grid">
-              {this.state.features.map(feature =>
+              {this.state.features.map(feature => {
+                return (
                   <div className="cp-feature"
                     onClick={() => {
                       if(feature.link) {
@@ -96,12 +97,14 @@ export default class Home extends React.Component {
                     }}
                     style={(feature.link !== undefined) ? {cursor: 'pointer'} : {}}>
                     <div className="placeholder placeholder-big">
-                      <img src={require(`./home/` + feature.icon)} />
+                      <img src={require(`./features/` + feature.icon)} />
                     </div>
                     <h5>{feature.title}</h5>
                     <p>{feature.body}</p>
+                    {(feature.link) ? <Link to={`/features#` + feature.link}>Learn more</Link> : undefined}
                   </div>
-              )}
+                );
+              })}
             </div>
           </div>
         </div>

@@ -50,6 +50,7 @@ export default class Features extends React.Component {
       features: [
         {
           title: 'Drag and drop rostering',
+          icon: 'drag-and-drop-rostering.svg',
           link: 'drag-and-drop-rostering',
           headline: `Roster Your Week In Minutes`,
           info: [
@@ -63,6 +64,7 @@ export default class Features extends React.Component {
         },
         {
           title: 'Infinite customisation',
+          icon: 'infinite-customisation.svg',
           link: 'infinite-customisation',
           headline: `Configured For Your Business`,
           info: [
@@ -76,6 +78,7 @@ export default class Features extends React.Component {
         },
         {
           title: 'Invoicing and Payments',
+          icon: 'invoicing.svg',
           link: 'invoicing-and-payments',
           headline: `Bill Customers and Pay Staff`,
           info: [
@@ -89,6 +92,7 @@ export default class Features extends React.Component {
         },
         {
           title: 'Call Monitoring',
+          icon: 'call-monitoring.svg',
           link: 'call-monitoring',
           headline: `Monitor Visits Safely and Securely`,
           info: [
@@ -102,6 +106,7 @@ export default class Features extends React.Component {
         },
         {
           title: 'Mobile App',
+          icon: 'sms-emails-mobile.svg',
           link: 'mobile-app',
           headline: `Keep Carers Connected On The Go`,
           info: [
@@ -151,6 +156,9 @@ export default class Features extends React.Component {
               return (
                 <div className="cp-section-2__feature--left" id={feature.link}>
                   <div className="cp-section-2__feature-info-grid">
+                    <div className="placeholder placeholder-big">
+                      <img src={require(`./` + feature.icon)} />
+                    </div>
                     <h5>{feature.title}</h5>
                     <h2>{feature.headline}</h2>
                     {feature.info.map(info =>
@@ -173,6 +181,9 @@ export default class Features extends React.Component {
                     <img src={require(`./` + feature.img)}/>
                   </div>
                   <div className="cp-section-2__feature-info-grid">
+                    <div className="placeholder placeholder-big">
+                      <img src={require(`./` + feature.icon)} />
+                    </div>
                     <h5>{feature.title}</h5>
                     <h2>{feature.headline}</h2>
                     {feature.info.map(info =>
@@ -198,6 +209,9 @@ export default class Features extends React.Component {
                   <p>{feature.body}</p>
                 </div>
               )}
+            </div>
+            <div style={{textAlign: 'center'}}>
+              <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
             </div>
           </div>
         </div>
