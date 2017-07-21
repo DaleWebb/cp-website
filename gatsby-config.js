@@ -38,6 +38,12 @@ module.exports = {
           }`
       }
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: `GTM-5875SRQ`,
+      },
+    }
   ]
 };
