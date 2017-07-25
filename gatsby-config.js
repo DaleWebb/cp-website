@@ -44,6 +44,19 @@ module.exports = {
       options: {
         id: `GTM-5875SRQ`,
       },
+    },
+    {
+      resolve: `cookie-policy`,
+      options: {
+        "palette": {
+          "popup": {
+            "background": "#252e39"
+          },
+          "button": {
+            "background": "#14a7d0"
+          }
+        }
+      }
     }
   ]
 };
