@@ -26,7 +26,7 @@ export default class Navbar extends React.Component {
               <span className="cp-navbar__hamburger__icon"></span>
             </a>
             <Link to="/">
-              <img className="cp-logo" src={logo}/>
+              <img className="cp-logo" src={logo} width="133.94" height="32"/>
             </Link>
             <div className="cp-navbar__actions" {...{'data-navbar-open': !this.state.collapsed}}>
               <ul className="cp-navbar__links">
