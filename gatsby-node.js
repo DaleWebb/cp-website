@@ -2,53 +2,59 @@ const path = require(`path`)
 const slash = require(`slash`)
 const _ = require(`lodash`)
 
+const dataTemplateMap = {
+  'case_study': {
+    path: '/case-studies/',
+    template: path.resolve(`src/templates/CaseStudy/index.js`)
+  },
+  'page': {
+    path: '/',
+    template: path.resolve(`src/templates/GenericPost/index.js`)
+  }
+};
+
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    // Query for markdown nodes to use in creating pages.
+    // Query for Prismic nodes to use in creating pages.
     resolve(
       graphql(
         `
-      {
-        allMarkdownRemark {
-          edges {
-            node {
-              frontmatter {
-                path
+        {
+          allPrismicDocument {
+            edges {
+              node {
+                slugs
+                type
+                data {
+                  permalink
+                }
               }
             }
           }
         }
-      }
     `
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
         }
 
-        const caseStudyTemplate = path.resolve(`src/templates/CaseStudy/index.js`)
-        const genericPostTemplate = path.resolve(`src/templates/GenericPost/index.js`)
-
         // Create pages for each markdown file.
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const path = node.frontmatter.path;
 
-          let template;
+        result.data.allPrismicDocument.edges.forEach(({ node }) => {
 
-          if(_.includes(path, `/case-studies/`)) {
-            template = slash(caseStudyTemplate);
-          } else {
-            template = slash(genericPostTemplate);
-          }
+          const slug = node.data.permalink || node.slugs[0];
+
+          const path = dataTemplateMap[node.type].path + slug;
 
           createPage({
             path,
-            component: template,
+            component: dataTemplateMap[node.type].template,
             // In your blog post template's graphql query, you can use path
             // as a GraphQL variable to query for data from the markdown file.
             context: {
-              path,
+              permalink: path,
             }
           })
         })
@@ -61,8 +67,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
 
-  if (node.internal.type === `File`) {
-    console.log(createNodeField({ node, name: `slug`, value: `/${node.name}/` }));
+  if (node.internal.type === `PrismicDocument`) {
+    const slug = node.data.permalink || node.slugs[0];
+    const path = dataTemplateMap[node.type].path + slug;
+    console.log(createNodeField({ node, name: `permalink`, value: path}));
   }// else if (
   //   node.internal.type === `MarkdownRemark` &&
   //   typeof node.slug === `undefined`

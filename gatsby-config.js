@@ -5,13 +5,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-prismic`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages",
+        repositoryName: `careplanner`,
+        accessToken: `MC5XYmxqc3g4QUFMOFNXZm9E.77-977-9fhLvv73vv71eD--_ve-_ve-_vVbvv73vv71UL--_ve-_ve-_vRlbJu-_ve-_ve-_vUnvv70GFW59PQ`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sitemap`,

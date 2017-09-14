@@ -4,17 +4,16 @@ import { navigateTo } from 'gatsby-link';
 import Link from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 
+import PrismicDOM from 'prismic-dom';
+
 import DefaultLayout from '../../templates/DefaultLayout/';
 
 import './CaseStudies.scss'
 
-import screens from '../home/screens.png';
-
 export default class CaseStudies extends React.Component {
 
   render() {
-
-    const caseStudies = this.props.data.allMarkdownRemark.edges;
+    const caseStudies = this.props.data.allPrismicDocument.edges;
 
     return (
       <DefaultLayout id="case-studies">
@@ -37,18 +36,16 @@ export default class CaseStudies extends React.Component {
         <div className="cp-section-2" itemScope itemType="http://schema.org/ItemList">
           <div className="cp-container">
             {caseStudies.map(caseStudy =>
-              <div className="cp-case-study" onClick={() => navigateTo(caseStudy.node.frontmatter.path)} itemProp="itemListElement">
+              <div className="cp-case-study" onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
                 <div className="cp-case-study__inner">
-                  <img className="cp-case-study__inner__img" src={require('./' + caseStudy.node.frontmatter.img.base)} alt="Quote from {caseStudy.frontmatter.body.company}" />
-                  <h3 itemProp="name">{caseStudy.node.frontmatter.name}</h3>
-                  <div className="cp-case-study__inner__description">
-                    <p>{caseStudy.node.frontmatter.description}</p>
-                  </div>
-                  <Link to={caseStudy.node.frontmatter.path}>Read Case Study...</Link>
+                  <img className="cp-case-study__inner__img" src={caseStudy.node.data.large_image.url} alt="Quote from {caseStudy.node.data.company_name.text}" />
+                  <h3 itemProp="name">{PrismicDOM.RichText.asText(caseStudy.node.data.company_name)}</h3>
+                  <div className="cp-case-study__inner__description" dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(caseStudy.node.data.summary)}}></div>
+                  <Link to={caseStudy.node.fields.permalink}>Read Case Study...</Link>
                 </div>
                 <div className="cp-case-study__stat">
-                  <div className="cp-case-study__stat__figure">{caseStudy.node.frontmatter.stat}</div>
-                  <div className="cp-case-study__stat__description">{caseStudy.node.frontmatter.statDescription}</div>
+                  <div className="cp-case-study__stat__figure">{caseStudy.node.data.key_stat_figure}</div>
+                  <div className="cp-case-study__stat__description">{caseStudy.node.data.key_stat_text}</div>
                 </div>
               </div>
             )}
@@ -61,20 +58,26 @@ export default class CaseStudies extends React.Component {
 
 export const pageQuery = graphql`
   query caseStudies {
-    allMarkdownRemark(
-      filter: { frontmatter: { path: { regex: "/case-studies/" }, draft: {eq: false} } }
-    ) {
+    allPrismicDocument(filter: { type: { eq: "case_study" } }) {
       edges {
         node {
-          frontmatter {
-            name
-            path
-            img {
-              base
+          fields {
+            permalink
+          }
+          data {
+            key_stat_figure
+            key_stat_text
+            large_image {
+              url
             }
-            description
-            stat
-            statDescription
+            summary {
+              type
+              text
+            }
+            company_name {
+              type
+              text
+            }
           }
         }
       }
