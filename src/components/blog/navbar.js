@@ -21,18 +21,20 @@ export default class BlogNavbar extends React.Component {
       <div css={styles.navbarContainer}>
         <nav css={styles.navbar}>
           <div css={styles.navbarInner}>
-            <div className="cp-container">
-              <a className="cp-navbar__hamburger" onClick={this.toggleMenu.bind(this)}>
-                <span className="cp-navbar__hamburger__icon"></span>
-              </a>
-              <Link to="/blog">
+            <a className="cp-navbar__hamburger" onClick={this.toggleMenu.bind(this)}>
+              <span className="cp-navbar__hamburger__icon"></span>
+            </a>
+            <Link to="/blog">
+              <div css={styles.logoContainer}>
                 <img css={styles.logo} src={require('../../assets/cp-logo-white.png')} />
-              </Link>
-              <div css={{float: 'right'}} >
-                <img css={styles.navbarSocialIcon} src={require('../../assets/linkedin-square-white.png')} />
-                <img css={styles.navbarSocialIcon} src={require('../../assets/twitter-white.png')} />
-                <Link className="cp-button cp-button--outline" to="/">Back to care-planner.co.uk</Link>
+                <div css={styles.logoBar}></div>
+                <div css={styles.logoText}>News</div>
               </div>
+            </Link>
+            <div css={{float: 'right'}} >
+              <img css={styles.navbarSocialIcon} src={require('../../assets/linkedin-square-white.png')} />
+              <img css={styles.navbarSocialIcon} src={require('../../assets/twitter-white.png')} />
+              <Link className="cp-button cp-button--outline" to="/">Back to care-planner.co.uk</Link>
             </div>
           </div>
         </nav>
@@ -115,6 +117,7 @@ const styles = {
       '-ms-user-select': 'none'
     },
     [presets.Desktop]: {
+      display: 'inline-block',
       position: 'relative',
       top: '13px',
       width: '134px',
@@ -124,6 +127,28 @@ const styles = {
       '-webkit-user-select': 'none',
       '-ms-user-select': 'none'
     }
+  },
+  logoBar: {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    height: '100%',
+    marginLeft: '15px',
+    marginRight: '15px',
+    borderLeft: '1px #FFFFFF solid'
+  },
+  logoText: {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    color: '#FFFFFF',
+    fontSize: '20px'
+  },
+  logoContainer: {
+    display: 'inline-block',
+    height: '32px',
+    userSelect: 'none',
+    '-moz-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none'
   },
   navbarSocialIcon: {
     position: 'relative',

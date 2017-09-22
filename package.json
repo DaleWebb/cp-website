@@ -22,7 +22,8 @@
     "gatsby-source-filesystem": "^1.0.1",
     "gatsby-source-prismic": "^0.1.1",
     "gatsby-transformer-remark": "^1.0.9",
-    "prismic-dom": "^2.0.2"
+    "prismic-dom": "^2.0.2",
+    "react-twitter-widgets": "^1.6.1"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0"

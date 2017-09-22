@@ -9,9 +9,31 @@ import BlogPostImagePreviewItem from '../../components/blog/post-image-preview-i
 // import BlogPostTextPreviewItem from '../../components/blog/post-text-preview-item';
 import BlogFooter from '../../components/blog/footer';
 
+import { Timeline, Tweet } from 'react-twitter-widgets';
+
 class BlogPostsIndex extends React.Component {
+
+  getTwitterTimelineElement() {
+    return (
+      <Timeline
+        dataSource={{
+          sourceType: 'profile',
+          screenName: 'careplannerltd'
+        }}
+        options={{
+          username: 'CarePlannerLtd',
+          height: '400'
+        }}
+      />
+    );
+  }
+
   render() {
     const { allPrismicDocument } = this.props.data
+
+    const twitterFeed = this.getTwitterTimelineElement();
+
+    allPrismicDocument.edges.splice(twitterFeed, 3);
 
     return (
       <div>
@@ -21,19 +43,36 @@ class BlogPostsIndex extends React.Component {
             switch(id) {
               case 0:
               return (
-                <BlogPostFeaturePreviewItem
-                  post={node}
-                  key={id}
-                />
-              );
-              case 1:
-                return (
-                  <BlogPostRowPreviewItem
+                <div>
+                  <BlogPostFeaturePreviewItem
                     post={node}
                     key={id}
                   />
+                  <hr css={{ borderColor: '#DDE5ED', borderStyle: 'solid' }}/>
+                </div>
+              );
+              case 1:
+                return (
+                  <div>
+                    <BlogPostRowPreviewItem
+                      post={node}
+                      key={id}
+                    />
+                    <hr css={{ borderColor: '#DDE5ED', borderStyle: 'solid' }}/>
+                  </div>
                 );
               return;
+              case 3:
+                return (
+                  <div
+                    css={{
+                      display: 'inline-block',
+                      width: 'calc(33% - (40px / 3))',
+                      marginRight: 'calc(40px / 2)'
+                    }}>
+                    {twitterFeed}
+                  </div>
+                );
               default:
                 if(true) {//if it has an image
                   return (

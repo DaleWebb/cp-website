@@ -10,7 +10,9 @@ class BlogPostPreviewItem extends React.Component {
         <div css={styles.featureImage}></div>
         <h3>Industry</h3>
         <h2>The Social Care Debate: The Home Care Hockey Stick</h2>
-        <p css={{ fontWeight: `normal` }}>Sup</p>
+        <p>
+          In the late 1990s and early 2000s, the discussion around climate change became dominated by something known as the ‘hockey stick graph’. Bear with me here…
+        </p>
       </div>
     )
   }
