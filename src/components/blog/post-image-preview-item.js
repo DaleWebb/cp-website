@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
 
-class BlogPostPreviewItem extends React.Component {
+class BlogPostImagePreviewItem extends React.Component {
   render() {
     const post = this.props.post
 
@@ -23,6 +23,7 @@ const styles = {
     display: 'inline-block',
     verticalAlign: 'top',
     width: 'calc(33% - (40px / 3))',
+    maxHeight: '500px',
     marginBottom: '20px',
     marginRight: 'calc(40px / 2)',
     ':nth-child(3n + 2)': {
@@ -38,10 +39,10 @@ const styles = {
   }
 };
 
-export default BlogPostPreviewItem
+export default BlogPostImagePreviewItem
 
-export const blogPostPreviewFragment = graphql`
-  fragment BlogPostPreview_item on PrismicDocument {
+export const blogPostImagePreviewFragment = graphql`
+  fragment BlogPostImagePreview_item on PrismicDocument {
     type
   }
 `

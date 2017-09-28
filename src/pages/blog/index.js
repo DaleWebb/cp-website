@@ -22,7 +22,7 @@ class BlogPostsIndex extends React.Component {
         }}
         options={{
           username: 'CarePlannerLtd',
-          height: '400'
+          height: '500'
         }}
       />
     );

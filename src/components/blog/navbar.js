@@ -54,7 +54,8 @@ const styles = {
     position: 'fixed',
     top: '0',
     width: '100%',
-    zIndex: '1000'
+    zIndex: '1000',
+    boxShadow: '0 2px 4px #DDE5ED'
   },
   navbar: {
     width: '100%',
