@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import DefaultLayout from '../templates/DefaultLayout/';
 
-import './404/404.scss'
+import presets from '../utils/presets';
 
 export default class FourOhFour extends React.Component {
 
@@ -17,18 +17,31 @@ export default class FourOhFour extends React.Component {
   render() {
 
     return (
-      <DefaultLayout id="four-oh-four">
+      <DefaultLayout>
         <Helmet title="Missing Page"></Helmet>
-        <div className="cp-section-1">
+        <div css={styles.topBlock}>
           <h1>We cannot find that page...</h1>
           <p className="cp-section__description--top">
             Click any of the links to learn more about CarePlanner.
           </p>
         </div>
-        <div className="cp-section-2">
-
-        </div>
       </DefaultLayout>
     );
+  }
+};
+
+const styles = {
+  topBlock: {
+    background: '#F4F8FC',
+    width: '100%',
+    [presets.Desktop]: {
+      padding: '160px 100px 100px 100px'
+    },
+    [presets.Tablet]: {
+      padding: '160px 100px 100px 100px'
+    },
+    [presets.Mobile]: {
+      padding: '110px 50px 50px 50px'
+    }
   }
 };

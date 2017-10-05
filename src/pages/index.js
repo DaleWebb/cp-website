@@ -4,11 +4,8 @@ import Link from 'gatsby-link';
 import { navigateTo } from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 
+import presets from '../utils/presets';
 import DefaultLayout from '../templates/DefaultLayout/';
-
-import './home/index.scss'
-
-import screens from './home/screens.png';
 
 export default class Home extends React.Component {
 
@@ -58,11 +55,11 @@ export default class Home extends React.Component {
   render() {
 
     return (
-      <DefaultLayout id="home-page">
+      <DefaultLayout>
         <Helmet title="Home"></Helmet>
-        <div className="cp-section-1">
+        <div css={styles.section1}>
           <div className="cp-container">
-            <h1 className="cp-section__title--top">Home care software that works</h1>
+            <h1>Home care software that works</h1>
             <p className="cp-section__description--top">
               CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
             </p>
@@ -72,13 +69,9 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="cp-section-2">
-          <div className="cp-screens">
-            <img src={screens}/>
-            <h3>Works on all modern browsers and devices</h3>
-          </div>
+        <div css={styles.section2}>
           <div className="cp-container">
-            <div className="cp-feature-aside">
+            <div css={styles.featureAside}>
               <div>
                 <h2 className="cp-section__title">Feature Highlights</h2>
                 <p className="cp-section__description">All the tools you need to help you focus on what you do best.</p>
@@ -90,10 +83,10 @@ export default class Home extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="cp-feature-grid">
+            <div css={styles.featureGrid}>
               {this.state.features.map(feature => {
                 return (
-                  <div className="cp-feature"
+                  <div css={styles.feature}
                     onClick={() => {
                       if(feature.link) {
                         navigateTo('/features#' + feature.link);
@@ -112,23 +105,23 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="cp-section-3">
+        <div css={styles.section3}>
           <div className="cp-container">
             <div className="cp-content">
-              <div className="cp-services-grid">
-                <div className="cp-services-grid__service">
+              <div css={styles.servicesGrid}>
+                <div css={styles.service}>
                   <h2>Top Notch Support</h2>
                   <p className="cp-section__description--top">
                     {`You can call us as much as you like and you will get straight through to someone who can help.`}
                   </p>
                 </div>
-                <div className="cp-services-grid__service">
+                <div css={styles.service}>
                   <h2>Unbeatable Value</h2>
                   <p className="cp-section__description--top">
                     {`Pay as you go with no long term contracts, no 'upgrade' fees and no additional charge for core features.`}
                   </p>
                 </div>
-                <div className="cp-services-grid__service">
+                <div css={styles.service}>
                   <h2>Easy to use</h2>
                   <p className="cp-section__description--top">
                     {`CarePlanner is very user friendly, and you don't need to be trained to use it.`}
@@ -146,3 +139,209 @@ export default class Home extends React.Component {
     );
   }
 };
+
+const styles = {
+  section1: {
+    position: 'relative',
+    height: '359px',
+    [presets.Desktop]: {
+      width: 'calc(100% - 200px)',
+      padding: '160px 100px 100px 100px'
+    },
+    [presets.Tablet]: {
+      width: 'calc(100% - 200px)',
+      padding: '160px 100px 100px 100px'
+    },
+    [presets.Mobile]: {
+      width: 'calc(100% - 70px)',
+      marginBottom: '60px',
+      padding: '90px 35px 90px 35px'
+    },
+    '::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
+      zIndex: -1,
+      background: 'url(' + require('../assets/section-background.png') + ') no-repeat top right'
+    }
+  },
+  section2: {
+    position: 'relative',
+    minHeight: '500px',
+    width: '100%',
+    backgroundColor: '#F4F8FC',
+    '::before': {
+      content: '""',
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      height: '100%',
+      backgroundImage: 'url(' + require('../assets/curve-top.svg') + ')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPositionY: 'top',
+      zIndex: -1,
+      [presets.Desktop]: {
+        top: '-30%',
+        backgroundPositionX: 'center'
+      },
+      [presets.Tablet]: {
+        top: '-129px'
+      },
+      [presets.Mobile]: {
+        top: '-125px'
+      }
+    },
+    '::after': {
+      content: '""',
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      height: '100%',
+      backgroundImage: 'url(' + require('../assets/curve-bottom.svg') + ')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPositionY: 'bottom',
+      zIndex: -1,
+      [presets.Desktop]: {
+        bottom: '-30%',
+        backgroundPositionX: 'center'
+      },
+      [presets.Tablet]: {
+        bottom: '-129px'
+      },
+      [presets.Mobile]: {
+        bottom: '-125px'
+      }
+    }
+  },
+  featureAside: {
+    [presets.Desktop]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '14%',
+      width: '14%',
+      margin: '40px 0 0 5%'
+    },
+    [presets.Tablet]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '14%',
+      width: '14%',
+      margin: '40px 0 0 5%'
+    },
+    [presets.Mobile]: {
+      margin: '0 35px'
+    }
+  },
+  featureGrid: {
+    [presets.Desktop]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '80%',
+      width: '80%',
+      '&:hover > *': {
+        opacity: .6
+      },
+      '&:hover > *:hover': {
+        opacity: 1
+      }
+    },
+    [presets.Tablet]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '80%',
+      width: '80%'
+    },
+    [presets.Mobile]: {
+      margin: '0 35px'
+    }
+  },
+  feature: {
+    [presets.Desktop]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '25%',
+      width: '25%',
+      margin: '40px 3.5%',
+      '-moz-transition': 'opacity .2s',
+      '-o-transition': 'opacity .2s',
+      '-webkit-transition': 'opacity .2s',
+      transition: 'opacity .2s'
+    },
+    [presets.Tablet]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '25%',
+      width: '25%',
+      margin: '40px 3.5%'
+    },
+    [presets.Mobile]: {
+      margin: '40px 15px'
+    }
+  },
+  section3: {
+    position: 'relative',
+    width: '100%',
+    [presets.Desktop]: {
+      paddingTop: '100px'
+    },
+    [presets.Tablet]: {
+      paddingTop: '57px'
+    },
+    '::after': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
+      zIndex: -3,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundImage: 'url(' + require('../assets/section-3-background.png') + ')',
+      opacity: .3
+    },
+    '::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
+      zIndex: -2,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundImage: '-webkit-linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,1))',
+      backgroundImage: '-o-linear-gradient(bottom,rgba(255,255,255,0),rgba(255,255,255,1))',
+      backgroundImage: '-moz-linear-gradient(bottom,rgba(255,255,255,0),rgba(255,255,255,1))',
+      backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1))'
+    }
+  },
+  servicesGrid: {
+    marginBottom: '50px',
+    [presets.Mobile]: {
+      marginBottom: 0
+    }
+  },
+  service: {
+    [presets.Desktop]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      width: '29%',
+      margin: '0 1.5%'
+    },
+    [presets.Tablet]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      width: '29%',
+      margin: '0 1.5%'
+    },
+    [presets.Mobile]: {
+      marginBottom: '40px'
+    }
+  }
+}
