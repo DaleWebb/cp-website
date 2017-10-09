@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: `https://dalewebb.github.io/cp-website`
   },
   plugins: [
+    `gatsby-plugin-glamor`,
     {
       resolve: `gatsby-source-prismic`,
       options: {
@@ -56,6 +57,12 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
     }
   ]
 };
