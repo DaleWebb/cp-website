@@ -9,7 +9,7 @@ const dataTemplateMap = {
   },
   'feature': {
     path: '/features/',
-    template: path.resolve(`src/templates/GenericPost/index.js`)
+    template: path.resolve(`src/templates/Feature/index.js`)
   },
   'page': {
     path: '/',
