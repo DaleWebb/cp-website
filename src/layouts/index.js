@@ -23,8 +23,37 @@ export default class DefaultLayout extends React.Component {
         </Helmet>
         <Navbar />
         {this.props.children()}
-        <Footer />
+        <Footer navigation={this.props.data.allPrismicDocument.edges}/>
       </div>
     );
   }
-}
+};
+
+export const pageQuery = graphql`
+  query navigation {
+    allPrismicDocument {
+      edges {
+        node {
+          type
+          fields {
+            permalink
+          }
+          data {
+            feature_name {
+              type
+              text
+            },
+            title {
+              type
+              text
+            }
+            company_name {
+              type
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+`

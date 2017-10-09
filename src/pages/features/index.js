@@ -4,6 +4,8 @@ import Link from 'gatsby-link';
 
 import { Helmet } from 'react-helmet';
 
+import PrismicDOM from 'prismic-dom';
+
 import presets from '../../utils/presets';
 import globalStyles from '../../utils/global-styles';
 import { buttonStyle, buttonGroupStyle } from '../../components/button';
@@ -13,36 +15,6 @@ export default class Features extends React.Component {
   constructor() {
     super();
     this.state = {
-      everythingElse: [
-        {
-          title: `CRM Functions`,
-          body: `A secure space to store information about clients and carers.`
-        },
-        {
-          title: `Sending Emails and SMS`,
-          body: `Communicate key information to clients and staff directly from CarePlanner.`
-        },
-        {
-          title: `Document Storage`,
-          body: `Keep all your documents together in one secure system.`
-        },
-        {
-          title: `Live Map`,
-          body: `Get a holistic view of carers and clients in real-time, powered by Google Maps.`
-        },
-        {
-          title: `Track Training and Skills`,
-          body: `Record staff training and receive alerts for when renewal is due.`
-        },
-        {
-          title: `Third-party Integrations`,
-          body: `All data can be exported as CSV for manual integrations.`
-        },
-        {
-          title: `Daily and Weekly Roster`,
-          body: `Get a visual overview of how your clients and carers are scheduled over a day or week.`
-        }
-      ],
       features: [
         {
           title: 'Drag and drop rostering',
@@ -119,6 +91,8 @@ export default class Features extends React.Component {
 
   render() {
 
+    const features = this.props.data.allPrismicDocument.edges;
+
     return (
       <div>
         <Helmet title="Features"></Helmet>
@@ -135,81 +109,67 @@ export default class Features extends React.Component {
               </div>
             </div>
             <div css={styles.column2}>
-              {this.state.features.map(feature =>
+              {features.map(feature =>
                 <h5 css={styles.column2feature}>
-                  <a href={`#` + feature.link}>{feature.title}</a>
+                  <Link to={feature.node.fields.permalink}>{PrismicDOM.RichText.asText(feature.node.data.feature_name)}</Link>
                 </h5>
               )}
-              <h5 css={styles.column2feature}>
-                <a href="#everything-else">Everything Else</a>
-              </h5>
             </div>
           </div>
         </div>
         <div css={styles.section2}>
-          {this.state.features.map((feature, i) => {
-            if(i % 2) {
+          {features.map((featureEdge, i) => {
+            const feature = featureEdge.node.data;
+            // if(i % 2) {
               return (
                 <div css={[styles.mainFeature, styles.mainFeature.left]} id={feature.link}>
                   <div css={styles.mainFeature.grid}>
                     <div css={globalStyles.placeholder}>
-                      <img src={require(`./` + feature.icon)} />
+
                     </div>
-                    <h5>{feature.title}</h5>
-                    <h2>{feature.headline}</h2>
-                    {feature.info.map(info =>
-                      <p css={styles.mainFeature.info}>{info}</p>
+                    <a href={featureEdge.node.fields.permalink}>
+                      <h5 id={PrismicDOM.RichText.asText(feature.feature_name)}>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
+                    </a>
+                    <a href={featureEdge.node.fields.permalink}>
+                      <h2>{PrismicDOM.RichText.asText(feature.feature_tagline)}</h2>
+                    </a>
+                    {feature.feature_bullets.map(object =>
+                      <p css={styles.mainFeature.info}>{PrismicDOM.RichText.asText(object.feature_bullet)}</p>
                     )}
                     <div css={buttonGroupStyle.horizontal}>
-                      <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-                      <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
+                      <Link css={[buttonStyle.button, buttonStyle.filled]} to={featureEdge.node.fields.permalink}>Learn more about {PrismicDOM.RichText.asText(feature.feature_name)}</Link>
+                      <Link css={[buttonStyle.button, buttonStyle.outline]} to="/contact-us">Book a demo</Link>
                     </div>
                   </div>
                   <div css={[styles.mainFeatureGraphic, styles.mainFeature.left[feature.graphicClass]]}>
-                    <img src={require(`./` + feature.img)}/>
+
                   </div>
                 </div>
               );
-            } else {
-              return (
-                <div css={[styles.mainFeature, styles.mainFeature.right]} id={feature.link}>
-                  <div css={[styles.mainFeatureGraphic, styles.mainFeature.right[feature.graphicClass]]}>
-                    <img src={require(`./` + feature.img)}/>
-                  </div>
-                  <div css={styles.mainFeature.grid}>
-                    <div css={globalStyles.placeholder}>
-                      <img src={require(`./` + feature.icon)} />
-                    </div>
-                    <h5>{feature.title}</h5>
-                    <h2>{feature.headline}</h2>
-                    {feature.info.map(info =>
-                      <p css={styles.mainFeature.info}>{info}</p>
-                    )}
-                    <div css={buttonGroupStyle.horizontal}>
-                      <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-                      <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
-                    </div>
-                  </div>
-                </div>
-              )
-            }
+            // } else {
+            //   return (
+            //     <div css={[styles.mainFeature, styles.mainFeature.right]} id={feature.link}>
+            //       <div css={[styles.mainFeatureGraphic, styles.mainFeature.right[feature.graphicClass]]}>
+            //         <img src={require(`./` + feature.img)}/>
+            //       </div>
+            //       <div css={styles.mainFeature.grid}>
+            //         <div css={globalStyles.placeholder}>
+            //           <img src={require(`./` + feature.icon)} />
+            //         </div>
+            //         <h5>{feature.title}</h5>
+            //         <h2>{feature.headline}</h2>
+            //         {feature.info.map(info =>
+            //           <p css={styles.mainFeature.info}>{info}</p>
+            //         )}
+            //         <div css={buttonGroupStyle.horizontal}>
+            //           <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+            //           <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
+            //         </div>
+            //       </div>
+            //     </div>
+            //   )
+            // }
           })}
-        </div>
-        <div css={styles.section3} id="everything-else">
-          <div css={globalStyles.container} style={{top: `-50px`}}>
-            <h1>{`Everything Else...`}</h1>
-            <div css={styles.section3.featureGrid}>
-              {this.state.everythingElse.map(feature =>
-                <div css={styles.section3.featureGrid.feature}>
-                  <h5>{feature.title}</h5>
-                  <p>{feature.body}</p>
-                </div>
-              )}
-            </div>
-            <div style={{textAlign: 'center'}}>
-              <a css={[buttonStyle.button, buttonStyle.outline, buttonStyle.large]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-            </div>
-          </div>
         </div>
       </div>
     );
@@ -573,3 +533,33 @@ const styles = {
   },
 
 };
+
+export const pageQuery = graphql`
+  query features {
+    allPrismicDocument(filter: { type: { eq: "feature" } }) {
+      edges {
+        node {
+          fields {
+            permalink
+          }
+          data {
+            feature_name {
+              type
+              text
+            }
+            feature_tagline {
+              type
+              text
+            }
+            feature_bullets {
+              feature_bullet {
+                type
+                text
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
