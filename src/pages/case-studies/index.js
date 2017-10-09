@@ -6,9 +6,8 @@ import { Helmet } from 'react-helmet';
 
 import PrismicDOM from 'prismic-dom';
 
-import DefaultLayout from '../../templates/DefaultLayout/';
-
 import presets from '../../utils/presets';
+import globalStyles from '../../utils/global-styles';
 
 export default class CaseStudies extends React.Component {
 
@@ -16,7 +15,7 @@ export default class CaseStudies extends React.Component {
     const caseStudies = this.props.data.allPrismicDocument.edges;
 
     return (
-      <DefaultLayout>
+      <div>
         <Helmet title="Case Studies">
           <meta name="description" content="Read why more companies are switching to CarePlanner." />
           <meta property="og:type" content="website" />
@@ -26,15 +25,15 @@ export default class CaseStudies extends React.Component {
           <meta name="twitter:description" content="Read why more companies are switching to CarePlanner." />
         </Helmet>
         <div css={styles.section1}>
-          <div className="cp-container">
+          <div css={globalStyles.container}>
             <h1>Case Studies</h1>
-            <p className="cp-section__description--top">
+            <p css={globalStyles.sectionDescriptionTop}>
               Read why more companies are switching to CarePlanner.
             </p>
           </div>
         </div>
         <div css={styles.section2} itemScope itemType="http://schema.org/ItemList">
-          <div className="cp-container">
+          <div css={globalStyles.container}>
             {caseStudies.map(caseStudy =>
               <div css={styles.caseStudy} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
                 <div css={styles.caseStudyInner}>
@@ -51,7 +50,7 @@ export default class CaseStudies extends React.Component {
             )}
           </div>
         </div>
-      </DefaultLayout>
+      </div>
     );
   }
 };

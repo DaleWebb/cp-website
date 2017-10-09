@@ -5,7 +5,8 @@ import { navigateTo } from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 
 import presets from '../utils/presets';
-import DefaultLayout from '../templates/DefaultLayout/';
+import globalStyles from '../utils/global-styles';
+import { buttonStyle, buttonGroupStyle } from '../components/button';
 
 export default class Home extends React.Component {
 
@@ -55,31 +56,31 @@ export default class Home extends React.Component {
   render() {
 
     return (
-      <DefaultLayout>
+      <div>
         <Helmet title="Home"></Helmet>
         <div css={styles.section1}>
-          <div className="cp-container">
-            <h1>Home care software that works</h1>
-            <p className="cp-section__description--top">
+          <div css={globalStyles.container}>
+            <h1 css={globalStyles.sectionTitleTop}>Home care software that works</h1>
+            <p css={globalStyles.sectionDescriptionTop}>
               CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
             </p>
-            <div className="cp-button-group--horizontal" style={{textAlign: 'left'}}>
-              <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-              <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+            <div css={buttonGroupStyle.horizontal} style={{textAlign: 'left'}}>
+              <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+              <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
             </div>
           </div>
         </div>
         <div css={styles.section2}>
-          <div className="cp-container">
+          <div css={globalStyles.container}>
             <div css={styles.featureAside}>
               <div>
-                <h2 className="cp-section__title">Feature Highlights</h2>
-                <p className="cp-section__description">All the tools you need to help you focus on what you do best.</p>
+                <h2 css={globalStyles.sectionTitle}>Feature Highlights</h2>
+                <p css={globalStyles.sectionDescription}>All the tools you need to help you focus on what you do best.</p>
                 <Link to="/features">Read More...</Link>
                 <hr />
-                <div className="cp-button-group--vertical">
-                  <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-                  <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+                <div css={buttonGroupStyle.vertical}>
+                  <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+                  <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
                 </div>
               </div>
             </div>
@@ -93,7 +94,7 @@ export default class Home extends React.Component {
                       }
                     }}
                     style={(feature.link !== undefined) ? {cursor: 'pointer'} : {}}>
-                    <div className="placeholder placeholder-big">
+                    <div css={globalStyles.placeholder}>
                       <img src={require(`./features/` + feature.icon)} />
                     </div>
                     <h5>{feature.title}</h5>
@@ -106,36 +107,36 @@ export default class Home extends React.Component {
           </div>
         </div>
         <div css={styles.section3}>
-          <div className="cp-container">
-            <div className="cp-content">
+          <div css={globalStyles.container}>
+            <div css={globalStyles.content}>
               <div css={styles.servicesGrid}>
                 <div css={styles.service}>
                   <h2>Top Notch Support</h2>
-                  <p className="cp-section__description--top">
+                  <p>
                     {`You can call us as much as you like and you will get straight through to someone who can help.`}
                   </p>
                 </div>
                 <div css={styles.service}>
                   <h2>Unbeatable Value</h2>
-                  <p className="cp-section__description--top">
+                  <p>
                     {`Pay as you go with no long term contracts, no 'upgrade' fees and no additional charge for core features.`}
                   </p>
                 </div>
                 <div css={styles.service}>
                   <h2>Easy to use</h2>
-                  <p className="cp-section__description--top">
+                  <p>
                     {`CarePlanner is very user friendly, and you don't need to be trained to use it.`}
                   </p>
                 </div>
               </div>
-              <div className="cp-button-group--horizontal">
-                <a className="cp-button cp-button--outline cp-button--large" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-                <Link className="cp-button cp-button--filled cp-button--large" to="/contact-us">Book a demo</Link>
+              <div css={buttonGroupStyle.horizontal}>
+                <a css={[buttonStyle.button, buttonStyle.outline, buttonStyle.large]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+                <Link css={[buttonStyle.button, buttonStyle.filled, buttonStyle.large]} to="/contact-us">Book a demo</Link>
               </div>
             </div>
           </div>
         </div>
-      </DefaultLayout>
+      </div>
     );
   }
 };

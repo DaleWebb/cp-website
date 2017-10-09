@@ -2,9 +2,8 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import DefaultLayout from '../templates/DefaultLayout/';
-
 import presets from '../utils/presets';
+import globalStyles from '../utils/global-styles';
 
 export default class FourOhFour extends React.Component {
 
@@ -17,15 +16,15 @@ export default class FourOhFour extends React.Component {
   render() {
 
     return (
-      <DefaultLayout>
+      <div>
         <Helmet title="Missing Page"></Helmet>
         <div css={styles.topBlock}>
           <h1>We cannot find that page...</h1>
-          <p className="cp-section__description--top">
+          <p css={globalStyles.sectionDescriptionTop}>
             Click any of the links to learn more about CarePlanner.
           </p>
         </div>
-      </DefaultLayout>
+      </div>
     );
   }
 };

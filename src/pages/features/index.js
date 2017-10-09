@@ -4,9 +4,9 @@ import Link from 'gatsby-link';
 
 import { Helmet } from 'react-helmet';
 
-import DefaultLayout from '../../templates/DefaultLayout/';
-
 import presets from '../../utils/presets';
+import globalStyles from '../../utils/global-styles';
+import { buttonStyle, buttonGroupStyle } from '../../components/button';
 
 export default class Features extends React.Component {
 
@@ -120,18 +120,18 @@ export default class Features extends React.Component {
   render() {
 
     return (
-      <DefaultLayout id="features">
+      <div>
         <Helmet title="Features"></Helmet>
         <div css={styles.section1}>
-          <div className="cp-container">
+          <div css={globalStyles.container}>
             <div css={styles.column1}>
-              <h1 className="cp-section__title--top">Feature Highlights</h1>
-              <p className="cp-section__description--top">
+              <h1 css={globalStyles.sectionTitleTop}>Feature Highlights</h1>
+              <p css={globalStyles.sectionDescriptionTop}>
                 {`Learn about the crucial parts of CarePlanner that will help boost your growth.`}
               </p>
-              <div className="cp-column-1__cta">
-              <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-              <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+              <div>
+                <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+                <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
               </div>
             </div>
             <div css={styles.column2}>
@@ -152,7 +152,7 @@ export default class Features extends React.Component {
               return (
                 <div css={[styles.mainFeature, styles.mainFeature.left]} id={feature.link}>
                   <div css={styles.mainFeature.grid}>
-                    <div className="placeholder placeholder-big">
+                    <div css={globalStyles.placeholder}>
                       <img src={require(`./` + feature.icon)} />
                     </div>
                     <h5>{feature.title}</h5>
@@ -160,9 +160,9 @@ export default class Features extends React.Component {
                     {feature.info.map(info =>
                       <p css={styles.mainFeature.info}>{info}</p>
                     )}
-                    <div className="cp-button-group--horizontal">
-                      <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-                      <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+                    <div css={buttonGroupStyle.horizontal}>
+                      <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+                      <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
                     </div>
                   </div>
                   <div css={[styles.mainFeatureGraphic, styles.mainFeature.left[feature.graphicClass]]}>
@@ -177,7 +177,7 @@ export default class Features extends React.Component {
                     <img src={require(`./` + feature.img)}/>
                   </div>
                   <div css={styles.mainFeature.grid}>
-                    <div className="placeholder placeholder-big">
+                    <div css={globalStyles.placeholder}>
                       <img src={require(`./` + feature.icon)} />
                     </div>
                     <h5>{feature.title}</h5>
@@ -185,9 +185,9 @@ export default class Features extends React.Component {
                     {feature.info.map(info =>
                       <p css={styles.mainFeature.info}>{info}</p>
                     )}
-                    <div className="cp-button-group--horizontal">
-                      <a className="cp-button cp-button--outline" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-                      <Link className="cp-button cp-button--filled" to="/contact-us">Book a demo</Link>
+                    <div css={buttonGroupStyle.horizontal}>
+                      <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+                      <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
                     </div>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export default class Features extends React.Component {
           })}
         </div>
         <div css={styles.section3} id="everything-else">
-          <div className="cp-container" style={{top: `-50px`}}>
+          <div css={globalStyles.container} style={{top: `-50px`}}>
             <h1>{`Everything Else...`}</h1>
             <div css={styles.section3.featureGrid}>
               {this.state.everythingElse.map(feature =>
@@ -207,11 +207,11 @@ export default class Features extends React.Component {
               )}
             </div>
             <div style={{textAlign: 'center'}}>
-              <a className="cp-button cp-button--outline cp-button--large" href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
+              <a css={[buttonStyle.button, buttonStyle.outline, buttonStyle.large]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
             </div>
           </div>
         </div>
-      </DefaultLayout>
+      </div>
     );
   }
 };

@@ -2,16 +2,15 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import DefaultLayout from '../../templates/DefaultLayout/';
-
 import presets from '../../utils/presets';
+import globalStyles from '../../utils/global-styles';
 
 export default class ContactUs extends React.Component {
 
   render() {
 
     return (
-      <DefaultLayout>
+      <div>
         <Helmet title="Contact Us">
           <meta name="description" content="Talk to the team about how CarePlanner can work for you." />
           <meta property="og:type" content="website" />
@@ -21,23 +20,20 @@ export default class ContactUs extends React.Component {
           <meta name="twitter:description" content="Talk to the team about how CarePlanner can work for you." />
         </Helmet>
         <div css={styles.section1}>
-          <div className="cp-container">
+          <div css={globalStyles.container}>
             <h1>Contact Us</h1>
           </div>
         </div>
         <div css={styles.section2}>
-          <div className="cp-container">
+          <div css={globalStyles.container}>
             <div css={styles.column1}>
               <iframe id="62022480953351" style={{border: 0}}/>
               <script src="https://form.jotformeu.com/jsform/62022480953351"></script>
             </div>
             <div css={styles.column2}>
-              <h2>Offices</h2>
+              <h2>Office</h2>
               <div css={styles.column2column}>
-                <p>Leadworks First Floor<br />Anchor Square<br />Harbourside<br />Bristol<br />BS1 5DB</p>
-              </div>
-              <div css={styles.column2column}>
-                <p>Leadworks First Floor<br />Anchor Square<br />Harbourside<br />Bristol<br />BS1 5DB</p>
+                <p>CarePlanner<br />11th Floor<br />Colston Tower<br />Bristol<br />BS1 4XE</p>
               </div>
               <h2>Sales Enquiries</h2>
                 <p>
@@ -51,7 +47,7 @@ export default class ContactUs extends React.Component {
             </div>
           </div>
         </div>
-      </DefaultLayout>
+      </div>
     );
   }
 };
