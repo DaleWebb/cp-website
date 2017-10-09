@@ -4,6 +4,8 @@ import Link from 'gatsby-link';
 import { navigateTo } from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 
+import PrismicDOM from 'prismic-dom';
+
 import presets from '../utils/presets';
 import globalStyles from '../utils/global-styles';
 import { buttonStyle, buttonGroupStyle } from '../components/button';
@@ -55,6 +57,8 @@ export default class Home extends React.Component {
 
   render() {
 
+    const features = this.props.data.allPrismicDocument.edges;
+
     return (
       <div>
         <Helmet title="Home"></Helmet>
@@ -85,23 +89,22 @@ export default class Home extends React.Component {
               </div>
             </div>
             <div css={styles.featureGrid}>
-              {this.state.features.map(feature => {
-                return (
-                  <div css={styles.feature}
-                    onClick={() => {
-                      if(feature.link) {
-                        navigateTo('/features#' + feature.link);
-                      }
-                    }}
-                    style={(feature.link !== undefined) ? {cursor: 'pointer'} : {}}>
-                    <div css={globalStyles.placeholder}>
-                      <img src={require(`./features/` + feature.icon)} />
+              {features.map((featureEdge, i) => {
+                if(i < 6) {
+                  const feature = featureEdge.node.data;
+                  return (
+                    <div css={styles.feature}
+                      onClick={() => navigateTo(featureEdge.node.fields.permalink)}
+                      style={{cursor: 'pointer'}}>
+                      <div css={globalStyles.placeholder}>
+                        <img src={require(`../assets/feature-icon-placeholder.svg`)} />
+                      </div>
+                      <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
+                      <p>{PrismicDOM.RichText.asText(feature.sell)}</p>
+                      <Link to={featureEdge.node.fields.permalink}>Learn more</Link>
                     </div>
-                    <h5>{feature.title}</h5>
-                    <p>{feature.body}</p>
-                    {(feature.link) ? <Link to={`/features#` + feature.link}>Learn more</Link> : undefined}
-                  </div>
-                );
+                  );
+                }
               })}
             </div>
           </div>
@@ -346,3 +349,27 @@ const styles = {
     }
   }
 }
+
+export const pageQuery = graphql`
+  query featureHighlights {
+    allPrismicDocument(filter: { type: { eq: "feature" } }) {
+      edges {
+        node {
+          fields {
+            permalink
+          }
+          data {
+            feature_name {
+              type
+              text
+            }
+            sell {
+              type
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+`;

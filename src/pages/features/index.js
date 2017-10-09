@@ -14,79 +14,6 @@ export default class Features extends React.Component {
 
   constructor() {
     super();
-    this.state = {
-      features: [
-        {
-          title: 'Drag and drop rostering',
-          icon: 'drag-and-drop-rostering.svg',
-          link: 'drag-and-drop-rostering',
-          headline: `Roster Your Week In Minutes`,
-          info: [
-            `All the information you need to select the best carer for an appointment`,
-            `Tweak appointment times and make carer changes with just a few clicks`,
-            `Easy schedule creation for appointments on an on-going basis`,
-            `Intuitive 'timeline' interface gives you a clear overview of your daily roster`
-          ],
-          graphicClass: `circle`,
-          img: `drag-and-drop-rostering.gif`
-        },
-        {
-          title: 'Infinite customisation',
-          icon: 'infinite-customisation.svg',
-          link: 'infinite-customisation',
-          headline: `Configured For Your Business`,
-          info: [
-            `CarePlanner has been built to be flexible; if you have a unique requirement, please get in touch.`,
-            `You can filter all the information by region, branch or geographical area.`,
-            `Permissions can be set to control what users can access.`,
-            `Franchises can be built around one system that grows with your business.`
-          ],
-          graphicClass: `circle`,
-          img: `drag-and-drop-rostering.gif`
-        },
-        {
-          title: 'Invoicing and Payments',
-          icon: 'invoicing.svg',
-          link: 'invoicing-and-payments',
-          headline: `Bill Customers and Pay Staff`,
-          info: [
-            `Produce professional invoices and timesheets complete with your company logo.`,
-            `Easy integration with Sage, Sage Payroll or IRIS.`,
-            `Customise how your invoice is presented, and what information is shown to your customers.`,
-            `Keep track of unpaid and overdue invoices.`
-          ],
-          graphicClass: `frame`,
-          img: `invoicing-and-payments.png`
-        },
-        {
-          title: 'Call Monitoring',
-          icon: 'call-monitoring.svg',
-          link: 'call-monitoring',
-          headline: `Monitor Visits Safely and Securely`,
-          info: [
-            `No need to use any service user's landline.`,
-            `No need for a smartphone`,
-            `Works even with no mobile reception`,
-            `Can be used completely securely just with handwritten timesheets`
-          ],
-          graphicClass: `normal`,
-          img: `call-monitoring.jpg`
-        },
-        {
-          title: 'Mobile App',
-          icon: 'sms-emails-mobile.svg',
-          link: 'mobile-app',
-          headline: `Keep Carers Connected On The Go`,
-          info: [
-            `GPS navigation to a carer’s next appointment.`,
-            `Carers know exactly where they need to be - and when.`,
-            `Rota changes updated for carers in real-time.`
-          ],
-          graphicClass: `normal`,
-          img: `mobile-app.gif`
-        }
-      ]
-    };
   }
 
   render() {
@@ -120,15 +47,15 @@ export default class Features extends React.Component {
         <div css={styles.section2}>
           {features.map((featureEdge, i) => {
             const feature = featureEdge.node.data;
-            // if(i % 2) {
+            if(i % 2) {
               return (
-                <div css={[styles.mainFeature, styles.mainFeature.left]} id={feature.link}>
+                <div css={[styles.mainFeature, styles.mainFeature.left]}>
                   <div css={styles.mainFeature.grid}>
                     <div css={globalStyles.placeholder}>
-
+                      <img src={require(`../../assets/feature-icon-placeholder.svg`)} />
                     </div>
                     <a href={featureEdge.node.fields.permalink}>
-                      <h5 id={PrismicDOM.RichText.asText(feature.feature_name)}>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
+                      <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
                     </a>
                     <a href={featureEdge.node.fields.permalink}>
                       <h2>{PrismicDOM.RichText.asText(feature.feature_tagline)}</h2>
@@ -136,7 +63,7 @@ export default class Features extends React.Component {
                     {feature.feature_bullets.map(object =>
                       <p css={styles.mainFeature.info}>{PrismicDOM.RichText.asText(object.feature_bullet)}</p>
                     )}
-                    <div css={buttonGroupStyle.horizontal}>
+                    <div css={buttonGroupStyle.horizontalLeft}>
                       <Link css={[buttonStyle.button, buttonStyle.filled]} to={featureEdge.node.fields.permalink}>Learn more about {PrismicDOM.RichText.asText(feature.feature_name)}</Link>
                       <Link css={[buttonStyle.button, buttonStyle.outline]} to="/contact-us">Book a demo</Link>
                     </div>
@@ -146,29 +73,33 @@ export default class Features extends React.Component {
                   </div>
                 </div>
               );
-            // } else {
-            //   return (
-            //     <div css={[styles.mainFeature, styles.mainFeature.right]} id={feature.link}>
-            //       <div css={[styles.mainFeatureGraphic, styles.mainFeature.right[feature.graphicClass]]}>
-            //         <img src={require(`./` + feature.img)}/>
-            //       </div>
-            //       <div css={styles.mainFeature.grid}>
-            //         <div css={globalStyles.placeholder}>
-            //           <img src={require(`./` + feature.icon)} />
-            //         </div>
-            //         <h5>{feature.title}</h5>
-            //         <h2>{feature.headline}</h2>
-            //         {feature.info.map(info =>
-            //           <p css={styles.mainFeature.info}>{info}</p>
-            //         )}
-            //         <div css={buttonGroupStyle.horizontal}>
-            //           <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
-            //           <Link css={[buttonStyle.button, buttonStyle.filled]} to="/contact-us">Book a demo</Link>
-            //         </div>
-            //       </div>
-            //     </div>
-            //   )
-            // }
+            } else {
+              return (
+                <div css={[styles.mainFeature, styles.mainFeature.right]}>
+                  <div css={[styles.mainFeatureGraphic, styles.mainFeature.right[feature.graphicClass]]}>
+
+                  </div>
+                  <div css={styles.mainFeature.grid}>
+                    <div css={globalStyles.placeholder}>
+                      <img src={require(`../../assets/feature-icon-placeholder.svg`)} />
+                    </div>
+                    <a href={featureEdge.node.fields.permalink}>
+                      <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
+                    </a>
+                    <a href={featureEdge.node.fields.permalink}>
+                      <h2>{PrismicDOM.RichText.asText(feature.feature_tagline)}</h2>
+                    </a>
+                    {feature.feature_bullets.map(object =>
+                      <p css={styles.mainFeature.info}>{PrismicDOM.RichText.asText(object.feature_bullet)}</p>
+                    )}
+                    <div css={buttonGroupStyle.horizontalLeft}>
+                      <Link css={[buttonStyle.button, buttonStyle.filled]} to={featureEdge.node.fields.permalink}>Learn more about {PrismicDOM.RichText.asText(feature.feature_name)}</Link>
+                      <Link css={[buttonStyle.button, buttonStyle.outline]} to="/contact-us">Book a demo</Link>
+                    </div>
+                  </div>
+                </div>
+              )
+            }
           })}
         </div>
       </div>
@@ -303,17 +234,15 @@ const styles = {
   section2: {
     [presets.Desktop]: {
       width: 'calc(100% - 200px)',
-      padding: '50px 100px 100px 100px',
-      marginBottom: '200px'
+      padding: '50px 100px 100px 100px'
     },
     [presets.Tablet]: {
       width: 'calc(100% - 100px)',
-      padding: '50px',
-      marginBottom: '150px'
+      padding: '50px'
     },
     [presets.Mobile]: {
       width: 'calc(100% - 40px)',
-      marginBottom: '120px',
+      marginBottom: '60px',
       padding: '0 20px'
     }
   },
@@ -335,11 +264,11 @@ const styles = {
     },
     grid: {
       [presets.Desktop]: {
-        maxWidth: '40%',
+        maxWidth: '50%',
         padding: '100px 0'
       },
       [presets.Tablet]: {
-        maxWidth: '40%',
+        maxWidth: '50%',
         padding: '25px 0'
       },
       [presets.Mobile]: {
@@ -442,12 +371,12 @@ const styles = {
   mainFeatureGraphic: {
     [presets.Desktop]: {
       position: 'relative',
-      minWidth: '60%',
+      minWidth: '50%',
       textAlign: 'center'
     },
     [presets.Tablet]: {
       position: 'relative',
-      minWidth: '60%',
+      minWidth: '50%',
       textAlign: 'center'
     },
     [presets.Mobile]: {

@@ -78,6 +78,34 @@ const buttonGroupStyle = {
       margin: 0
     }
   },
+  horizontalLeft: {
+    textAlign: 'left',
+    userSelect: 'none',
+    '-moz-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    '> *': {
+      display: 'inline-block',
+      margin: '9px 15px 9px 0'
+    },
+    '> *:last-child': {
+      margin: 0
+    }
+  },
+  horizontalRight: {
+    textAlign: 'right',
+    userSelect: 'none',
+    '-moz-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    '> *': {
+      display: 'inline-block',
+      margin: '9px 15px 9px 0'
+    },
+    '> *:last-child': {
+      margin: 0
+    }
+  },
   vertical: {
     userSelect: 'none',
     '-moz-user-select': 'none',
