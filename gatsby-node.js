@@ -7,6 +7,10 @@ const dataTemplateMap = {
     path: '/case-studies/',
     template: path.resolve(`src/templates/CaseStudy/index.js`)
   },
+  'feature': {
+    path: '/features/',
+    template: path.resolve(`src/templates/GenericPost/index.js`)
+  },
   'page': {
     path: '/',
     template: path.resolve(`src/templates/GenericPost/index.js`)
@@ -27,9 +31,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               node {
                 slugs
                 type
-                data {
-                  permalink
-                }
               }
             }
           }
@@ -44,9 +45,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         result.data.allPrismicDocument.edges.forEach(({ node }) => {
 
-          const slug = node.data.permalink || node.slugs[0];
-
-          const path = dataTemplateMap[node.type].path + slug;
+          const path = dataTemplateMap[node.type].path + node.slugs[0];
 
           createPage({
             path,
@@ -70,7 +69,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   if (node.internal.type === `PrismicDocument`) {
     const slug = node.data.permalink || node.slugs[0];
     const path = dataTemplateMap[node.type].path + slug;
-    console.log(createNodeField({ node, name: `permalink`, value: path}));
+    createNodeField({ node, name: `permalink`, value: path});
   }// else if (
   //   node.internal.type === `MarkdownRemark` &&
   //   typeof node.slug === `undefined`
