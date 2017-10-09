@@ -1,5 +1,7 @@
 import React from "react"
 
+import presets from './utils/presets'
+
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
@@ -22,7 +24,7 @@ export default class HTML extends React.Component {
     }
 
     return (
-      <html lang="en">
+      <html lang="en" css={styles.html}>
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -42,5 +44,13 @@ export default class HTML extends React.Component {
         </body>
       </html>
     )
+  }
+}
+
+const styles = {
+  html: {
+    maxWidth: '100%',
+    width: '100%',
+    overflowX: 'hidden'
   }
 }
