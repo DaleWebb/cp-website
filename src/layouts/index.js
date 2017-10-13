@@ -2,14 +2,26 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import SalesNavbar from '../components/sales-navbar';
+import SalesFooter from '../components/sales-footer';
+import BlogNavbar from '../components/blog-navbar';
+import BlogFooter from '../components/blog-footer';
 
 import '../fonts/fonts.scss';
 
 export default class DefaultLayout extends React.Component {
 
   render() {
+    const isBlog = this.props.location.pathname.slice(0, 5) === `/blog`;
+
+    let Navbar = <SalesNavbar />;
+    let Footer = <SalesFooter navigation={this.props.data.allPrismicDocument.edges}/>;
+
+    if(isBlog) {
+      Navbar = <BlogNavbar />;
+      Footer = <BlogFooter />;
+    }
+
     return (
       <div {...this.props}>
         <Helmet defaultTitle="Home care software that works" titleTemplate="%s | CarePlanner">
@@ -21,9 +33,9 @@ export default class DefaultLayout extends React.Component {
           <meta name="twitter:title" content="CarePlanner" />
           <meta name="twitter:description" content="CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets." />
         </Helmet>
-        <Navbar />
+        {Navbar}
         {this.props.children()}
-        <Footer navigation={this.props.data.allPrismicDocument.edges}/>
+        {Footer}
       </div>
     );
   }

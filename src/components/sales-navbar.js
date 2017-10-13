@@ -40,6 +40,9 @@ export default class Navbar extends React.Component {
                   <Link css={style.link} activeClassName="active" to="/case-studies">Case Studies</Link>
                 </li>
                 <li>
+                  <Link css={style.link} activeClassName="active" to="/blog">News</Link>
+                </li>
+                <li>
                   <Link css={style.link} activeClassName="active" to="/contact-us">Contact Us</Link>
                 </li>
               </ul>

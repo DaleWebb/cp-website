@@ -14,6 +14,10 @@ const dataTemplateMap = {
   'page': {
     path: '/',
     template: path.resolve(`src/templates/GenericPost/index.js`)
+  },
+  'blog_post': {
+    path: '/blog/',
+    template: path.resolve(`src/templates/BlogPost/index.js`)
   }
 };
 
