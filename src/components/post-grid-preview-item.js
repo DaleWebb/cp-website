@@ -20,7 +20,7 @@ class BlogPostGridPreviewItem extends React.Component {
           {image}
           <h3>{PrismicDOM.RichText.asText(post.data.title)}</h3>
         </Link>
-        <p>{PrismicDOM.RichText.asText(post.data.excerpt)}</p>
+        <p style={styles.p}>{PrismicDOM.RichText.asText(post.data.excerpt)}</p>
         <Link to={post.fields.permalink}>Read more...</Link>
       </div>
     )

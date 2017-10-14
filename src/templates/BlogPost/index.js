@@ -14,18 +14,17 @@ export default class BlogPost extends React.Component {
 
     const post = this.props.data.prismicDocument.data;
 
-    console.log(post)
+    const image = (post.feature_image) ? <img src={post.feature_image.url} css={styles.featureImage} /> : undefined;
 
     return (
       <div>
         <Helmet title={PrismicDOM.RichText.asText(post.title)}></Helmet>
         <div css={styles.section1}>
           <h1>{PrismicDOM.RichText.asText(post.title)}</h1>
+          <blockquote>{PrismicDOM.RichText.asText(post.excerpt)}</blockquote>
+          {image}
         </div>
-        <div css={styles.section2} dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(post.body, (doc, ctx) => {
-    if (doc.type === 'test') return `/page/${doc.uid}`;
-    return '/';
-  })}}></div>
+        <div css={styles.section2} dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(post.body)}}></div>
       </div>
     );
   }
@@ -33,33 +32,78 @@ export default class BlogPost extends React.Component {
 
 const styles = {
   section1: {
-    background: '#F4F8FC',
+    margin: '0 auto',
+    marginTop: '60px',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      width: '1000px',
+      paddingTop: '50px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      marginLeft: '100px',
+      marginRight: '100px',
+      paddingTop: '50px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 100px)',
-      padding: '110px 50px 70px 50px'
+      marginLeft: '50px',
+      marginRight: '50px',
+      paddingTop: '50px'
+    }
+  },
+  featureImage: {
+    [presets.Desktop]: {
+      width: '100%'
+    },
+    [presets.Tablet]: {
+      width: 'calc(100% + 200px)',
+      maxWidth: 'calc(100% + 200px)',
+      marginBottom: '20px',
+      marginLeft: '-100px',
+      marginRight: '-100px'
+    },
+    [presets.Mobile]: {
+      width: 'calc(100% + 100px)',
+      maxWidth: 'calc(100% + 100px)',
+      marginBottom: '20px',
+      marginLeft: '-50px',
+      marginRight: '-50px'
     }
   },
   section2: {
+    margin: '0 auto',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '100px'
+      width: '1000px',
+      '> p': {
+        fontSize: '20px',
+        lineHeight: '40px',
+        marginBottom: '40px'
+      },
+      '> .block-img': {
+        textAlign: 'center'
+      }
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '0 50px'
+      marginLeft: '100px',
+      marginRight: '100px',
+      '> p': {
+        fontSize: '18px',
+        lineHeight: '35px',
+        marginBottom: '40px'
+      },
+      '> .block-img': {
+        textAlign: 'center'
+      }
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 100px)',
-      padding: '0 20px',
-      marginBottom: '60px'
+      marginBottom: '60px',
+      '> p': {
+        marginLeft: '50px',
+        marginRight: '50px',
+        lineHeight: '30px',
+        marginBottom: '40px'
+      },
+      '> .block-img': {
+        textAlign: 'center',
+      }
     }
   }
 }

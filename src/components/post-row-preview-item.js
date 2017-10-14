@@ -14,16 +14,18 @@ class BlogPostPreviewItem extends React.Component {
 
     const image = (post.data.feature_image) ? <div style={this.generateBackgroundImageCss(post.data.feature_image.url)}></div> : undefined;
 
+    let articleContentStyle = (image) ? styles.articleContentWithImage : styles.articleContent;
+
     return (
       <div>
         <Link to={post.fields.permalink}>
           {image}
         </Link>
-        <div style={styles.articleContent}>
+        <div style={articleContentStyle}>
           <Link to={post.fields.permalink}>
             <h2>{PrismicDOM.RichText.asText(post.data.title)}</h2>
           </Link>
-          <p>{PrismicDOM.RichText.asText(post.data.excerpt)}</p>
+          <p style={styles.p}>{PrismicDOM.RichText.asText(post.data.excerpt)}</p>
           <Link to={post.fields.permalink}>Read more...</Link>
         </div>
       </div>
@@ -42,13 +44,20 @@ const styles = {
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   },
-  articleContent: {
+  articleContentWithImage: {
     display: 'inline-block',
     width: 'calc(50% - 70px)',
     height: '280px',
     maxHeight: '280px',
     verticalAlign: 'top',
     padding: '35px'
+  },
+  articleContent: {
+    width: '100%'
+  },
+  p: {
+    fontSize: '20px',
+    lineHeight: '40px'
   }
 };
 

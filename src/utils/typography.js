@@ -36,12 +36,10 @@ const options = {
       h1: {
         color: '#70A4DB',
         fontWeight: 'normal',
-        margin: '10px 0 0 0'
       },
       h2: {
         color: '#70A4DB',
         fontWeight: 'normal',
-        margin: '10px 0 0 0'
       },
       h3: {
         fontWeight: 'normal',
@@ -55,7 +53,6 @@ const options = {
         fontWeight: 'bold',
         lineHeight: '25px',
         color: '#4F739A',
-        margin: '15px 0 0 0'
       },
       p: {
         margin: '10px 0',

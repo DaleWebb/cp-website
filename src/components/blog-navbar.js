@@ -42,7 +42,7 @@ export default class BlogNavbar extends React.Component {
                 <div css={styles.logoText}>News</div>
               </div>
             </Link>
-            <div style={styles.rightNavContainer} >
+            <div css={styles.rightNavContainer} {...{'data-navbar-open': !this.state.collapsed}}>
               <a href="https://www.linkedin.com/company/3239311/" target="_blank">
                 <img css={styles.navbarSocialIcon} src={require('../assets/linkedin-square-white.png')} />
               </a>
@@ -72,24 +72,30 @@ const styles = {
     backgroundColor: '#70A4DB'
   },
   navbarInner: {
-    width: '1000px',
     height: '100%',
-    margin: '0 auto'
+    margin: '0 auto',
+    [presets.Desktop]: {
+      width: '1000px'
+    },
+    [presets.Tablet]: {
+      paddingLeft: '20px',
+      paddingRight: '20px'
+    },
+    [presets.Mobile]: {
+      paddingLeft: '20px',
+      paddingRight: '20px'
+    }
   },
   hamburger: {
     [presets.Desktop]: {
       display: 'none',
     },
     [presets.Tablet]: {
-      display: 'inline-block',
-      position: 'relative',
-      height: '30px',
-      width: '30px',
-      margin: '15px 0',
+      display: 'none'
     },
     [presets.Mobile]: {
       display: 'inline-block',
-      verticalAlign: 'top',
+      verticalAlign: 'middle',
       position: 'relative',
       height: '30px',
       width: '30px',
@@ -101,26 +107,7 @@ const styles = {
       display: 'none'
     },
     [presets.Tablet]: {
-      position: 'absolute',
-      marginTop: '15px',
-      display: 'inline-block',
-      width: '30px',
-      height: '2px',
-      borderTop: '2px solid #4F739A',
-      '-webkit-transition': 'border-color .1s',
-      transition: 'border-color .1s',
-      '::before, ::after': {
-        content: '""',
-        position: 'absolute',
-        borderTop: '2px solid #4F739A',
-        height: 0,
-        left: 0,
-        right: 0,
-        '-webkit-transition': '-webkit-transform .2s',
-        transition: '-webkit-transform .2s',
-        transition: 'transform .2s',
-        transition: 'transform .2s, -webkit-transform .2s',
-      }
+      display: 'none'
     },
     [presets.Mobile]: {
       position: 'absolute',
@@ -128,13 +115,13 @@ const styles = {
       display: 'inline-block',
       width: '30px',
       height: '2px',
-      borderTop: '2px solid #4F739A',
+      borderTop: '2px solid #FFFFFF',
       '-webkit-transition': 'border-color .1s',
       transition: 'border-color .1s',
       '::before, ::after': {
         content: '""',
         position: 'absolute',
-        borderTop: '2px solid #4F739A',
+        borderTop: '2px solid #FFFFFF',
         height: 0,
         left: 0,
         right: 0,
@@ -153,11 +140,40 @@ const styles = {
   },
   rightNavContainer: {
     float: 'right',
-    marginTop: '9px',
-    marginBottom: '8px'
+    paddingTop: '9px',
+    paddingBottom: '8px',
+    [presets.Mobile]: {
+      display: 'block',
+      marginLeft: '-20px',
+      marginRight: '-20px',
+      paddingTop: '0px',
+      paddingBottom: '0px',
+      float: 'none',
+      height: '0px',
+      overflowY: 'hidden',
+      backgroundColor: '#4F739A',
+      '-webkit-transition': 'height .2s ease-out, padding-top .2s ease-out, padding-bottom .2s ease-out',
+      '-moz-transition': 'height .2s ease-out, padding-top .2s ease-out, padding-bottom .2s ease-out',
+      '-ms-transition': 'height .2s ease-out, padding-top .2s ease-out, padding-bottom .2s ease-out',
+      '-o-transition': 'height .2s ease-out, padding-top .2s ease-out, padding-bottom .2s ease-out',
+      transition: 'height .2s ease-out',
+      '&[data-navbar-open=true]': {
+        height: '65px',
+      },
+      '> *': {
+        display: 'inline-block',
+        paddingTop: '10px',
+        paddingBottom: '10px',
+      },
+      '> *:first-child': {
+        marginLeft: '20px'
+      }
+    }
   },
   navbarButton: {
-    margin: 0,
+    marginTop: 0,
+    marginBottom: 0,
+    marginRight: 0,
     verticalAlign: 'middle'
   },
   subnav: {
@@ -186,7 +202,6 @@ const styles = {
   logo: {
     [presets.Desktop]: {
       display: 'inline-block',
-      position: 'relative',
       verticalAlign: 'middle',
       width: '134px',
       height: '32px',
@@ -199,9 +214,6 @@ const styles = {
     [presets.Tablet]: {
       display: 'inline-block',
       verticalAlign: 'top',
-      position: 'relative',
-      top: '13px',
-      left: '20px',
       width: '134px',
       height: '32px',
       marginBottom: 0,
@@ -213,9 +225,6 @@ const styles = {
     [presets.Mobile]: {
       display: 'inline-block',
       verticalAlign: 'top',
-      position: 'relative',
-      top: '13px',
-      left: 'calc(50% - 85px)',
       width: '134px',
       height: '32px',
       marginBottom: 0,
@@ -246,7 +255,12 @@ const styles = {
     userSelect: 'none',
     '-moz-user-select': 'none',
     '-webkit-user-select': 'none',
-    '-ms-user-select': 'none'
+    '-ms-user-select': 'none',
+    [presets.Mobile]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      marginLeft: 'calc(50% - 125px)'
+    }
   },
   navbarSocialIcon: {
     height: '25px',

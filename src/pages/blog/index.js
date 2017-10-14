@@ -101,8 +101,16 @@ class BlogPostsIndex extends React.Component {
 
 const styles = {
   content: {
-    width: '1000px',
-    margin: '145px auto 0 auto'
+    [presets.Desktop]: {
+      width: '1000px',
+      margin: '145px auto 0 auto'
+    },
+    [presets.Tablet]: {
+      margin: '145px 50px 0 50px'
+    },
+    [presets.Mobile]: {
+      margin: '60px 50px 50px 50px'
+    }
   },
   hr: {
     borderColor: '#DDE5ED',

@@ -18,9 +18,9 @@ class BlogPostFeaturePreviewItem extends React.Component {
       <div>
         <Link to={post.fields.permalink}>
           {image}
-          <h2>{PrismicDOM.RichText.asText(post.data.title)}</h2>
+          <h1>{PrismicDOM.RichText.asText(post.data.title)}</h1>
         </Link>
-        <p>{PrismicDOM.RichText.asText(post.data.excerpt)}</p>
+        <p style={styles.p}>{PrismicDOM.RichText.asText(post.data.excerpt)}</p>
         <Link to={post.fields.permalink}>Read more...</Link>
       </div>
     )
@@ -36,6 +36,10 @@ const styles = {
     backgroundColor: '#DDE5ED',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
+  },
+  p: {
+    fontSize: '20px',
+    lineHeight: '40px'
   }
 };
 
