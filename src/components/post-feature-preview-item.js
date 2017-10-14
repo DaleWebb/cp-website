@@ -10,18 +10,17 @@ class BlogPostFeaturePreviewItem extends React.Component {
   }
 
   render() {
-    const post = this.props.post;
 
-    const image = (post.data.feature_image) ? <div style={this.generateBackgroundImageCss(post.data.feature_image.url)}></div> : undefined;
+    const image = (this.props.featureImage) ? <div style={this.generateBackgroundImageCss(this.props.featureImage.url)}></div> : undefined;
 
     return (
       <div>
-        <Link to={post.fields.permalink}>
+        <Link to={this.props.permalink}>
           {image}
-          <h1>{PrismicDOM.RichText.asText(post.data.title)}</h1>
+          <h1>{PrismicDOM.RichText.asText(this.props.title)}</h1>
         </Link>
-        <p style={styles.p}>{PrismicDOM.RichText.asText(post.data.excerpt)}</p>
-        <Link to={post.fields.permalink}>Read more...</Link>
+        <p style={styles.p}>{PrismicDOM.RichText.asText(this.props.excerpt)}</p>
+        <Link to={this.props.permalink}>Read more...</Link>
       </div>
     )
   }

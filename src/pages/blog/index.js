@@ -49,7 +49,10 @@ class BlogPostsIndex extends React.Component {
         elements.push(
           <div>
             <BlogPostFeaturePreviewItem
-              post={node}
+              featureImage={node.data.feature_image}
+              permalink={node.fields.permalink}
+              title={node.data.title}
+              excerpt={node.data.excerpt}
               key={i}
             />
             {divider}
@@ -62,7 +65,10 @@ class BlogPostsIndex extends React.Component {
           elements.push(
             <div>
               <BlogPostRowPreviewItem
-                post={node}
+                featureImage={node.data.feature_image}
+                permalink={node.fields.permalink}
+                title={node.data.title}
+                excerpt={node.data.excerpt}
                 key={i}
               />
               {divider}
@@ -82,7 +88,10 @@ class BlogPostsIndex extends React.Component {
           node = blogPosts[blogPostMarker].node;
           elements.push(
             <BlogPostGridPreviewItem
-              post={node}
+              featureImage={node.data.feature_image}
+              permalink={node.fields.permalink}
+              title={node.data.title}
+              excerpt={node.data.excerpt}
               key={i}
             />
           );

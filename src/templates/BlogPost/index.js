@@ -8,6 +8,8 @@ import PrismicDOM from 'prismic-dom';
 import presets from '../../utils/presets';
 import globalStyles from '../../utils/global-styles';
 
+import BlogPostRowPreviewItem from '../../components/post-row-preview-item';
+
 export default class BlogPost extends React.Component {
 
   render() {
@@ -15,6 +17,8 @@ export default class BlogPost extends React.Component {
     const post = this.props.data.prismicDocument.data;
 
     const image = (post.feature_image) ? <img src={post.feature_image.url} css={styles.featureImage} /> : undefined;
+
+    const nextPost = this.props.pathContext.next;
 
     return (
       <div>
@@ -25,6 +29,14 @@ export default class BlogPost extends React.Component {
           {image}
         </div>
         <div css={styles.section2} dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(post.body)}}></div>
+        {nextPost && (
+          <BlogPostRowPreviewItem
+            featureImage={nextPost.data.feature_image}
+            permalink={nextPost.fields.permalink}
+            title={nextPost.data.title}
+            excerpt={nextPost.data.excerpt}
+          />
+        )}
       </div>
     );
   }
