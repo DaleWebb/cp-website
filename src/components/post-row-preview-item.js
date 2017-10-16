@@ -55,8 +55,8 @@ const styles = {
     width: '100%'
   },
   p: {
-    fontSize: '20px',
-    lineHeight: '40px'
+    fontSize: '18px',
+    lineHeight: '35px'
   }
 };
 

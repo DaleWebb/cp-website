@@ -30,12 +30,16 @@ export default class BlogPost extends React.Component {
         </div>
         <div css={styles.section2} dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(post.body)}}></div>
         {nextPost && (
-          <BlogPostRowPreviewItem
-            featureImage={nextPost.data.feature_image}
-            permalink={nextPost.fields.permalink}
-            title={nextPost.data.title}
-            excerpt={nextPost.data.excerpt}
-          />
+          <div css={styles.section3}>
+            <h2 style={{textAlign: 'center'}}>Next Article</h2>
+            <hr style={{ borderColor: '#DDE5ED', borderStyle: 'solid', height: 0 }}/>
+            <BlogPostRowPreviewItem
+              featureImage={nextPost.data.feature_image}
+              permalink={nextPost.fields.permalink}
+              title={nextPost.data.title}
+              excerpt={nextPost.data.excerpt}
+            />
+          </div>
         )}
       </div>
     );
@@ -85,8 +89,8 @@ const styles = {
     [presets.Desktop]: {
       width: '1000px',
       '> p': {
-        fontSize: '20px',
-        lineHeight: '40px',
+        fontSize: '18px',
+        lineHeight: '35px',
         marginBottom: '40px'
       },
       '> .block-img': {
@@ -116,6 +120,18 @@ const styles = {
       '> .block-img': {
         textAlign: 'center',
       }
+    }
+  },
+  section3: {
+    background: '#F4F8FC',
+    [presets.Desktop]: {
+      padding: '50px 100px'
+    },
+    [presets.Tablet]: {
+      padding: '50px'
+    },
+    [presets.Mobile]: {
+      padding: '10px 10px'
     }
   }
 }

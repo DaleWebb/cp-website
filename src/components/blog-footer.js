@@ -21,7 +21,6 @@ const styles = {
   container: {
     textAlign: 'center',
     padding: '40px',
-    marginTop: '50px',
     backgroundColor: '#F4F8FC'
   },
   socialIcon: {

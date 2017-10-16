@@ -32,9 +32,7 @@ class BlogPostsIndex extends React.Component {
 
     const blogPosts = allPrismicDocument.edges;
 
-    // const maxElements = blogPosts.length < 10 ? blogPosts.length : 10;
-
-    let maxElements = 10;
+    const maxElements = blogPosts.length < 10 ? blogPosts.length : 10;
 
     let blogPostMarker = 0;
 
@@ -58,7 +56,7 @@ class BlogPostsIndex extends React.Component {
             {divider}
           </div>
         );
-        // blogPostMarker++;
+        blogPostMarker++;
         break;
         case 1:
           node = blogPosts[blogPostMarker].node;
@@ -74,7 +72,7 @@ class BlogPostsIndex extends React.Component {
               {divider}
             </div>
           );
-          // blogPostMarker++;
+          blogPostMarker++;
         break;
         case 3:
           elements.push(
@@ -95,8 +93,8 @@ class BlogPostsIndex extends React.Component {
               key={i}
             />
           );
-          // blogPostMarker++;
-        break;
+          blogPostMarker++;
+          break;
       }
     }
 
@@ -112,10 +110,10 @@ const styles = {
   content: {
     [presets.Desktop]: {
       width: '1000px',
-      margin: '145px auto 0 auto'
+      margin: '145px auto 50px auto'
     },
     [presets.Tablet]: {
-      margin: '145px 50px 0 50px'
+      margin: '145px 50px 50px 50px'
     },
     [presets.Mobile]: {
       margin: '60px 50px 50px 50px'

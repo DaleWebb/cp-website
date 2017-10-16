@@ -37,8 +37,8 @@ const styles = {
     backgroundPosition: 'center'
   },
   p: {
-    fontSize: '20px',
-    lineHeight: '40px'
+    fontSize: '18px',
+    lineHeight: '35px'
   }
 };
 
