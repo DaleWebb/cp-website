@@ -168,15 +168,12 @@ const styles = {
   },
   section2: {
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
       padding: '0 100px 100px 100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 100px)',
       padding: '0 50px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 40px)',
       marginBottom: '60px',
       padding: '0 20px'
     },

@@ -14,45 +14,6 @@ export default class Home extends React.Component {
 
   constructor() {
     super();
-    this.state = {
-      features: [
-        {
-          title: 'Drag and drop rostering',
-          link: 'drag-and-drop-rostering',
-          body: 'Organise your carers faster than before with our powerful visual rostering.',
-          icon: `drag-and-drop-rostering.svg`
-        },
-        {
-          title: 'Call Monitoring',
-          link: 'call-monitoring',
-          body: 'Know for certain that a carer has attended an appointment, and receive a warning if they haven\'t.',
-          icon: `call-monitoring.svg`
-        },
-        {
-          title: 'SMS, Emails and Mobile',
-          link: 'mobile-app',
-          body: 'Keep your carers in the loop with instant updates and notifications sent to their phones and inbox.',
-          icon: `sms-emails-mobile.svg`
-        },
-        {
-          title: 'Banking-grade security',
-          body: 'Your data is safe with us. We have a 256-bit encryption on sensitive information.',
-          icon: `security.svg`
-        },
-        {
-          title: 'Invoicing and Payments',
-          link: 'invoicing-and-payments',
-          body: 'Produce beautiful invoices that reflect the image of your company.',
-          icon: `invoicing.svg`
-        },
-        {
-          title: 'Infinite customisation',
-          link: 'infinite-customisation',
-          body: 'You can manipulate CarePlanner to fit into your workflow and processes.',
-          icon: `infinite-customisation.svg`
-        }
-      ]
-    };
   }
 
   render() {
@@ -149,15 +110,12 @@ const styles = {
     position: 'relative',
     height: '359px',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
       padding: '160px 100px 100px 100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
       padding: '160px 100px 100px 100px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 70px)',
       marginBottom: '60px',
       padding: '90px 35px 90px 35px'
     },
