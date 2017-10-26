@@ -22,12 +22,12 @@ export default class Home extends React.Component {
 
     return (
       <div>
-        <Helmet title="Home"></Helmet>
+        <Helmet title="Home Care Software"></Helmet>
         <div css={styles.section1}>
           <div css={globalStyles.container}>
-            <h1 css={globalStyles.sectionTitleTop}>Home care software that works</h1>
+            <h1 css={globalStyles.sectionTitleTop}>Home Care Software that Works</h1>
             <p css={globalStyles.sectionDescriptionTop}>
-              CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
+              CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoices, timesheets, reports and more...
             </p>
             <div css={buttonGroupStyle.horizontal} style={{textAlign: 'left'}}>
               <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
@@ -40,7 +40,7 @@ export default class Home extends React.Component {
             <div css={styles.featureAside}>
               <div>
                 <h2 css={globalStyles.sectionTitle}>Feature Highlights</h2>
-                <p css={globalStyles.sectionDescription}>All the tools you need to help you focus on what you do best.</p>
+                <p css={globalStyles.sectionDescription}>All the tools you need to help you focus on providing the best care</p>
                 <Link to="/features">Read More...</Link>
                 <hr />
                 <div css={buttonGroupStyle.vertical}>
@@ -77,19 +77,19 @@ export default class Home extends React.Component {
                 <div css={styles.service}>
                   <h2>Top Notch Support</h2>
                   <p>
-                    {`You can call us as much as you like and you will get straight through to someone who can help.`}
+                    {`You can call us as much as you like and you will get straight through to someone who can help. We don't charge any extra, and we're always happy to offer advice.`}
                   </p>
                 </div>
                 <div css={styles.service}>
                   <h2>Unbeatable Value</h2>
                   <p>
-                    {`Pay as you go with no long term contracts, no 'upgrade' fees and no additional charge for core features.`}
+                    {`Pay as you go with no long term contracts, no 'upgrade' fees and no additional charge for core features. Everything is cloud-based, so there's no need for expensive servers or backups.`}
                   </p>
                 </div>
                 <div css={styles.service}>
                   <h2>Easy to use</h2>
                   <p>
-                    {`CarePlanner is very user friendly, and you don't need to be trained to use it.`}
+                    {`CarePlanner is very user friendly, and you don't need to be trained to use it. If you do want training, be that online or on-site, simply get in touch and ask us.`}
                   </p>
                 </div>
               </div>
