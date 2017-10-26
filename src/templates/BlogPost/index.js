@@ -5,6 +5,8 @@ import { navigateTo } from 'gatsby-link';
 
 import PrismicDOM from 'prismic-dom';
 
+import Moment from 'react-moment';
+
 import presets from '../../utils/presets';
 import globalStyles from '../../utils/global-styles';
 
@@ -25,6 +27,7 @@ export default class BlogPost extends React.Component {
         <Helmet title={PrismicDOM.RichText.asText(post.title)}></Helmet>
         <div css={styles.section1}>
           <h1>{PrismicDOM.RichText.asText(post.title)}</h1>
+          <h5><Moment format="dddd Do MMMM YYYY">{post.override_publication_date || this.props.data.prismicDocument.first_publication_date}</Moment></h5>
           <blockquote>{PrismicDOM.RichText.asText(post.excerpt)}</blockquote>
           {image}
         </div>
@@ -139,11 +142,13 @@ const styles = {
 export const pageQuery = graphql`
   query BlogPost($permalink: String!) {
     prismicDocument(type: { eq: "blog_post" }, fields: { permalink: { eq: $permalink } }) {
+      first_publication_date
       data {
         title {
           type
           text
         }
+        override_publication_date
         excerpt {
           type
           text

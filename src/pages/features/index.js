@@ -77,7 +77,7 @@ export default class Features extends React.Component {
               return (
                 <div css={[styles.mainFeature, styles.mainFeature.right]}>
                   <div css={[styles.mainFeatureGraphic, styles.mainFeature.right[feature.graphicClass]]}>
-
+                    <img src={require(`../../assets/Split-GIF-draft.gif`)} />
                   </div>
                   <div css={styles.mainFeature.grid}>
                     <div css={globalStyles.placeholder}>

@@ -51,6 +51,7 @@ class BlogPostsIndex extends React.Component {
               permalink={node.fields.permalink}
               title={node.data.title}
               excerpt={node.data.excerpt}
+              date={node.data.override_publication_date || node.first_publication_date}
               key={i}
             />
             {divider}
@@ -67,6 +68,7 @@ class BlogPostsIndex extends React.Component {
                 permalink={node.fields.permalink}
                 title={node.data.title}
                 excerpt={node.data.excerpt}
+                date={node.data.override_publication_date || node.first_publication_date}
                 key={i}
               />
               {divider}
@@ -90,6 +92,7 @@ class BlogPostsIndex extends React.Component {
               permalink={node.fields.permalink}
               title={node.data.title}
               excerpt={node.data.excerpt}
+              date={node.data.override_publication_date || node.first_publication_date}
               key={i}
             />
           );
@@ -142,6 +145,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          first_publication_date
           fields {
             permalink
           }
@@ -150,6 +154,7 @@ export const pageQuery = graphql`
               type
               text
             }
+            override_publication_date
             excerpt {
               type
               text
