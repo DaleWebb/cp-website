@@ -57,7 +57,7 @@ export default class CaseStudies extends React.Component {
 
 export const pageQuery = graphql`
   query caseStudies {
-    allPrismicDocument(filter: { type: { eq: "case_study" } }) {
+    allPrismicDocument(filter: { type: { eq: "case_study" } }, sort: { order: ASC, fields: [data___weight] }) {
       edges {
         node {
           fields {

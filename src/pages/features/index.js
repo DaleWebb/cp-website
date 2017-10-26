@@ -289,7 +289,7 @@ const styles = {
 
 export const pageQuery = graphql`
   query features {
-    allPrismicDocument(filter: { type: { eq: "feature" } }) {
+    allPrismicDocument(filter: { type: { eq: "feature" } }, sort: { order: ASC, fields: [data___weight] }) {
       edges {
         node {
           fields {

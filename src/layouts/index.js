@@ -43,7 +43,7 @@ export default class DefaultLayout extends React.Component {
 
 export const pageQuery = graphql`
   query navigation {
-    allPrismicDocument {
+    allPrismicDocument(sort: { order: ASC, fields: [data___weight] }) {
       edges {
         node {
           type
