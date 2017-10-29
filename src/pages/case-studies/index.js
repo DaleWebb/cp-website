@@ -34,8 +34,8 @@ export default class CaseStudies extends React.Component {
         </div>
         <div css={styles.section2} itemScope itemType="http://schema.org/ItemList">
           <div css={globalStyles.container}>
-            {caseStudies.map(caseStudy =>
-              <div css={styles.caseStudy} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
+            {caseStudies.map((caseStudy, i) =>
+              <div css={styles.caseStudy} key={i} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
                 <div css={styles.caseStudyInner}>
                   <img css={styles.caseStudyInnerImg} src={caseStudy.node.data.large_image.url} alt="Quote from {caseStudy.node.data.company_name.text}" />
                   <h3 itemProp="name">{PrismicDOM.RichText.asText(caseStudy.node.data.company_name)}</h3>
@@ -57,7 +57,7 @@ export default class CaseStudies extends React.Component {
 
 export const pageQuery = graphql`
   query caseStudies {
-    allPrismicDocument(filter: { type: { eq: "case_study" } }) {
+    allPrismicDocument(filter: { type: { eq: "case_study" } }, sort: { order: ASC, fields: [data___weight] }) {
       edges {
         node {
           fields {
@@ -89,15 +89,15 @@ const styles = {
     background: '#F4F8FC',
     [presets.Desktop]: {
       width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
       width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
       width: 'calc(100% - 100px)',
-      padding: '150px 50px 70px 50px'
+      padding: '70px 50px'
     }
   },
   section2: {
@@ -121,9 +121,9 @@ const styles = {
     [presets.Desktop]: {
       display: 'inline-block',
       verticalAlign: 'top',
-      maxWidth: '22%',
-      width: '22%',
-      margin: '4% 1.3% 0 1.3%',
+      maxWidth: '29%',
+      width: '29%',
+      margin: '4% 1.9% 0 1.9%',
       '-moz-transition': 'opacity .2s',
       '-o-transition': 'opacity .2s',
       '-webkit-transition': 'opacity .2s',

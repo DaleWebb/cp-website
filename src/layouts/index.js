@@ -7,6 +7,8 @@ import SalesFooter from '../components/sales-footer';
 import BlogNavbar from '../components/blog-navbar';
 import BlogFooter from '../components/blog-footer';
 
+import presets from '../utils/presets';
+
 import '../fonts/fonts.scss';
 
 export default class DefaultLayout extends React.Component {
@@ -23,7 +25,7 @@ export default class DefaultLayout extends React.Component {
     }
 
     return (
-      <div {...this.props}>
+      <div css={(isBlog) ? style.marginBlogSite : style.marginSalesSite}>
         <Helmet defaultTitle="Home care software that works" titleTemplate="%s | CarePlanner">
           <link rel="icon" href={require('../assets/favicon.ico')} type="image/x-icon"/>
           <meta name="description" content="CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets." />
@@ -41,9 +43,26 @@ export default class DefaultLayout extends React.Component {
   }
 };
 
+const style = {
+  marginSalesSite: {
+    [presets.Desktop]: {
+      marginTop: '80px'
+    },
+    [presets.Tablet]: {
+      marginTop: '60px'
+    },
+    [presets.Mobile]: {
+      marginTop: '60px'
+    }
+  },
+  marginBlogSite: {
+    marginTop: '60px'
+  }
+}
+
 export const pageQuery = graphql`
   query navigation {
-    allPrismicDocument {
+    allPrismicDocument(sort: { order: ASC, fields: [data___weight] }) {
       edges {
         node {
           type

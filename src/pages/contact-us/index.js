@@ -56,16 +56,13 @@ const styles = {
   section1: {
     background: '#F4F8FC',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 100px)',
-      padding: '150px 50px 70px 50px'
+      padding: '70px 50px'
 
     }
   },

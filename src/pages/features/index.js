@@ -10,6 +10,9 @@ import presets from '../../utils/presets';
 import globalStyles from '../../utils/global-styles';
 import { buttonStyle, buttonGroupStyle } from '../../components/button';
 
+import FeatureHeaderRight from '../../components/feature-header-right';
+import FeatureHeaderLeft from '../../components/feature-header-left';
+
 export default class Features extends React.Component {
 
   constructor() {
@@ -36,8 +39,8 @@ export default class Features extends React.Component {
               </div>
             </div>
             <div css={styles.column2}>
-              {features.map(feature =>
-                <h5 css={styles.column2feature}>
+              {features.map((feature, i) =>
+                <h5 css={styles.column2feature} key={i}>
                   <Link to={feature.node.fields.permalink}>{PrismicDOM.RichText.asText(feature.node.data.feature_name)}</Link>
                 </h5>
               )}
@@ -49,55 +52,27 @@ export default class Features extends React.Component {
             const feature = featureEdge.node.data;
             if(i % 2) {
               return (
-                <div css={[styles.mainFeature, styles.mainFeature.left]}>
-                  <div css={styles.mainFeature.grid}>
-                    <div css={globalStyles.placeholder}>
-                      <img src={require(`../../assets/feature-icon-placeholder.svg`)} />
-                    </div>
-                    <a href={featureEdge.node.fields.permalink}>
-                      <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
-                    </a>
-                    <a href={featureEdge.node.fields.permalink}>
-                      <h2>{PrismicDOM.RichText.asText(feature.feature_tagline)}</h2>
-                    </a>
-                    {feature.feature_bullets.map(object =>
-                      <p css={styles.mainFeature.info}>{PrismicDOM.RichText.asText(object.feature_bullet)}</p>
-                    )}
-                    <div css={buttonGroupStyle.horizontalLeft}>
-                      <Link css={[buttonStyle.button, buttonStyle.filled]} to={featureEdge.node.fields.permalink}>Learn more about {PrismicDOM.RichText.asText(feature.feature_name)}</Link>
-                      <Link css={[buttonStyle.button, buttonStyle.outline]} to="/contact-us">Book a demo</Link>
-                    </div>
-                  </div>
-                  <div css={[styles.mainFeatureGraphic, styles.mainFeature.left[feature.graphicClass]]}>
-
-                  </div>
-                </div>
+                <FeatureHeaderLeft
+                  key={i}
+                  permalink={featureEdge.node.fields.permalink}
+                  image={require(`./invoicing-and-payments.png`)}
+                  icon={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../../assets/feature-icon-placeholder.svg`)}
+                  name={feature.feature_name}
+                  tagline={feature.feature_tagline}
+                  bullets={feature.feature_bullets}
+                />
               );
             } else {
               return (
-                <div css={[styles.mainFeature, styles.mainFeature.right]}>
-                  <div css={[styles.mainFeatureGraphic, styles.mainFeature.right[feature.graphicClass]]}>
-                    <img src={require(`../../assets/Split-GIF-draft.gif`)} />
-                  </div>
-                  <div css={styles.mainFeature.grid}>
-                    <div css={globalStyles.placeholder}>
-                      <img src={require(`../../assets/feature-icon-placeholder.svg`)} />
-                    </div>
-                    <a href={featureEdge.node.fields.permalink}>
-                      <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
-                    </a>
-                    <a href={featureEdge.node.fields.permalink}>
-                      <h2>{PrismicDOM.RichText.asText(feature.feature_tagline)}</h2>
-                    </a>
-                    {feature.feature_bullets.map(object =>
-                      <p css={styles.mainFeature.info}>{PrismicDOM.RichText.asText(object.feature_bullet)}</p>
-                    )}
-                    <div css={buttonGroupStyle.horizontalLeft}>
-                      <Link css={[buttonStyle.button, buttonStyle.filled]} to={featureEdge.node.fields.permalink}>Learn more about {PrismicDOM.RichText.asText(feature.feature_name)}</Link>
-                      <Link css={[buttonStyle.button, buttonStyle.outline]} to="/contact-us">Book a demo</Link>
-                    </div>
-                  </div>
-                </div>
+                <FeatureHeaderRight
+                  key={i}
+                  permalink={featureEdge.node.fields.permalink}
+                  image={require(`./invoicing-and-payments.png`)}
+                  icon={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../../assets/feature-icon-placeholder.svg`)}
+                  name={feature.feature_name}
+                  tagline={feature.feature_tagline}
+                  bullets={feature.feature_bullets}
+                />
               )
             }
           })}
@@ -111,17 +86,14 @@ const styles = {
   section1: {
     position: 'relative',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 50px)',
       marginBottom: '60px',
-      padding: '110px 25px 50px 25px'
+      padding: '50px 25px'
     },
     '::before': {
       content: '""',
@@ -233,160 +205,14 @@ const styles = {
   },
   section2: {
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
       padding: '50px 100px 100px 100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 100px)',
       padding: '50px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 40px)',
       marginBottom: '60px',
       padding: '0 20px'
-    }
-  },
-  mainFeature: {
-    display: '-webkit-box',
-    display: '-moz-box',
-    display: '-ms-flexbox',
-    display: '-webkit-flex',
-    display: 'flex',
-    alignItems: 'center',
-    [presets.Desktop]: {
-      flexFlow: 'row'
-    },
-    [presets.Tablet]: {
-      flexFlow: 'row'
-    },
-    [presets.Mobile]: {
-      flexFlow: 'column'
-    },
-    grid: {
-      [presets.Desktop]: {
-        maxWidth: '50%',
-        padding: '100px 0'
-      },
-      [presets.Tablet]: {
-        maxWidth: '50%',
-        padding: '25px 0'
-      },
-      [presets.Mobile]: {
-        padding: '50px 20px',
-        order: 1
-      }
-    },
-    left: {
-      circle: {
-        [presets.Desktop]: {
-          left: '200px',
-          marginLeft: '-100px'
-        },
-        [presets.Tablet]: {
-          left: '200px',
-          marginLeft: '-100px'
-        },
-        '& img': {
-          borderRadius: '100%',
-          '-webkit-box-shadow': 'inset 0px 0px 15px #888888',
-          '-moz-box-shadow': 'inset 0px 0px 15px #888888',
-          boxShadow: 'inset 0px 0px 15px #888888'
-        }
-      },
-      frame: {
-        [presets.Desktop]: {
-          left: '100px'
-        },
-        [presets.Tablet]: {
-          left: '100px'
-        }
-      },
-      normal: {
-        [presets.Desktop]: {
-          left: '50px'
-        },
-        [presets.Tablet]: {
-          left: '50px'
-        }
-      },
-      info: {
-        [presets.Desktop]: {
-          margin: '20px 0 20px 10%'
-        },
-        [presets.Tablet]: {
-          margin: '20px 0 20px 10%'
-        }
-      }
-    },
-    right: {
-      circle: {
-        [presets.Desktop]: {
-          right: '200px',
-          marginRight: '-100px'
-        },
-        [presets.Tablet]: {
-          right: '200px',
-          marginRight: '-100px'
-        },
-        '& img': {
-          borderRadius: '100%',
-          '-webkit-box-shadow': 'inset 0px 0px 15px #888888',
-          '-moz-box-shadow': 'inset 0px 0px 15px #888888',
-          boxShadow: 'inset 0px 0px 15px #888888'
-        }
-      },
-      frame: {
-        [presets.Desktop]: {
-          right: '100px'
-        },
-        [presets.Tablet]: {
-          right: '100px'
-        }
-      },
-      normal: {
-        [presets.Desktop]: {
-          right: '50px'
-        },
-        [presets.Tablet]: {
-          right: '50px'
-        }
-      }
-    },
-    info: {
-      [presets.Desktop]: {
-        display: 'inline-block',
-        width: '40%',
-        margin: '20px 10% 20px 0',
-        verticalAlign: 'top'
-      },
-      [presets.Tablet]: {
-        display: 'inline-block',
-        width: '40%',
-        margin: '20px 10% 20px 0',
-        verticalAlign: 'top'
-      }
-    },
-
-  },
-  mainFeatureGraphic: {
-    [presets.Desktop]: {
-      position: 'relative',
-      minWidth: '50%',
-      textAlign: 'center'
-    },
-    [presets.Tablet]: {
-      position: 'relative',
-      minWidth: '50%',
-      textAlign: 'center'
-    },
-    [presets.Mobile]: {
-      order: 0,
-      width: '100%',
-      maxWidth: '100%',
-      textAlign: 'center'
-    },
-    '& img': {
-      maxWidth: '100%'
     }
   },
   section3: {
@@ -465,7 +291,7 @@ const styles = {
 
 export const pageQuery = graphql`
   query features {
-    allPrismicDocument(filter: { type: { eq: "feature" } }) {
+    allPrismicDocument(filter: { type: { eq: "feature" } }, sort: { order: ASC, fields: [data___weight] }) {
       edges {
         node {
           fields {
@@ -475,6 +301,9 @@ export const pageQuery = graphql`
             feature_name {
               type
               text
+            }
+            feature_icon {
+              url
             }
             feature_tagline {
               type

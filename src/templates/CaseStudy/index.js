@@ -74,8 +74,8 @@ export default class CaseStudy extends React.Component {
         <div css={styles.section3} itemScope itemType="http://schema.org/ItemList">
           <div css={globalStyles.container}>
             <h2 onClick={() => navigateTo('/case-studies')}>More Case Studies</h2>
-            {caseStudies.map(caseStudy =>
-              <div css={styles.caseStudy} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
+            {caseStudies.map((caseStudy, i) =>
+              <div css={styles.caseStudy} key={i} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
                 <div css={styles.caseStudyInner}>
                   <img css={styles.caseStudyInnerImage} src={caseStudy.node.data.large_image.url} alt="Quote from {PrismicDOM.RichText.asText(caseStudy.node.data.company_description)}"/>
                   <h3 itemProp="name">{PrismicDOM.RichText.asText(caseStudy.node.data.company_name)}</h3>
@@ -99,17 +99,14 @@ const styles = {
   section1: {
     position: 'relative',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 100px)',
       marginBottom: '60px',
-      padding: '110px 50px 70px 50px'
+      padding: '70px 50px'
     },
     '::before': {
       content: '""',
@@ -168,15 +165,12 @@ const styles = {
   },
   section2: {
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
       padding: '0 100px 100px 100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 100px)',
       padding: '0 50px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 40px)',
       marginBottom: '60px',
       padding: '0 20px'
     },

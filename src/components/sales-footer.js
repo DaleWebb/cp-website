@@ -44,9 +44,9 @@ export default class Footer extends React.Component {
     };
   }
 
-  renderLink(data) {
+  renderLink(data, i) {
     return (
-      <div css={styles.item}>
+      <div css={styles.item} key={i}>
         <Link to={data.link}>{data.title}</Link>
       </div>
     );
@@ -59,13 +59,17 @@ export default class Footer extends React.Component {
           <div style={styles.links}>
             <div css={styles.column}>
               <div css={styles.item}>
-                <h5>Features</h5>
+                <Link to="/features">
+                  <h5>Features</h5>
+                </Link>
               </div>
               {this.state.links.features.map(this.renderLink)}
             </div>
             <div css={styles.column}>
               <div css={styles.item}>
-                <h5>Case Studies</h5>
+                <Link to="/case-studies">
+                  <h5>Case Studies</h5>
+                </Link>
               </div>
               {this.state.links.caseStudies.map(this.renderLink)}
             </div>
