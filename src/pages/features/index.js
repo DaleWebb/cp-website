@@ -39,8 +39,8 @@ export default class Features extends React.Component {
               </div>
             </div>
             <div css={styles.column2}>
-              {features.map(feature =>
-                <h5 css={styles.column2feature}>
+              {features.map((feature, i) =>
+                <h5 css={styles.column2feature} key={i}>
                   <Link to={feature.node.fields.permalink}>{PrismicDOM.RichText.asText(feature.node.data.feature_name)}</Link>
                 </h5>
               )}
@@ -53,9 +53,10 @@ export default class Features extends React.Component {
             if(i % 2) {
               return (
                 <FeatureHeaderLeft
+                  key={i}
                   permalink={featureEdge.node.fields.permalink}
                   image={require(`./invoicing-and-payments.png`)}
-                  icon={require(`../../assets/feature-icon-placeholder.svg`)}
+                  icon={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../../assets/feature-icon-placeholder.svg`)}
                   name={feature.feature_name}
                   tagline={feature.feature_tagline}
                   bullets={feature.feature_bullets}
@@ -64,9 +65,10 @@ export default class Features extends React.Component {
             } else {
               return (
                 <FeatureHeaderRight
+                  key={i}
                   permalink={featureEdge.node.fields.permalink}
                   image={require(`./invoicing-and-payments.png`)}
-                  icon={require(`../../assets/feature-icon-placeholder.svg`)}
+                  icon={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../../assets/feature-icon-placeholder.svg`)}
                   name={feature.feature_name}
                   tagline={feature.feature_tagline}
                   bullets={feature.feature_bullets}
@@ -84,14 +86,14 @@ const styles = {
   section1: {
     position: 'relative',
     [presets.Desktop]: {
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
       marginBottom: '60px',
-      padding: '110px 25px 50px 25px'
+      padding: '50px 25px'
     },
     '::before': {
       content: '""',
@@ -299,6 +301,9 @@ export const pageQuery = graphql`
             feature_name {
               type
               text
+            }
+            feature_icon {
+              url
             }
             feature_tagline {
               type
