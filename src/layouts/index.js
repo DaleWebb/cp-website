@@ -46,17 +46,17 @@ export default class DefaultLayout extends React.Component {
 const style = {
   marginSalesSite: {
     [presets.Desktop]: {
-      marginTop: '80px'
+      paddingTop: '80px'
     },
     [presets.Tablet]: {
-      marginTop: '60px'
+      paddingTop: '60px'
     },
     [presets.Mobile]: {
-      marginTop: '60px'
+      paddingTop: '60px'
     }
   },
   marginBlogSite: {
-    marginTop: '60px'
+    paddingTop: '60px'
   }
 }
 

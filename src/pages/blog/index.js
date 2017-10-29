@@ -112,14 +112,14 @@ class BlogPostsIndex extends React.Component {
 const styles = {
   content: {
     [presets.Desktop]: {
-      width: '1000px',
-      margin: '145px auto 50px auto'
+      maxWidth: '1000px',
+      margin: '50px auto'
     },
     [presets.Tablet]: {
-      margin: '145px 50px 50px 50px'
+      margin: '50px'
     },
     [presets.Mobile]: {
-      margin: '60px 50px 50px 50px'
+      margin: '50px'
     }
   },
   hr: {
