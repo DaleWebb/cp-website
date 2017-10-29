@@ -11,23 +11,25 @@ class FeatureHeaderLeft extends React.Component {
 
   render() {
 
+    const buttonText = [{type: this.props.name[0].type, text: this.props.name[0].text.toLowerCase()}];
+
     return (
       <div css={styles.mainFeature}>
-        <div css={styles.mainFeature.grid}>
-          <div css={globalStyles.placeholder}>
-            <img src={this.props.icon} />
-          </div>
+        <div>
           <Link to={this.props.permalink}>
+            <div css={globalStyles.placeholder}>
+              <img src={this.props.icon} />
+            </div>
             <h5>{PrismicDOM.RichText.asText(this.props.name)}</h5>
           </Link>
           <Link to={this.props.permalink}>
             <h2>{PrismicDOM.RichText.asText(this.props.tagline)}</h2>
           </Link>
-          {this.props.bullets.map(object =>
-            <p css={styles.info}>{PrismicDOM.RichText.asText(object.feature_bullet)}</p>
+          {this.props.bullets.map((object, i) =>
+            <p css={styles.info} key={i}>{PrismicDOM.RichText.asText(object.feature_bullet)}</p>
           )}
           <div css={buttonGroupStyle.horizontalLeft}>
-            <Link css={[buttonStyle.button, buttonStyle.filled]} to={this.props.permalink} style={(!this.props.permalink) ? {display: 'none'} : undefined}>Learn more about {PrismicDOM.RichText.asText(this.props.name)}</Link>
+            <Link css={[buttonStyle.button, buttonStyle.filled]} to={this.props.permalink} style={(!this.props.permalink) ? {display: 'none'} : undefined}>Learn more about {PrismicDOM.RichText.asText(buttonText)}</Link>
             <Link css={[buttonStyle.button, buttonStyle.outline]} to="/contact-us">Book a demo</Link>
           </div>
         </div>

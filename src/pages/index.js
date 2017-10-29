@@ -18,7 +18,8 @@ export default class Home extends React.Component {
 
   render() {
 
-    const features = this.props.data.allPrismicDocument.edges;
+    const features = this.props.data.allPrismicDocument.edges.filter(edge => edge.node.type === 'feature').slice(0, 6);
+    const caseStudies = this.props.data.allPrismicDocument.edges.filter(edge => edge.node.type === 'case_study').slice(0, 3);
 
     return (
       <div>
@@ -51,21 +52,17 @@ export default class Home extends React.Component {
             </div>
             <div css={styles.featureGrid}>
               {features.map((featureEdge, i) => {
-                if(i < 6) {
-                  const feature = featureEdge.node.data;
-                  return (
-                    <div css={styles.feature}
-                      onClick={() => navigateTo(featureEdge.node.fields.permalink)}
-                      style={{cursor: 'pointer'}}>
-                      <div css={globalStyles.placeholder}>
-                        <img src={require(`../assets/feature-icon-placeholder.svg`)} />
-                      </div>
-                      <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
-                      <p>{PrismicDOM.RichText.asText(feature.sell)}</p>
-                      <Link to={featureEdge.node.fields.permalink}>Learn more</Link>
+                const feature = featureEdge.node.data;
+                return (
+                  <div css={styles.feature} key={i} onClick={() => navigateTo(featureEdge.node.fields.permalink)}>
+                    <div css={globalStyles.placeholder}>
+                      <img src={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../assets/feature-icon-placeholder.svg`)} />
                     </div>
-                  );
-                }
+                    <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
+                    <p>{PrismicDOM.RichText.asText(feature.sell)}</p>
+                    <Link to={featureEdge.node.fields.permalink}>Learn more</Link>
+                  </div>
+                );
               })}
             </div>
           </div>
@@ -76,19 +73,19 @@ export default class Home extends React.Component {
               <div css={styles.servicesGrid}>
                 <div css={styles.service}>
                   <h2>Top Notch Support</h2>
-                  <p>
+                  <p css={globalStyles.sectionDescriptionTop}>
                     {`You can call us as much as you like and you will get straight through to someone who can help. We don't charge any extra, and we're always happy to offer advice.`}
                   </p>
                 </div>
                 <div css={styles.service}>
                   <h2>Unbeatable Value</h2>
-                  <p>
+                  <p css={globalStyles.sectionDescriptionTop}>
                     {`Pay as you go with no long term contracts, no 'upgrade' fees and no additional charge for core features. Everything is cloud-based, so there's no need for expensive servers or backups.`}
                   </p>
                 </div>
                 <div css={styles.service}>
                   <h2>Easy to use</h2>
-                  <p>
+                  <p css={globalStyles.sectionDescriptionTop}>
                     {`CarePlanner is very user friendly, and you don't need to be trained to use it. If you do want training, be that online or on-site, simply get in touch and ask us.`}
                   </p>
                 </div>
@@ -98,6 +95,24 @@ export default class Home extends React.Component {
                 <Link css={[buttonStyle.button, buttonStyle.filled, buttonStyle.large]} to="/contact-us">Book a demo</Link>
               </div>
             </div>
+          </div>
+        </div>
+        <div css={styles.section4}>
+          <div css={globalStyles.container}>
+            {caseStudies.map((caseStudy, i) =>
+              <div css={styles.caseStudy} key={i} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
+                <div css={styles.caseStudyInner}>
+                  <img css={styles.caseStudyInnerImg} src={caseStudy.node.data.large_image.url} alt="Quote from {caseStudy.node.data.company_name.text}" />
+                  <h3 itemProp="name">{PrismicDOM.RichText.asText(caseStudy.node.data.company_name)}</h3>
+                  <div css={styles.caseStudyInnerDescription} dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(caseStudy.node.data.summary)}}></div>
+                  <Link to={caseStudy.node.fields.permalink}>Read Case Study...</Link>
+                </div>
+                <div css={styles.caseStudyStat}>
+                  <div css={styles.caseStudyStatFigure}>{caseStudy.node.data.key_stat_figure}</div>
+                  <div css={styles.caseStudyStatDescription}>{caseStudy.node.data.key_stat_text}</div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -110,14 +125,14 @@ const styles = {
     position: 'relative',
     height: '359px',
     [presets.Desktop]: {
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
       marginBottom: '60px',
-      padding: '90px 35px 90px 35px'
+      padding: '90px 35px'
     },
     '::before': {
       content: '""',
@@ -223,6 +238,7 @@ const styles = {
     }
   },
   feature: {
+    cursor: 'pointer',
     [presets.Desktop]: {
       display: 'inline-block',
       verticalAlign: 'top',
@@ -305,14 +321,101 @@ const styles = {
     [presets.Mobile]: {
       marginBottom: '40px'
     }
+  },
+  section4: {
+    [presets.Desktop]: {
+      padding: '0 100px 50px',
+      '&:hover > * > *': {
+        opacity: .6
+      },
+      '&:hover > * > *:hover': {
+        opacity: 1
+      }
+    },
+    [presets.Tablet]: {
+      paddingBottom: '50px'
+    },
+    [presets.Mobile]: {
+      padding: '0 10px'
+    },
+  },
+  caseStudy: {
+    [presets.Desktop]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '29%',
+      width: '29%',
+      margin: '4% 1.9% 0 1.9%',
+      '-moz-transition': 'opacity .2s',
+      '-o-transition': 'opacity .2s',
+      '-webkit-transition': 'opacity .2s',
+      transition: 'opacity .2s'
+    },
+    [presets.Tablet]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '29%',
+      width: '29%',
+      margin: '4% 1.9% 0 1.9%'
+    },
+    [presets.Mobile]: {
+      maxWidth: '90%',
+      width: '90%',
+      margin: '5%'
+    }
+  },
+  caseStudyInner: {
+    padding: '20px',
+    marginBottom: '20px',
+    cursor: 'pointer'
+  },
+  caseStudyInnerImg: {
+    width: '100%'
+  },
+  caseStudyInnerDescription: {
+    [presets.Desktop]: {
+      maxHeight: '141px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    },
+    [presets.Tablet]: {
+      maxHeight: '141px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    }
+  },
+  caseStudyStat: {
+    width: 'calc(100% - 40px)',
+    padding: '20px',
+    background: '#F4F8FC',
+    cursor: 'pointer',
+    [presets.Desktop]: {
+      height: '108px',
+      maxHeight: '108px'
+    },
+    [presets.Tablet]: {
+      height: '108px',
+      maxHeight: '108px'
+    }
+  },
+  caseStudyStatFigure: {
+    fontSize: '36px',
+    color: '#4F739A',
+    textAlign: 'center',
+    margin: '10px 0'
+  },
+  caseStudyStatDescription: {
+    textAlign: 'center',
+    margin: '10px'
   }
 }
 
 export const pageQuery = graphql`
   query featureHighlights {
-    allPrismicDocument(filter: { type: { eq: "feature" } }) {
+    allPrismicDocument(filter: { type: { regex: "/feature|case_study/" } }, sort: { order: ASC, fields: [data___weight] }) {
       edges {
         node {
+          type
           fields {
             permalink
           }
@@ -321,7 +424,23 @@ export const pageQuery = graphql`
               type
               text
             }
+            feature_icon {
+              url
+            }
             sell {
+              type
+              text
+            }
+            key_stat_figure
+            key_stat_text
+            large_image {
+              url
+            }
+            summary {
+              type
+              text
+            }
+            company_name {
               type
               text
             }

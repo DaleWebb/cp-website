@@ -30,13 +30,13 @@ const styles = {
   section1: {
     background: '#F4F8FC',
     [presets.Desktop]: {
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
-      padding: '110px 50px 70px 50px'
+      padding: '70px 50px'
     }
   },
   section2: {

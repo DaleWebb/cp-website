@@ -25,9 +25,9 @@ export default class Feature extends React.Component {
           <div css={[styles.mainFeatureGraphic, styles.normal]}>
             <img src={require('../../assets/section-background.png')} />
           </div>
-          <div css={styles.mainFeature.grid}>
+          <div>
             <div css={globalStyles.placeholder}>
-              <img src={require('../../assets/feature-icon-placeholder.svg')} />
+              <img src={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../../assets/feature-icon-placeholder.svg`)} />
             </div>
             <a href={feature.feature_permalink}>
               <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
@@ -45,9 +45,11 @@ export default class Feature extends React.Component {
         <div css={[styles.section2, globalStyles.container]}>
             <div css={styles.column1} dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(feature.feature_body_copy)}}></div>
             <div css={styles.column2}>
-              {feature.features_sidebar.map(a => {
-                <div dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(a.feature_text)}}></div>
-              })}
+              {feature.features_sidebar.map((a, i) => (
+                <div key={i}>
+                  <blockquote dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(a.feature_text)}}></blockquote>
+                </div>
+              ))}
             </div>
         </div>
       </div>
@@ -58,14 +60,14 @@ export default class Feature extends React.Component {
 const styles = {
   section1: {
     [presets.Desktop]: {
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
       marginBottom: '60px',
-      padding: '110px 25px 50px 25px'
+      padding: '50px 25px'
     }
   },
   mainFeature: {
@@ -259,14 +261,12 @@ export const pageQuery = graphql`
           type
           text
         }
+        feature_icon {
+          url
+        }
         feature_body_copy {
           type
           text
-          spans {
-            start
-            end
-            type
-          }
         }
         feature_bullets {
           feature_bullet {

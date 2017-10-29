@@ -44,9 +44,9 @@ export default class Footer extends React.Component {
     };
   }
 
-  renderLink(data) {
+  renderLink(data, i) {
     return (
-      <div css={styles.item}>
+      <div css={styles.item} key={i}>
         <Link to={data.link}>{data.title}</Link>
       </div>
     );
