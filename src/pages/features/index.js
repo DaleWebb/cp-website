@@ -55,7 +55,7 @@ export default class Features extends React.Component {
                 <FeatureHeaderLeft
                   key={i}
                   permalink={featureEdge.node.fields.permalink}
-                  image={require(`./invoicing-and-payments.png`)}
+                  image={feature.feature_image.url}
                   icon={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../../assets/feature-icon-placeholder.svg`)}
                   name={feature.feature_name}
                   tagline={feature.feature_tagline}
@@ -67,7 +67,7 @@ export default class Features extends React.Component {
                 <FeatureHeaderRight
                   key={i}
                   permalink={featureEdge.node.fields.permalink}
-                  image={require(`./invoicing-and-payments.png`)}
+                  image={feature.feature_image.url}
                   icon={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../../assets/feature-icon-placeholder.svg`)}
                   name={feature.feature_name}
                   tagline={feature.feature_tagline}
@@ -105,7 +105,7 @@ const styles = {
       opacity: .2,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top right',
-      backgroundImage: 'url(' + require('./section-1.png') + ')',
+      backgroundImage: 'url(' + require('../../assets/section-1.png') + ')',
       [presets.Desktop]: {
         height: '200%',
         backgroundSize: '100%'
@@ -303,6 +303,9 @@ export const pageQuery = graphql`
               text
             }
             feature_icon {
+              url
+            }
+            feature_image {
               url
             }
             feature_tagline {

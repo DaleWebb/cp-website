@@ -23,7 +23,7 @@ export default class Feature extends React.Component {
         <div css={styles.section1}>
         <div css={styles.mainFeature}>
           <div css={[styles.mainFeatureGraphic, styles.normal]}>
-            <img src={require('../../assets/section-background.png')} />
+            <img src={feature.feature_image.url} />
           </div>
           <div>
             <div css={globalStyles.placeholder}>
@@ -262,6 +262,9 @@ export const pageQuery = graphql`
           text
         }
         feature_icon {
+          url
+        }
+        feature_image {
           url
         }
         feature_body_copy {
