@@ -24,6 +24,8 @@
     "gatsby-source-prismic": "^0.1.1",
     "gatsby-transformer-remark": "^1.0.9",
     "prismic-dom": "^2.0.5",
+    "react-moment": "^0.6.5",
+    "react-share": "^1.16.0",
     "react-twitter-widgets": "^1.6.1",
     "typography": "^0.16.6"
   },

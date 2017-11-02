@@ -3,6 +3,8 @@ import Link from "gatsby-link"
 
 import PrismicDOM from 'prismic-dom';
 
+import Moment from 'react-moment';
+
 class BlogPostGridPreviewItem extends React.Component {
 
   generateBackgroundImageCss(url) {
@@ -19,6 +21,7 @@ class BlogPostGridPreviewItem extends React.Component {
           {image}
           <h3>{PrismicDOM.RichText.asText(this.props.title)}</h3>
         </Link>
+        <h5><Moment format="dddd Do MMMM YYYY">{this.props.date}</Moment></h5>
         <p style={styles.p}>{PrismicDOM.RichText.asText(this.props.excerpt)}</p>
         <Link to={this.props.permalink}>Read more...</Link>
       </div>

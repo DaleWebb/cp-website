@@ -4,11 +4,11 @@ import Link from 'gatsby-link';
 export default () => (
   <div css={styles.container}>
     <div>
-      <a href="https://twitter.com/careplannerltd" target="_blank">
-        <img src={require('../assets/twitter-circle.png')} css={styles.socialIcon} />
+      <a href="https://twitter.com/careplannerltd" target="_blank" css={styles.socialIcon}>
+        <img src={require('../assets/twitter-circle.png')} />
       </a>
-      <a href="https://www.linkedin.com/company/3239311/" target="_blank">
-        <img src={require('../assets/linkedin-circle.png')} css={styles.socialIcon} />
+      <a href="https://www.linkedin.com/company/3239311/" target="_blank" css={styles.socialIcon}>
+        <img src={require('../assets/linkedin-circle.png')} />
       </a>
     </div>
     <div css={styles.copyright}>
@@ -24,9 +24,13 @@ const styles = {
     backgroundColor: '#F4F8FC'
   },
   socialIcon: {
-    height: '30px',
+    '> img': {
+      height: '30px',
+    },
     ':first-child': {
-      marginRight: '20px'
+      '> img': {
+        marginRight: '20px'
+      }
     }
   },
   copyright: {
