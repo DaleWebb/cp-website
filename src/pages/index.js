@@ -4,6 +4,8 @@ import Link from 'gatsby-link';
 import { navigateTo } from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 
+import PrismicDOM from 'prismic-dom';
+
 import presets from '../utils/presets';
 import globalStyles from '../utils/global-styles';
 import { buttonStyle, buttonGroupStyle } from '../components/button';
@@ -12,57 +14,21 @@ export default class Home extends React.Component {
 
   constructor() {
     super();
-    this.state = {
-      features: [
-        {
-          title: 'Drag and drop rostering',
-          link: 'drag-and-drop-rostering',
-          body: 'Organise your carers faster than before with our powerful visual rostering.',
-          icon: `drag-and-drop-rostering.svg`
-        },
-        {
-          title: 'Call Monitoring',
-          link: 'call-monitoring',
-          body: 'Know for certain that a carer has attended an appointment, and receive a warning if they haven\'t.',
-          icon: `call-monitoring.svg`
-        },
-        {
-          title: 'SMS, Emails and Mobile',
-          link: 'mobile-app',
-          body: 'Keep your carers in the loop with instant updates and notifications sent to their phones and inbox.',
-          icon: `sms-emails-mobile.svg`
-        },
-        {
-          title: 'Banking-grade security',
-          body: 'Your data is safe with us. We have a 256-bit encryption on sensitive information.',
-          icon: `security.svg`
-        },
-        {
-          title: 'Invoicing and Payments',
-          link: 'invoicing-and-payments',
-          body: 'Produce beautiful invoices that reflect the image of your company.',
-          icon: `invoicing.svg`
-        },
-        {
-          title: 'Infinite customisation',
-          link: 'infinite-customisation',
-          body: 'You can manipulate CarePlanner to fit into your workflow and processes.',
-          icon: `infinite-customisation.svg`
-        }
-      ]
-    };
   }
 
   render() {
 
+    const features = this.props.data.allPrismicDocument.edges.filter(edge => edge.node.type === 'feature').slice(0, 6);
+    const caseStudies = this.props.data.allPrismicDocument.edges.filter(edge => edge.node.type === 'case_study').slice(0, 3);
+
     return (
       <div>
-        <Helmet title="Home"></Helmet>
+        <Helmet title="Home Care Software"></Helmet>
         <div css={styles.section1}>
           <div css={globalStyles.container}>
-            <h1 css={globalStyles.sectionTitleTop}>Home care software that works</h1>
+            <h1 css={globalStyles.sectionTitleTop}>Home Care Software that Works</h1>
             <p css={globalStyles.sectionDescriptionTop}>
-              CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoicing and timesheets.
+              CarePlanner gives domiciliary home care agencies the power to plan and manage staff rosters, client schedules, invoices, timesheets, reports and more...
             </p>
             <div css={buttonGroupStyle.horizontal} style={{textAlign: 'left'}}>
               <a css={[buttonStyle.button, buttonStyle.outline]} href="https://www.youtube.com/embed/7oTDpRya7Ko?autoplay=1" target="_blank">Watch the video</a>
@@ -75,7 +41,7 @@ export default class Home extends React.Component {
             <div css={styles.featureAside}>
               <div>
                 <h2 css={globalStyles.sectionTitle}>Feature Highlights</h2>
-                <p css={globalStyles.sectionDescription}>All the tools you need to help you focus on what you do best.</p>
+                <p css={globalStyles.sectionDescription}>All the tools you need to help you focus on providing the best care</p>
                 <Link to="/features">Read More...</Link>
                 <hr />
                 <div css={buttonGroupStyle.vertical}>
@@ -85,21 +51,16 @@ export default class Home extends React.Component {
               </div>
             </div>
             <div css={styles.featureGrid}>
-              {this.state.features.map(feature => {
+              {features.map((featureEdge, i) => {
+                const feature = featureEdge.node.data;
                 return (
-                  <div css={styles.feature}
-                    onClick={() => {
-                      if(feature.link) {
-                        navigateTo('/features#' + feature.link);
-                      }
-                    }}
-                    style={(feature.link !== undefined) ? {cursor: 'pointer'} : {}}>
+                  <div css={styles.feature} key={i} onClick={() => navigateTo(featureEdge.node.fields.permalink)}>
                     <div css={globalStyles.placeholder}>
-                      <img src={require(`./features/` + feature.icon)} />
+                      <img src={(feature.feature_icon.url) ? feature.feature_icon.url : require(`../assets/feature-icon-placeholder.svg`)} />
                     </div>
-                    <h5>{feature.title}</h5>
-                    <p>{feature.body}</p>
-                    {(feature.link) ? <Link to={`/features#` + feature.link}>Learn more</Link> : undefined}
+                    <h5>{PrismicDOM.RichText.asText(feature.feature_name)}</h5>
+                    <p>{PrismicDOM.RichText.asText(feature.sell)}</p>
+                    <Link to={featureEdge.node.fields.permalink}>Learn more</Link>
                   </div>
                 );
               })}
@@ -112,20 +73,20 @@ export default class Home extends React.Component {
               <div css={styles.servicesGrid}>
                 <div css={styles.service}>
                   <h2>Top Notch Support</h2>
-                  <p>
-                    {`You can call us as much as you like and you will get straight through to someone who can help.`}
+                  <p css={globalStyles.sectionDescriptionTop}>
+                    {`You can call us as much as you like and you will get straight through to someone who can help. We don't charge any extra, and we're always happy to offer advice.`}
                   </p>
                 </div>
                 <div css={styles.service}>
                   <h2>Unbeatable Value</h2>
-                  <p>
-                    {`Pay as you go with no long term contracts, no 'upgrade' fees and no additional charge for core features.`}
+                  <p css={globalStyles.sectionDescriptionTop}>
+                    {`Pay as you go with no long term contracts, no 'upgrade' fees and no additional charge for core features. Everything is cloud-based, so there's no need for expensive servers or backups.`}
                   </p>
                 </div>
                 <div css={styles.service}>
                   <h2>Easy to use</h2>
-                  <p>
-                    {`CarePlanner is very user friendly, and you don't need to be trained to use it.`}
+                  <p css={globalStyles.sectionDescriptionTop}>
+                    {`CarePlanner is very user friendly, and you don't need to be trained to use it. If you do want training, be that online or on-site, simply get in touch and ask us.`}
                   </p>
                 </div>
               </div>
@@ -134,6 +95,24 @@ export default class Home extends React.Component {
                 <Link css={[buttonStyle.button, buttonStyle.filled, buttonStyle.large]} to="/contact-us">Book a demo</Link>
               </div>
             </div>
+          </div>
+        </div>
+        <div css={styles.section4}>
+          <div css={globalStyles.container}>
+            {caseStudies.map((caseStudy, i) =>
+              <div css={styles.caseStudy} key={i} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
+                <div css={styles.caseStudyInner}>
+                  <img css={styles.caseStudyInnerImg} src={caseStudy.node.data.large_image.url} alt="Quote from {caseStudy.node.data.company_name.text}" />
+                  <h3 itemProp="name">{PrismicDOM.RichText.asText(caseStudy.node.data.company_name)}</h3>
+                  <div css={styles.caseStudyInnerDescription} dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(caseStudy.node.data.summary)}}></div>
+                  <Link to={caseStudy.node.fields.permalink}>Read Case Study...</Link>
+                </div>
+                <div css={styles.caseStudyStat}>
+                  <div css={styles.caseStudyStatFigure}>{caseStudy.node.data.key_stat_figure}</div>
+                  <div css={styles.caseStudyStatDescription}>{caseStudy.node.data.key_stat_text}</div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -146,17 +125,14 @@ const styles = {
     position: 'relative',
     height: '359px',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 70px)',
       marginBottom: '60px',
-      padding: '90px 35px 90px 35px'
+      padding: '90px 35px'
     },
     '::before': {
       content: '""',
@@ -262,6 +238,7 @@ const styles = {
     }
   },
   feature: {
+    cursor: 'pointer',
     [presets.Desktop]: {
       display: 'inline-block',
       verticalAlign: 'top',
@@ -344,5 +321,132 @@ const styles = {
     [presets.Mobile]: {
       marginBottom: '40px'
     }
+  },
+  section4: {
+    [presets.Desktop]: {
+      padding: '0 100px 50px',
+      '&:hover > * > *': {
+        opacity: .6
+      },
+      '&:hover > * > *:hover': {
+        opacity: 1
+      }
+    },
+    [presets.Tablet]: {
+      paddingBottom: '50px'
+    },
+    [presets.Mobile]: {
+      padding: '0 10px'
+    },
+  },
+  caseStudy: {
+    [presets.Desktop]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '29%',
+      width: '29%',
+      margin: '4% 1.9% 0 1.9%',
+      '-moz-transition': 'opacity .2s',
+      '-o-transition': 'opacity .2s',
+      '-webkit-transition': 'opacity .2s',
+      transition: 'opacity .2s'
+    },
+    [presets.Tablet]: {
+      display: 'inline-block',
+      verticalAlign: 'top',
+      maxWidth: '29%',
+      width: '29%',
+      margin: '4% 1.9% 0 1.9%'
+    },
+    [presets.Mobile]: {
+      maxWidth: '90%',
+      width: '90%',
+      margin: '5%'
+    }
+  },
+  caseStudyInner: {
+    padding: '20px',
+    marginBottom: '20px',
+    cursor: 'pointer'
+  },
+  caseStudyInnerImg: {
+    width: '100%'
+  },
+  caseStudyInnerDescription: {
+    [presets.Desktop]: {
+      maxHeight: '141px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    },
+    [presets.Tablet]: {
+      maxHeight: '141px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    }
+  },
+  caseStudyStat: {
+    width: 'calc(100% - 40px)',
+    padding: '20px',
+    background: '#F4F8FC',
+    cursor: 'pointer',
+    [presets.Desktop]: {
+      height: '108px',
+      maxHeight: '108px'
+    },
+    [presets.Tablet]: {
+      height: '108px',
+      maxHeight: '108px'
+    }
+  },
+  caseStudyStatFigure: {
+    fontSize: '36px',
+    color: '#4F739A',
+    textAlign: 'center',
+    margin: '10px 0'
+  },
+  caseStudyStatDescription: {
+    textAlign: 'center',
+    margin: '10px'
   }
 }
+
+export const pageQuery = graphql`
+  query featureHighlights {
+    allPrismicDocument(filter: { type: { regex: "/feature|case_study/" } }, sort: { order: ASC, fields: [data___weight] }) {
+      edges {
+        node {
+          type
+          fields {
+            permalink
+          }
+          data {
+            feature_name {
+              type
+              text
+            }
+            feature_icon {
+              url
+            }
+            sell {
+              type
+              text
+            }
+            key_stat_figure
+            key_stat_text
+            large_image {
+              url
+            }
+            summary {
+              type
+              text
+            }
+            company_name {
+              type
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+`;

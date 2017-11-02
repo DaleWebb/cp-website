@@ -16,12 +16,7 @@ const buttonStyle = {
     '-o-transition': 'background .2s, color .2s, border-color .2s',
     '-webkit-transition': 'background .2s, color .2s, border-color .2s',
     transition: 'background .2s, color .2s, border-color .2s',
-    [presets.Desktop]: {
-      margin: '10px 20px 10px 0'
-    },
-    [presets.Tablet]: {
-      margin: '10px 20px 10px 0'
-    },
+    margin: '10px 20px 10px 0',
     [presets.Mobile]: {
       margin: '10px 10px 10px 0'
     },
@@ -66,6 +61,34 @@ const buttonStyle = {
 const buttonGroupStyle = {
   horizontal: {
     textAlign: 'center',
+    userSelect: 'none',
+    '-moz-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    '> *': {
+      display: 'inline-block',
+      margin: '9px 15px 9px 0'
+    },
+    '> *:last-child': {
+      margin: 0
+    }
+  },
+  horizontalLeft: {
+    textAlign: 'left',
+    userSelect: 'none',
+    '-moz-user-select': 'none',
+    '-webkit-user-select': 'none',
+    '-ms-user-select': 'none',
+    '> *': {
+      display: 'inline-block',
+      margin: '9px 15px 9px 0'
+    },
+    '> *:last-child': {
+      margin: 0
+    }
+  },
+  horizontalRight: {
+    textAlign: 'right',
     userSelect: 'none',
     '-moz-user-select': 'none',
     '-webkit-user-select': 'none',

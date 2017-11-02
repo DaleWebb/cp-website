@@ -30,31 +30,56 @@ const styles = {
   section1: {
     background: '#F4F8FC',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 100px)',
-      padding: '110px 50px 70px 50px'
+      padding: '70px 50px'
     }
   },
   section2: {
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '100px'
+      padding: '100px',
+      '& p, & li': {
+        fontSize: '18px',
+        lineHeight: '35px'
+      },
+      '& p': {
+        marginBottom: '40px'
+      },
+      '& .block-img': {
+        textAlign: 'center'
+      }
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '0 50px'
+      padding: '0 50px',
+      '& p, & li': {
+        fontSize: '18px',
+        lineHeight: '35px'
+      },
+      '& p': {
+        marginBottom: '40px'
+      },
+      '& .block-img': {
+        textAlign: 'center'
+      }
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 100px)',
       padding: '0 20px',
-      marginBottom: '60px'
+      marginBottom: '60px',
+      '& p, & li': {
+        marginLeft: '50px',
+        marginRight: '50px',
+        lineHeight: '30px',
+      },
+      '& p': {
+        marginBottom: '40px'
+      },
+      '& .block-img': {
+        textAlign: 'center',
+      }
     }
   }
 }

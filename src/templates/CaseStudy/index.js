@@ -43,26 +43,20 @@ export default class CaseStudy extends React.Component {
           <div css={globalStyles.container}>
             <div css={styles.column1} itemProp="articleBody">
               <div itemProp="articleSection">
-                <h3>The Company</h3>
+                <h2>The Company</h2>
                  <div dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(caseStudy.data.company_description)}}></div>
               </div>
               <div itemProp="articleSection">
-                <h3>The Problem</h3>
-                <p>
-                   <div dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asText(caseStudy.data.problem)}}></div>
-                </p>
+                <h2>The Problem</h2>
+                <div dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(caseStudy.data.problem)}}></div>
               </div>
               <div itemProp="articleSection">
-                <h3>The Solution</h3>
-                <p>
-                   <div dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asText(caseStudy.data.solution)}}></div>
-                </p>
+                <h2>The Solution</h2>
+                <div dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(caseStudy.data.solution)}}></div>
               </div>
               <div itemProp="articleSection">
-                <h3>The Results</h3>
-                <p>
-                   <div dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asText(caseStudy.data.results)}}></div>
-                </p>
+                <h2>The Results</h2>
+                <div dangerouslySetInnerHTML={{ __html: PrismicDOM.RichText.asHtml(caseStudy.data.results)}}></div>
               </div>
             </div>
             <div css={styles.column2}>
@@ -72,7 +66,7 @@ export default class CaseStudy extends React.Component {
               </div>
               <blockquote>"{PrismicDOM.RichText.asText(caseStudy.data.quote)}"</blockquote>
               <div css={buttonGroupStyle.vertical}>
-                <Link css={[buttonStyle.button, buttonStyle.filled, buttonStyle.large]} to="/contact-us">Book a demo</Link>
+                <Link css={[buttonStyle.button, buttonStyle.filled, buttonStyle.large]} style={{display: 'block'}} to="/contact-us">Book a demo</Link>
               </div>
             </div>
           </div>
@@ -80,8 +74,8 @@ export default class CaseStudy extends React.Component {
         <div css={styles.section3} itemScope itemType="http://schema.org/ItemList">
           <div css={globalStyles.container}>
             <h2 onClick={() => navigateTo('/case-studies')}>More Case Studies</h2>
-            {caseStudies.map(caseStudy =>
-              <div css={styles.caseStudy} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
+            {caseStudies.map((caseStudy, i) =>
+              <div css={styles.caseStudy} key={i} onClick={() => navigateTo(caseStudy.node.fields.permalink)} itemProp="itemListElement">
                 <div css={styles.caseStudyInner}>
                   <img css={styles.caseStudyInnerImage} src={caseStudy.node.data.large_image.url} alt="Quote from {PrismicDOM.RichText.asText(caseStudy.node.data.company_description)}"/>
                   <h3 itemProp="name">{PrismicDOM.RichText.asText(caseStudy.node.data.company_name)}</h3>
@@ -105,17 +99,14 @@ const styles = {
   section1: {
     position: 'relative',
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 200px)',
-      padding: '160px 100px 100px 100px'
+      padding: '100px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 100px)',
       marginBottom: '60px',
-      padding: '110px 50px 70px 50px'
+      padding: '70px 50px'
     },
     '::before': {
       content: '""',
@@ -174,15 +165,12 @@ const styles = {
   },
   section2: {
     [presets.Desktop]: {
-      width: 'calc(100% - 200px)',
       padding: '0 100px 100px 100px'
     },
     [presets.Tablet]: {
-      width: 'calc(100% - 100px)',
       padding: '0 50px'
     },
     [presets.Mobile]: {
-      width: 'calc(100% - 40px)',
       marginBottom: '60px',
       padding: '0 20px'
     },
@@ -223,13 +211,23 @@ const styles = {
       maxWidth: '60%',
       width: '60%',
       margin: '0 1%',
+      '& p': {
+        fontSize: '18px',
+        lineHeight: '35px',
+        marginBottom: '40px'
+      }
     },
     [presets.Tablet]: {
       display: 'inline-block',
       verticalAlign: 'top',
       maxWidth: '60%',
       width: '60%',
-      margin: '0 1%'
+      margin: '0 1%',
+      '& p': {
+        fontSize: '18px',
+        lineHeight: '35px',
+        marginBottom: '40px'
+      }
     },
     [presets.Mobile]: {
       maxWidth: '90%',
@@ -296,10 +294,10 @@ const styles = {
     '& h2': {
       textAlign: 'center'
     },
-    '&:hover > * > *': {
+    '&:hover > * > div': {
       opacity: .6
     },
-    '&:hover > * > *:hover': {
+    '&:hover > * > div:hover': {
       opacity: 1
     }
   },
@@ -332,7 +330,6 @@ const styles = {
     width: 'calc(100% - 40px)',
     padding: '20px',
     marginBottom: '20px',
-    background: '#FFFFFF',
     cursor: 'pointer',
     [presets.Desktop]: {
       maxHeight: '324px',

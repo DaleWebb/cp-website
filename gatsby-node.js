@@ -9,11 +9,15 @@ const dataTemplateMap = {
   },
   'feature': {
     path: '/features/',
-    template: path.resolve(`src/templates/GenericPost/index.js`)
+    template: path.resolve(`src/templates/Feature/index.js`)
   },
   'page': {
     path: '/',
     template: path.resolve(`src/templates/GenericPost/index.js`)
+  },
+  'blog_post': {
+    path: '/blog/',
+    template: path.resolve(`src/templates/BlogPost/index.js`)
   }
 };
 
@@ -26,11 +30,56 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(
         `
         {
-          allPrismicDocument {
+          allPrismicDocument(
+              sort: { order: DESC, fields: first_publication_date }
+            ) {
             edges {
               node {
                 slugs
                 type
+                fields {
+                  permalink
+                }
+                data {
+                  feature_name {
+                    type
+                    text
+                  }
+                  feature_tagline {
+                    type
+                    text
+                  }
+                  sell {
+                    type
+                    text
+                  }
+
+                  title {
+                    type
+                    text
+                  }
+                  excerpt {
+                    type
+                    text
+                  }
+                  feature_image {
+                    url
+                  }
+
+                  key_stat_figure
+                  key_stat_text
+                  large_image {
+                    url
+                  }
+                  summary {
+                    type
+                    text
+                  }
+                  company_name {
+                    type
+                    text
+                  }
+                }
               }
             }
           }
@@ -41,19 +90,42 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           reject(result.errors)
         }
 
-        // Create pages for each markdown file.
+        const posts = result.data.allPrismicDocument.edges;
 
-        result.data.allPrismicDocument.edges.forEach(({ node }) => {
+        posts.forEach((post, i) => {
+
+          const node = post.node;
 
           const path = dataTemplateMap[node.type].path + node.slugs[0];
+
+          let prev, next;
+
+          let pastPosts = posts.slice(0, i);
+          pastPosts.reverse();
+
+          for(let prevPost of pastPosts) {
+            if(prevPost.node.type === node.type && prevPost.node.fields.permalink !== node.fields.permalink) {
+              prev = prevPost.node;
+              break;
+            }
+          };
+
+          let nextPosts = posts.slice(i, posts.length - 1);
+
+          for(let nextPost of pastPosts) {
+            if(nextPost.node.type === node.type && nextPost.node.fields.permalink !== node.fields.permalink) {
+              next = nextPost.node;
+              break;
+            }
+          };
 
           createPage({
             path,
             component: dataTemplateMap[node.type].template,
-            // In your blog post template's graphql query, you can use path
-            // as a GraphQL variable to query for data from the markdown file.
             context: {
               permalink: path,
+              prev,
+              next
             }
           })
         })

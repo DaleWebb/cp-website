@@ -22,14 +22,14 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <nav style={style.navbar}>
+      <nav css={style.navbar}>
         <div style={style.inner}>
           <div css={globalStyles.container}>
             <a css={style.hamburger} onClick={this.toggleMenu.bind(this)}>
               <span css={style.hamburgerIcon}></span>
             </a>
             <Link to="/">
-              <img css={style.logo} src={logo} width="133.94" height="32"/>
+              <img css={style.logo} src={logo}/>
             </Link>
             <div css={style.actions} {...{'data-navbar-open': !this.state.collapsed}}>
               <ul css={style.links}>
@@ -38,6 +38,9 @@ export default class Navbar extends React.Component {
                 </li>
                 <li>
                   <Link css={style.link} activeClassName="active" to="/case-studies">Case Studies</Link>
+                </li>
+                <li>
+                  <Link css={style.link} activeClassName="active" to="/blog">News</Link>
                 </li>
                 <li>
                   <Link css={style.link} activeClassName="active" to="/contact-us">Contact Us</Link>
@@ -60,10 +63,18 @@ const style = {
     position: 'fixed',
     top: '0',
     width: '100%',
-    height: '60px',
     backgroundColor: '#FFFFFF',
     boxShadow: '0 2px 4px #DDE5ED',
-    zIndex: '1000'
+    zIndex: '1000',
+    [presets.Desktop]: {
+      height: '80px'
+    },
+    [presets.Tablet]: {
+      height: '60px'
+    },
+    [presets.Mobile]: {
+      height: '60px'
+    }
   },
   inner: {
     padding: '0 20px 0 20px'
@@ -101,8 +112,8 @@ const style = {
       borderTop: '2px solid #4F739A',
       '-webkit-transition': 'border-color .1s',
       transition: 'border-color .1s',
-      '::before, ::after': {
-        content: '""',
+      ':before, :after': {
+        content: '" "',
         position: 'absolute',
         borderTop: '2px solid #4F739A',
         height: 0,
@@ -123,7 +134,7 @@ const style = {
       borderTop: '2px solid #4F739A',
       '-webkit-transition': 'border-color .1s',
       transition: 'border-color .1s',
-      '::before, ::after': {
+      ':before, :after': {
         content: '""',
         position: 'absolute',
         borderTop: '2px solid #4F739A',
@@ -136,10 +147,10 @@ const style = {
         transition: 'transform .2s, -webkit-transform .2s',
       }
     },
-    '::before': {
+    ':before': {
       top: '-10px'
     },
-    '::after': {
+    ':after': {
       bottom: '-6px'
     }
   },
@@ -157,7 +168,7 @@ const style = {
       '-o-transition': 'height .2s ease-out',
       transition: 'height .2s ease-out',
       '&[data-navbar-open=true]': {
-        height: '180px'
+        height: '245px'
       }
     },
     [presets.Mobile]: {
@@ -173,7 +184,7 @@ const style = {
       '-o-transition': 'height .2s ease-out',
       transition: 'height .2s ease-out',
       '&[data-navbar-open=true]': {
-        height: '266px'
+        height: '310px'
       }
     }
   },
@@ -206,7 +217,7 @@ const style = {
       display: 'block',
       float: 'left',
       height: '100%',
-      margin: '0 0 0 20px',
+      margin: '10px 0 10px 20px',
       '& li': {
         display: 'block',
         float: 'left'
@@ -233,7 +244,6 @@ const style = {
   link: {
     display: 'block',
     color: '#4F739A',
-    padding: '20.5px 20px 20.5px 20px',
     margin: 0,
     minWidth: '80px',
     textDecoration: 'none',
@@ -246,13 +256,16 @@ const style = {
     '-webkit-transition': 'background .2s',
     transition: 'background .2s',
     [presets.Desktop]: {
-      textAlign: 'center'
+      textAlign: 'center',
+      padding: '30.5px 20px 30.5px 20px'
     },
     [presets.Tablet]: {
-      textAlign: 'left'
+      textAlign: 'left',
+      padding: '20.5px 12px 20.5px 12px'
     },
     [presets.Mobile]: {
-      textAlign: 'left'
+      textAlign: 'left',
+      padding: '20.5px 20px 20.5px 20px'
     },
     '&:hover, &:focus, &:active': {
       fontWeight: 'normal',
@@ -270,15 +283,23 @@ const style = {
     '-moz-user-select': 'none',
     '-webkit-user-select': 'none',
     '-ms-user-select': 'none',
+    [presets.Desktop]: {
+      top: '16px',
+      height: '45px'
+    },
     [presets.Tablet]: {
       display: 'inline-block',
       verticalAlign: 'top',
-      left: '20px'
+      top: '13px',
+      left: '20px',
+      height: '32px'
     },
     [presets.Mobile]: {
       display: 'inline-block',
       verticalAlign: 'top',
-      left: 'calc(50% - 85px)'
+      top: '13px',
+      left: 'calc(50% - 85px)',
+      height: '32px'
     }
   }
 };

@@ -4,54 +4,50 @@ import Link from 'gatsby-link';
 import presets from '../utils/presets';
 import globalStyles from '../utils/global-styles';
 
+import PrismicDOM from 'prismic-dom';
+
 export default class Footer extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    let caseStudies = [];
+    let features = [];
+
+    this.props.navigation.map(node => {
+      const item = node.node;
+      switch(item.type) {
+        case 'case_study':
+          caseStudies.push({
+            link: item.fields.permalink,
+            title: PrismicDOM.RichText.asText(item.data.company_name)
+          });
+        break;
+        case 'feature':
+          features.push({
+            link: item.fields.permalink,
+            title: PrismicDOM.RichText.asText(item.data.feature_name)
+          });
+        break;
+      }
+    });
+
     this.state = {
       links: {
-        features: [
-          {
-            url: "/features", title: 'Feature Highlights', header: true
-          },
-          {
-            url: "/features#drag-and-drop-rostering", title: 'Drag and Drop Rostering'
-          },
-          {
-            url: "/features#infinite-customisation", title: 'Infinite Customisation'
-          },
-          {
-            url: "/features#invoicing-and-payments", title: 'Invoicing and Payments'
-          },
-          {
-            url: "/features#call-monitoring", title: 'Call Monitoring'
-          },
-          {
-            url: "/features#mobile-app", title: 'Mobile App'
-          }
-        ],
-        caseStudies: [
-          {url: "/case-studies", title: 'Case Studies', header: true},
-          {url: "/case-studies/sos-homecare", title: 'SOS Homecare'},
-          {url: "/case-studies/county-care", title: 'County Care'},
-          {url: "/case-studies/proud-to-care", title: 'Proud To Care'},
-          {url: "/case-studies/charlesworth-community-care", title: 'Charlesworth Community Care'},
-          {url: "/case-studies/woodfield24", title: 'Woodfield24'}
-        ],
+        features: features,
+        caseStudies: caseStudies,
         company: [
-          {title: 'Company', header: true},
-          {url: "/terms-and-conditions", title: 'Terms and Conditions'},
-          {url: "/contact-us", title: 'Contact Us'}
+          {link: "/terms-and-conditions", title: 'Terms and Conditions'},
+          {link: "/contact-us", title: 'Contact Us'}
         ]
       }
     };
   }
 
-  renderLink(data) {
-    const component = (<Link to={data.url}>{data.title}</Link>);
+  renderLink(data, i) {
     return (
-      <div css={styles.item}>
-        {(data.header) ? <h5>{(data.link) ? component : data.title}</h5> : component}
+      <div css={styles.item} key={i}>
+        <Link to={data.link}>{data.title}</Link>
       </div>
     );
   }
@@ -62,12 +58,25 @@ export default class Footer extends React.Component {
         <div css={globalStyles.container}>
           <div style={styles.links}>
             <div css={styles.column}>
+              <div css={styles.item}>
+                <Link to="/features">
+                  <h5>Features</h5>
+                </Link>
+              </div>
               {this.state.links.features.map(this.renderLink)}
             </div>
             <div css={styles.column}>
+              <div css={styles.item}>
+                <Link to="/case-studies">
+                  <h5>Case Studies</h5>
+                </Link>
+              </div>
               {this.state.links.caseStudies.map(this.renderLink)}
             </div>
             <div css={styles.column}>
+              <div css={styles.item}>
+                <h5>Company</h5>
+              </div>
               {this.state.links.company.map(this.renderLink)}
             </div>
           </div>

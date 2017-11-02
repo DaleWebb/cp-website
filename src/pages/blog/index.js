@@ -2,12 +2,9 @@ import React from 'react';
 
 import presets from '../../utils/presets';
 
-import BlogNavbar from '../../components/blog/navbar';
-import BlogPostFeaturePreviewItem from '../../components/blog/post-feature-preview-item';
-import BlogPostRowPreviewItem from '../../components/blog/post-row-preview-item';
-import BlogPostImagePreviewItem from '../../components/blog/post-image-preview-item';
-// import BlogPostTextPreviewItem from '../../components/blog/post-text-preview-item';
-import BlogFooter from '../../components/blog/footer';
+import BlogPostFeaturePreviewItem from '../../components/post-feature-preview-item';
+import BlogPostRowPreviewItem from '../../components/post-row-preview-item';
+import BlogPostGridPreviewItem from '../../components/post-grid-preview-item';
 
 import { Timeline, Tweet } from 'react-twitter-widgets';
 
@@ -33,67 +30,77 @@ class BlogPostsIndex extends React.Component {
 
     const twitterFeed = this.getTwitterTimelineElement();
 
-    allPrismicDocument.edges.splice(twitterFeed, 3);
+    const blogPosts = allPrismicDocument.edges;
+
+    const maxElements = blogPosts.length < 10 ? blogPosts.length : 10;
+
+    let blogPostMarker = 0;
+
+    const elements = [];
+
+    for(let i = 0; i < maxElements; i++) {
+      let node;
+      let divider = (i < maxElements - 1) ? <hr style={styles.hr}/> : undefined
+      switch(i) {
+        case 0:
+        node = blogPosts[blogPostMarker].node;
+        elements.push(
+          <div>
+            <BlogPostFeaturePreviewItem
+              featureImage={node.data.feature_image}
+              permalink={node.fields.permalink}
+              title={node.data.title}
+              excerpt={node.data.excerpt}
+              key={i}
+            />
+            {divider}
+          </div>
+        );
+        blogPostMarker++;
+        break;
+        case 1:
+          node = blogPosts[blogPostMarker].node;
+          elements.push(
+            <div>
+              <BlogPostRowPreviewItem
+                featureImage={node.data.feature_image}
+                permalink={node.fields.permalink}
+                title={node.data.title}
+                excerpt={node.data.excerpt}
+                key={i}
+              />
+              {divider}
+            </div>
+          );
+          blogPostMarker++;
+        break;
+        case 3:
+          elements.push(
+            <div
+              style={styles.twitterFeedWrapper}>
+              {twitterFeed}
+            </div>
+          );
+          break;
+        default:
+          node = blogPosts[blogPostMarker].node;
+          elements.push(
+            <BlogPostGridPreviewItem
+              featureImage={node.data.feature_image}
+              permalink={node.fields.permalink}
+              title={node.data.title}
+              excerpt={node.data.excerpt}
+              key={i}
+            />
+          );
+          blogPostMarker++;
+          break;
+      }
+    }
 
     return (
-      <div>
-      <BlogNavbar />
       <div css={styles.content}>
-          {[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((node, id) => {
-            switch(id) {
-              case 0:
-              return (
-                <div>
-                  <BlogPostFeaturePreviewItem
-                    post={node}
-                    key={id}
-                  />
-                  <hr css={{ borderColor: '#DDE5ED', borderStyle: 'solid' }}/>
-                </div>
-              );
-              case 1:
-                return (
-                  <div>
-                    <BlogPostRowPreviewItem
-                      post={node}
-                      key={id}
-                    />
-                    <hr css={{ borderColor: '#DDE5ED', borderStyle: 'solid' }}/>
-                  </div>
-                );
-              return;
-              case 3:
-                return (
-                  <div
-                    css={{
-                      display: 'inline-block',
-                      width: 'calc(33% - (40px / 3))',
-                      marginRight: 'calc(40px / 2)'
-                    }}>
-                    {twitterFeed}
-                  </div>
-                );
-              default:
-                if(true) {//if it has an image
-                  return (
-                    <BlogPostImagePreviewItem
-                      post={node}
-                      key={id}
-                    />
-                  );
-                } else {
-                  return (
-                    <BlogPostTextPreviewItem
-                      post={node}
-                      key={id}
-                    />
-                  );
-                }
-              return;
-            }
-          })}
-        </div>
-        <BlogFooter />
+          {elements}
       </div>
     );
   }
@@ -101,8 +108,26 @@ class BlogPostsIndex extends React.Component {
 
 const styles = {
   content: {
-    width: '1000px',
-    margin: '145px auto 0 auto'
+    [presets.Desktop]: {
+      width: '1000px',
+      margin: '145px auto 50px auto'
+    },
+    [presets.Tablet]: {
+      margin: '145px 50px 50px 50px'
+    },
+    [presets.Mobile]: {
+      margin: '60px 50px 50px 50px'
+    }
+  },
+  hr: {
+    borderColor: '#DDE5ED',
+    borderStyle: 'solid',
+    height: 0
+  },
+  twitterFeedWrapper: {
+    display: 'inline-block',
+    width: 'calc(33% - (40px / 3))',
+    marginRight: 'calc(40px / 2)'
   }
 }
 
@@ -112,12 +137,27 @@ export const pageQuery = graphql`
   query BlogPostsIndexQuery {
     allPrismicDocument(
       filter: {
-        type: { eq: "case_study" }
+        type: { eq: "blog_post" }
       }
     ) {
       edges {
         node {
-          type
+          fields {
+            permalink
+          }
+          data {
+            title {
+              type
+              text
+            }
+            excerpt {
+              type
+              text
+            }
+            feature_image {
+              url
+            }
+          }
         }
       }
     }
