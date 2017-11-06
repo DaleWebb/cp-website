@@ -305,12 +305,9 @@ export const pageQuery = graphql`
             feature_icon {
               url
             }
-<<<<<<< HEAD
             feature_image {
               url
             }
-=======
->>>>>>> feature/blog
             feature_tagline {
               type
               text

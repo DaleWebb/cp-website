@@ -35,7 +35,7 @@ export default class BlogPost extends React.Component {
     const WhatsappIcon = generateShareIcon('whatsapp');
     const EmailIcon = generateShareIcon('email');
 
-    const url = location.href;
+    const url = this.props.data.site.siteMetadata.siteUrl + this.props.data.prismicDocument.fields.permalink;
     const title = this.props.data.prismicDocument.data.title[0].text;
 
     return (
@@ -200,8 +200,16 @@ const styles = {
 
 export const pageQuery = graphql`
   query BlogPost($permalink: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     prismicDocument(type: { eq: "blog_post" }, fields: { permalink: { eq: $permalink } }) {
       first_publication_date
+      fields {
+        permalink
+      }
       data {
         title {
           type
