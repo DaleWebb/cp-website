@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://dalewebb.github.io/cp-website/case-studies/charlesworth-community-care</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://dalewebb.github.io/cp-website/case-studies/county-care</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://dalewebb.github.io/cp-website/case-studies/proud-to-care</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://dalewebb.github.io/cp-website/case-studies/sos-homecare</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://dalewebb.github.io/cp-website/case-studies/woodfield24</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/blog/who-cares-about-social-care</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/shiftplanning-software</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/software-for-home-care-services</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/customisation</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/record-keeping</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/communication</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/travel</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/reporting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/invoicing-and-payments</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/secure-cloud-based-system</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/drag-and-drop-rostering</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/mobile</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/features/call-monitoring</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dalewebb.github.io/cp-website/terms-and-conditions</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/case-studies/woodfield24</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/case-studies/sos-homecare</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/case-studies/county-care</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/case-studies/charlesworth-community-care</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/case-studies/proud-to-care</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dalewebb.github.io/cp-website/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://dalewebb.github.io/cp-website/case-studies/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dalewebb.github.io/cp-website/contact-us/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dalewebb.github.io/cp-website/features/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dalewebb.github.io/cp-website/case-studies/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

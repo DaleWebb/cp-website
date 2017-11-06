@@ -1,88 +1,164 @@
 {
   "assetsByChunkName": {
-    "page-component---src-pages-contact-us-index-js": [
-      "page-component---src-pages-contact-us-index-js-58c5f6bb32d2a3444e9b.js",
-      "page-component---src-pages-contact-us-index-js-58c5f6bb32d2a3444e9b.js.map"
+    "component---src-templates-generic-post-index-js": [
+      "component---src-templates-generic-post-index-js-accfdb1664b05aa336e9.js",
+      "component---src-templates-generic-post-index-js-accfdb1664b05aa336e9.js.map"
+    ],
+    "path---features-customisation": [
+      "path---features-customisation-497e1d39dc7a79093e6c.js",
+      "path---features-customisation-497e1d39dc7a79093e6c.js.map"
+    ],
+    "path---features-communication": [
+      "path---features-communication-9538c30e7e183bf48eac.js",
+      "path---features-communication-9538c30e7e183bf48eac.js.map"
     ],
     "path---case-studies-charlesworth-community-care": [
-      "path---case-studies-charlesworth-community-care-09a966d1a1f0a8ec7ade.js",
-      "path---case-studies-charlesworth-community-care-09a966d1a1f0a8ec7ade.js.map"
+      "path---case-studies-charlesworth-community-care-cc85027374862be0809a.js",
+      "path---case-studies-charlesworth-community-care-cc85027374862be0809a.js.map"
+    ],
+    "path---features-record-keeping": [
+      "path---features-record-keeping-f78926ac352dd024d11e.js",
+      "path---features-record-keeping-f78926ac352dd024d11e.js.map"
     ],
     "path---case-studies-sos-homecare": [
-      "path---case-studies-sos-homecare-db797bac04a12b276933.js",
-      "path---case-studies-sos-homecare-db797bac04a12b276933.js.map"
+      "path---case-studies-sos-homecare-dac050a0f9b59de894b6.js",
+      "path---case-studies-sos-homecare-dac050a0f9b59de894b6.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-360059c258fe454f2468.js",
+      "component---src-pages-index-js-360059c258fe454f2468.js.map"
+    ],
+    "path---blog-who-cares-about-social-care": [
+      "path---blog-who-cares-about-social-care-859d36f530d306938412.js",
+      "path---blog-who-cares-about-social-care-859d36f530d306938412.js.map"
+    ],
+    "path---blog": [
+      "path---blog-9d62f6dbe854f6353a63.js",
+      "path---blog-9d62f6dbe854f6353a63.js.map"
+    ],
+    "component---src-pages-case-studies-index-js": [
+      "component---src-pages-case-studies-index-js-d63fd281eb06827d4f96.js",
+      "component---src-pages-case-studies-index-js-d63fd281eb06827d4f96.js.map"
     ],
     "path---features": [
-      "path---features-586c7e095e534a3909ec.js",
-      "path---features-586c7e095e534a3909ec.js.map"
+      "path---features-c619ddf47ca41c48a19c.js",
+      "path---features-c619ddf47ca41c48a19c.js.map"
     ],
-    "page-component---src-pages-index-js": [
-      "page-component---src-pages-index-js-3f9942e67c863eb1ab6f.js",
-      "page-component---src-pages-index-js-3f9942e67c863eb1ab6f.js.map"
+    "path---software-for-home-care-services": [
+      "path---software-for-home-care-services-766466891eee3af588a9.js",
+      "path---software-for-home-care-services-766466891eee3af588a9.js.map"
+    ],
+    "path---": [
+      "path----70316551328a97fac55f.js",
+      "path----70316551328a97fac55f.js.map"
+    ],
+    "component---src-pages-features-index-js": [
+      "component---src-pages-features-index-js-a0b5b4f8a54446ee2f8d.js",
+      "component---src-pages-features-index-js-a0b5b4f8a54446ee2f8d.js.map"
+    ],
+    "component---src-templates-case-study-index-js": [
+      "component---src-templates-case-study-index-js-1b3a3a7d9e9854883757.js",
+      "component---src-templates-case-study-index-js-1b3a3a7d9e9854883757.js.map"
     ],
     "path---case-studies-woodfield-24": [
-      "path---case-studies-woodfield-24-f248929a6add92c49c25.js",
-      "path---case-studies-woodfield-24-f248929a6add92c49c25.js.map"
+      "path---case-studies-woodfield-24-6e1a683d3a2d99b17b76.js",
+      "path---case-studies-woodfield-24-6e1a683d3a2d99b17b76.js.map"
     ],
     "path---terms-and-conditions": [
-      "path---terms-and-conditions-b6d72b525a58c41a449a.js",
-      "path---terms-and-conditions-b6d72b525a58c41a449a.js.map"
+      "path---terms-and-conditions-640b6fdfa13cd2d5f334.js",
+      "path---terms-and-conditions-640b6fdfa13cd2d5f334.js.map"
     ],
-    "page-component---src-pages-404-js": [
-      "page-component---src-pages-404-js-c06e03c78d551ec2613a.js",
-      "page-component---src-pages-404-js-c06e03c78d551ec2613a.js.map"
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-19507a629a745ebf508e.js",
+      "component---src-layouts-index-js-19507a629a745ebf508e.js.map"
     ],
     "path---case-studies": [
-      "path---case-studies-8a785cc9688fbc7a0391.js",
-      "path---case-studies-8a785cc9688fbc7a0391.js.map"
-    ],
-    "page-component---src-templates-generic-post-index-js": [
-      "page-component---src-templates-generic-post-index-js-f534408c9ea83ebf9ea7.js",
-      "page-component---src-templates-generic-post-index-js-f534408c9ea83ebf9ea7.js.map"
-    ],
-    "page-component---src-templates-case-study-index-js": [
-      "page-component---src-templates-case-study-index-js-bdb09daac185270ad8a3.js",
-      "page-component---src-templates-case-study-index-js-bdb09daac185270ad8a3.js.map"
+      "path---case-studies-71dbcbba40aa690094ba.js",
+      "path---case-studies-71dbcbba40aa690094ba.js.map"
     ],
     "path---index": [
-      "path---index-586c7e095e534a3909ec.js",
-      "path---index-586c7e095e534a3909ec.js.map"
+      "path---index-0105cb13d4e45ecaffae.js",
+      "path---index-0105cb13d4e45ecaffae.js.map"
+    ],
+    "component---src-pages-blog-index-js": [
+      "component---src-pages-blog-index-js-b26f55a550abe572d91b.js",
+      "component---src-pages-blog-index-js-b26f55a550abe572d91b.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-bcd7dbed3875853a5af6.js",
+      "component---src-pages-404-js-bcd7dbed3875853a5af6.js.map"
     ],
     "path---case-studies-proud-to-care": [
-      "path---case-studies-proud-to-care-6e0e7d2f33248a86ad85.js",
-      "path---case-studies-proud-to-care-6e0e7d2f33248a86ad85.js.map"
+      "path---case-studies-proud-to-care-1f1221e4c90f5e5db3b5.js",
+      "path---case-studies-proud-to-care-1f1221e4c90f5e5db3b5.js.map"
     ],
     "commons": [
-      "commons-cac70ccb4666864a57d4.js",
-      "commons-cac70ccb4666864a57d4.js.map"
+      "commons-3c38580b351bcce25fcb.js",
+      "commons-3c38580b351bcce25fcb.js.map"
+    ],
+    "path---features-travel": [
+      "path---features-travel-a80bc946be9c18a7da09.js",
+      "path---features-travel-a80bc946be9c18a7da09.js.map"
+    ],
+    "path---features-drag-and-drop-rostering": [
+      "path---features-drag-and-drop-rostering-fe5691068018b78308d0.js",
+      "path---features-drag-and-drop-rostering-fe5691068018b78308d0.js.map"
     ],
     "path---404-html": [
-      "path---404-html-586c7e095e534a3909ec.js",
-      "path---404-html-586c7e095e534a3909ec.js.map"
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---shiftplanning-software": [
+      "path---shiftplanning-software-85f9e29158bd1b6b5bf3.js",
+      "path---shiftplanning-software-85f9e29158bd1b6b5bf3.js.map"
+    ],
+    "path---features-call-monitoring": [
+      "path---features-call-monitoring-ee1666d2ff1b4ccdd492.js",
+      "path---features-call-monitoring-ee1666d2ff1b4ccdd492.js.map"
+    ],
+    "path---features-mobile": [
+      "path---features-mobile-e3d0d44cde5da90588b7.js",
+      "path---features-mobile-e3d0d44cde5da90588b7.js.map"
+    ],
+    "component---src-pages-contact-us-index-js": [
+      "component---src-pages-contact-us-index-js-66b7918401693f3697ea.js",
+      "component---src-pages-contact-us-index-js-66b7918401693f3697ea.js.map"
+    ],
+    "path---features-invoicing-and-payments": [
+      "path---features-invoicing-and-payments-08009fe53dfb196f3377.js",
+      "path---features-invoicing-and-payments-08009fe53dfb196f3377.js.map"
     ],
     "app": [
-      "app-0ff9b8ac8ae8ff894bc3.js",
-      "app-0ff9b8ac8ae8ff894bc3.js.map"
+      "app-d1f3998f492cdbc62034.js",
+      "app-d1f3998f492cdbc62034.js.map"
+    ],
+    "component---src-templates-feature-index-js": [
+      "component---src-templates-feature-index-js-c422e5642455821f9597.js",
+      "component---src-templates-feature-index-js-c422e5642455821f9597.js.map"
     ],
     "path---404": [
-      "path---404-586c7e095e534a3909ec.js",
-      "path---404-586c7e095e534a3909ec.js.map"
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "page-component---src-pages-case-studies-index-js": [
-      "page-component---src-pages-case-studies-index-js-1873478c2f563f8dd29b.js",
-      "page-component---src-pages-case-studies-index-js-1873478c2f563f8dd29b.js.map"
+    "path---features-reporting": [
+      "path---features-reporting-2831cc4cd6bcc9fb543d.js",
+      "path---features-reporting-2831cc4cd6bcc9fb543d.js.map"
     ],
     "path---case-studies-county-care": [
-      "path---case-studies-county-care-7c6365664f29786dc10b.js",
-      "path---case-studies-county-care-7c6365664f29786dc10b.js.map"
+      "path---case-studies-county-care-d3778bccd5ecb3530627.js",
+      "path---case-studies-county-care-d3778bccd5ecb3530627.js.map"
     ],
-    "page-component---src-pages-features-index-js": [
-      "page-component---src-pages-features-index-js-aa70f6597f9276e6fc4c.js",
-      "page-component---src-pages-features-index-js-aa70f6597f9276e6fc4c.js.map"
+    "path---features-secure-cloud-based-system": [
+      "path---features-secure-cloud-based-system-485499c845109477d80f.js",
+      "path---features-secure-cloud-based-system-485499c845109477d80f.js.map"
     ],
     "path---contact-us": [
-      "path---contact-us-586c7e095e534a3909ec.js",
-      "path---contact-us-586c7e095e534a3909ec.js.map"
+      "path---contact-us-a0e39f21c11f6a62c5ab.js",
+      "path---contact-us-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-templates-blog-post-index-js": [
+      "component---src-templates-blog-post-index-js-82fe51b4a5de4594088b.js",
+      "component---src-templates-blog-post-index-js-82fe51b4a5de4594088b.js.map"
     ]
   }
 }

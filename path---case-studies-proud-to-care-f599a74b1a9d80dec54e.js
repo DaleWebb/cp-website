@@ -1,0 +1,2 @@
+webpackJsonp([0x992e7d56e9df9000],{"./node_modules/json-loader/index.js!./.cache/json/case-studies-proud-to-care.json":function(e,o){e.exports={pathContext:{path:"/case-studies/proud-to-care"}}}});
+//# sourceMappingURL=path---case-studies-proud-to-care-f599a74b1a9d80dec54e.js.map

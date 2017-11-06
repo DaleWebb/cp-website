@@ -1,2 +1,2 @@
-webpackJsonp([5],{"./node_modules/json-loader/index.js!./.cache/json/case-studies.json":function(e,o){e.exports={pathContext:{}}}});
+webpackJsonp([0x770a89891020],{"./node_modules/json-loader/index.js!./.cache/json/case-studies.json":function(e,o){e.exports={pathContext:{}}}});
 //# sourceMappingURL=path---case-studies-586c7e095e534a3909ec.js.map
