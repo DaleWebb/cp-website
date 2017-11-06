@@ -14,7 +14,9 @@ import '../fonts/fonts.scss';
 export default class DefaultLayout extends React.Component {
 
   render() {
-    const isBlog = this.props.location.pathname.slice(0, 5) === `/blog`;
+
+    //For staging on GitHub pages, find the sub-directory in the URL and extract it
+    const isBlog = this.props.location.pathname.replace('/' + this.props.data.site.siteMetadata.gitRepo, '').slice(0, 5) === `/blog`;
 
     let Navbar = <SalesNavbar />;
     let Footer = <SalesFooter navigation={this.props.data.allPrismicDocument.edges}/>;
@@ -62,6 +64,11 @@ const style = {
 
 export const pageQuery = graphql`
   query navigation {
+    site {
+      siteMetadata {
+        gitRepo
+      }
+    }
     allPrismicDocument(sort: { order: ASC, fields: [data___weight] }) {
       edges {
         node {

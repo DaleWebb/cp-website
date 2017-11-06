@@ -1,7 +1,8 @@
 module.exports = {
   pathPrefix: '/cp-website',
   siteMetadata: {
-    siteUrl: `https://dalewebb.github.io/cp-website`
+    siteUrl: `https://dalewebb.github.io/cp-website`,
+    gitRepo: `cp-website`
   },
   plugins: [
     `gatsby-plugin-glamor`,
